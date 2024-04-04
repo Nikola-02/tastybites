@@ -1,1 +1,79 @@
-/*# sourceMappingURL=app.component.css.map */
+h1 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 10px 0px;
+}
+header .my-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .my-container .logo-name {
+  width: 25%;
+}
+header .my-container .logo-name a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+header .my-container .logo-name a .logo {
+  width: 45px;
+  display: flex;
+  align-items: center;
+}
+header .my-container .logo-name a .logo img {
+  width: 100%;
+}
+header .my-container .logo-name a h1 {
+  color: #ff6464;
+}
+header .my-container nav {
+  width: 50%;
+}
+header .my-container nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+}
+header .my-container nav ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #2a2a2a;
+  transition: 0.3s ease all;
+}
+header .my-container nav ul li a:hover {
+  color: #ff6464;
+}
+header .my-container .contact-div {
+  width: 25%;
+  text-align: end;
+}
+header .my-container .contact-div a {
+  font-size: 18px;
+  padding: 12px 35px;
+  border-radius: 10px;
+  background-color: #ff6464;
+  color: #f6f6f6;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease all;
+}
+header .my-container .contact-div a:hover {
+  background-color: #2a2a2a;
+}/*# sourceMappingURL=app.component.css.map */
