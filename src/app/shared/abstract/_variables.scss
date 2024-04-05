@@ -3,3 +3,12 @@ $red: #ff6464;
 $white: #f6f6f6;
 $black: #2a2a2a;
 $background-grey: #f5f5f5;
+
+@mixin wrapper {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.my-container {
+  @include wrapper();
+}
