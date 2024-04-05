@@ -277,6 +277,121 @@ footer {
   .upper {
     background-color: $background-grey;
     padding: 45px 0px;
+    .my-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+        width: 25%;
+        .logo-and-text {
+          margin-bottom: 20px;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            .logo {
+              width: 45px;
+              display: flex;
+              align-items: center;
+              img {
+                width: 100%;
+              }
+            }
+            h1 {
+              color: $red;
+            }
+          }
+        }
+        .catalog {
+          img {
+            width: 100%;
+          }
+        }
+
+        .social-networks {
+          margin-top: 20px;
+          .title {
+            p {
+              font-weight: 300;
+            }
+          }
+
+          .content {
+            display: flex;
+            gap: 33px;
+            margin-top: 20px;
+            a {
+              text-decoration: none;
+              color: $black;
+              i {
+                font-size: 23px;
+              }
+            }
+
+            .facebook {
+              &:hover {
+                color: #1877f2;
+              }
+            }
+            .instagram {
+              &:hover {
+                color: #c32aa3;
+              }
+            }
+            .twitter {
+              &:hover {
+                color: $black;
+              }
+            }
+            .tiktok {
+              &:hover {
+                color: #af415c;
+              }
+            }
+            .youtube {
+              &:hover {
+                color: #ff0000;
+              }
+            }
+          }
+        }
+      }
+      .center {
+        width: 15%;
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          a {
+            text-decoration: none;
+            color: $black;
+            font-weight: 600;
+            font-size: 23px;
+            transition: ease 0.2s all;
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+      .right {
+        width: 20%;
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          a {
+            text-decoration: none;
+            color: rgba($color: $black, $alpha: 0.6);
+            transition: ease 0.2s all;
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
   }
   .down {
     background-color: $red;
