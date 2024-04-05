@@ -214,3 +214,28 @@ header {
     }
   }
 }
+
+.what-can-you-find-here {
+  margin-top: 60px;
+  .my-container {
+    .title {
+      margin-bottom: 70px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-evenly;
+      .item {
+        width: 20%;
+        text-align: center;
+        i {
+          font-size: 60px;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

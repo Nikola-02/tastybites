@@ -176,4 +176,25 @@ header .my-container .contact-div a:hover {
   margin-bottom: 25px;
   color: rgba(42, 42, 42, 0.8);
   margin-bottom: 30px;
+}
+.what-can-you-find-here {
+  margin-top: 60px;
+}
+.what-can-you-find-here .my-container .title {
+  margin-bottom: 70px;
+}
+.what-can-you-find-here .my-container .content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.what-can-you-find-here .my-container .content .item {
+  width: 20%;
+  text-align: center;
+}
+.what-can-you-find-here .my-container .content .item i {
+  font-size: 60px;
+}
+.what-can-you-find-here .my-container .content .item p {
+  margin-top: 20px;
+  font-size: 17px;
 }/*# sourceMappingURL=app.component.css.map */
