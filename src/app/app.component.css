@@ -197,4 +197,33 @@ header .my-container .contact-div a:hover {
 .what-can-you-find-here .my-container .content .item p {
   margin-top: 20px;
   font-size: 17px;
+}
+
+.magazine {
+  margin-top: 100px;
+  padding: 100px 0px;
+  background-image: url("../assets/images/magazine.png");
+  background-position: center;
+  background-size: cover;
+}
+.magazine .my-container .title {
+  width: 45%;
+}
+.magazine .my-container .title h2 {
+  text-align: start;
+  margin-bottom: 0px;
+}
+.magazine .my-container .title p {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(42, 42, 42, 0.45);
+  margin-bottom: 22px;
+}
+.magazine .my-container .title a {
+  font-size: 18px;
+  background-color: #ff6464;
+}
+.magazine .my-container .title a:hover {
+  background-color: #2a2a2a;
+  color: #f6f6f6;
 }/*# sourceMappingURL=app.component.css.map */

@@ -239,3 +239,34 @@ header {
     }
   }
 }
+
+.magazine {
+  margin-top: 100px;
+  padding: 100px 0px;
+  background-image: url("../assets/images/magazine.png");
+  background-position: center;
+  background-size: cover;
+  .my-container {
+    .title {
+      width: 45%;
+      h2 {
+        text-align: start;
+        margin-bottom: 0px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        color: rgba($color: $black, $alpha: 0.45);
+        margin-bottom: 22px;
+      }
+      a {
+        font-size: 18px;
+        background-color: $red;
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
