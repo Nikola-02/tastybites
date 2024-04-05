@@ -1,0 +1,126 @@
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+footer .upper {
+  background-color: #f5f5f5;
+  padding: 45px 0px;
+}
+footer .upper .my-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .upper .my-container .left {
+  width: 25%;
+}
+footer .upper .my-container .left .logo-and-text {
+  margin-bottom: 20px;
+}
+footer .upper .my-container .left .logo-and-text a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+footer .upper .my-container .left .logo-and-text a .logo {
+  width: 45px;
+  display: flex;
+  align-items: center;
+}
+footer .upper .my-container .left .logo-and-text a .logo img {
+  width: 100%;
+}
+footer .upper .my-container .left .logo-and-text a h1 {
+  color: #ff6464;
+}
+footer .upper .my-container .left .catalog img {
+  width: 100%;
+}
+footer .upper .my-container .left .social-networks {
+  margin-top: 20px;
+}
+footer .upper .my-container .left .social-networks .title p {
+  font-weight: 300;
+}
+footer .upper .my-container .left .social-networks .content {
+  display: flex;
+  gap: 33px;
+  margin-top: 20px;
+}
+footer .upper .my-container .left .social-networks .content a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+footer .upper .my-container .left .social-networks .content a i {
+  font-size: 23px;
+}
+footer .upper .my-container .left .social-networks .content .facebook:hover {
+  color: #1877f2;
+}
+footer .upper .my-container .left .social-networks .content .instagram:hover {
+  color: #c32aa3;
+}
+footer .upper .my-container .left .social-networks .content .twitter:hover {
+  color: #2a2a2a;
+}
+footer .upper .my-container .left .social-networks .content .tiktok:hover {
+  color: #af415c;
+}
+footer .upper .my-container .left .social-networks .content .youtube:hover {
+  color: #ff0000;
+}
+footer .upper .my-container .center {
+  width: 15%;
+}
+footer .upper .my-container .center .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .upper .my-container .center .content a {
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 600;
+  font-size: 23px;
+  transition: ease 0.2s all;
+}
+footer .upper .my-container .center .content a:hover {
+  color: #ff6464;
+}
+footer .upper .my-container .right {
+  width: 20%;
+}
+footer .upper .my-container .right .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .upper .my-container .right .content a {
+  text-decoration: none;
+  color: rgba(42, 42, 42, 0.6);
+  transition: ease 0.2s all;
+}
+footer .upper .my-container .right .content a:hover {
+  color: #ff6464;
+}
+footer .down {
+  background-color: #ff6464;
+  padding: 28px 0px;
+}
+footer .down .my-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f6f6f6;
+}
+footer .down .my-container p {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+footer .down .my-container span {
+  font-weight: 400;
+  font-size: 18px;
+}/*# sourceMappingURL=footer.component.css.map */
