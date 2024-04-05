@@ -45,7 +45,12 @@
       </div>
       <div class="center">
         <div class="content">
-          <a routerLink="/" routerLinkActive="active">HOME</a>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >HOME</a
+          >
           <a routerLink="/recipes" routerLinkActive="active">RECIPES</a>
           <a routerLink="/shopping-list" routerLinkActive="active"
             >SHOPPING LIST</a

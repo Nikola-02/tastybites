@@ -11,10 +11,15 @@
     <nav>
       <ul>
         <li>
-          <a routerLink="/" routerLinkActive="active">Home</a>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
         </li>
         <li>
-          <a href="">Recipes</a>
+          <a routerLink="/recipes" routerLinkActive="active">Recipes</a>
         </li>
         <li>
           <a href="">Shopping list</a>
