@@ -50,6 +50,9 @@ header .my-container nav ul li a {
 header .my-container nav ul li a:hover {
   color: #ff6464;
 }
+header .my-container nav ul li a.active {
+  color: #ff6464;
+}
 header .my-container .contact-div {
   width: 25%;
   text-align: end;

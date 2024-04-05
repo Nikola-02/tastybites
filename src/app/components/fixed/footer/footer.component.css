@@ -89,6 +89,9 @@ footer .upper .my-container .center .content a {
 footer .upper .my-container .center .content a:hover {
   color: #ff6464;
 }
+footer .upper .my-container .center .content a.active {
+  color: #ff6464;
+}
 footer .upper .my-container .right {
   width: 20%;
 }

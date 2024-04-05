@@ -113,6 +113,10 @@ footer {
               color: $red;
             }
           }
+
+          a.active {
+            color: $red;
+          }
         }
       }
       .right {
