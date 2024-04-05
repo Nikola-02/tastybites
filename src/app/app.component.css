@@ -162,15 +162,15 @@ header .my-container .contact-div a:hover {
   transform: scale(1.04);
 }
 
-.what-we-provide {
+.what-you-want-to-cook {
   background-color: #ff6464;
   text-align: center;
   padding: 80px 0px;
 }
-.what-we-provide .my-container .text h2 {
+.what-you-want-to-cook .my-container .text h2 {
   margin-bottom: 5px;
 }
-.what-we-provide .my-container .text p {
+.what-you-want-to-cook .my-container .text p {
   font-weight: 300;
   margin-top: 5px;
   margin-bottom: 25px;
