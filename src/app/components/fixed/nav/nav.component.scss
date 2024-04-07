@@ -45,7 +45,8 @@ header {
       width: 50%;
       ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 90px;
         list-style-type: none;
         margin: 0;
         li {

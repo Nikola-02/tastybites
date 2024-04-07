@@ -38,7 +38,8 @@ header .my-container nav {
 }
 header .my-container nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 90px;
   list-style-type: none;
   margin: 0;
 }

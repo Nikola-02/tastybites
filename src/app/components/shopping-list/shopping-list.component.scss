@@ -3,17 +3,18 @@
 main {
   .my-container {
     .shopping-list-title {
-      margin: 80px 0px;
+      margin: 65px 0px 80px 0px;
       text-align: center;
       h2 {
         margin-bottom: 10px;
+        font-weight: 700;
       }
       p {
         color: rgba(42, 42, 42, 0.8);
       }
     }
     .shopping-list-div {
-      margin: 65px auto;
+      margin: 65px auto 100px auto;
       width: 60%;
 
       .name-amount-btns {
