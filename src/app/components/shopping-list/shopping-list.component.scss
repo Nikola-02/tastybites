@@ -1,0 +1,94 @@
+@use "../../shared/abstract/variables" as vars;
+
+main {
+  .my-container {
+    .shopping-list-title {
+      margin: 80px 0px;
+      text-align: center;
+      h2 {
+        margin-bottom: 10px;
+      }
+      p {
+        color: rgba(42, 42, 42, 0.8);
+      }
+    }
+    .shopping-list-div {
+      margin: 65px auto;
+      width: 60%;
+
+      .name-amount-btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba($color: vars.$black, $alpha: 0.3);
+        .name-amount {
+          display: flex;
+          gap: 30px;
+          .name-input {
+          }
+
+          .amount-input {
+            width: 45%;
+          }
+        }
+        .add-clear-btn {
+          display: flex;
+          gap: 30px;
+          button {
+            color: vars.$white;
+            transition: 0.3s all ease;
+            border-radius: 20px;
+            &:hover {
+              background-color: vars.$black;
+            }
+          }
+          .add-update-btn {
+            background-color: #5cb85c;
+            width: 100px;
+          }
+          .clear-btn {
+            background-color: #337ab7;
+            width: 100px;
+          }
+        }
+      }
+
+      .shopping-list-items {
+        margin-top: 50px;
+        display: flex;
+        align-items: space-evenly;
+        flex-direction: column;
+        gap: 30px;
+        .shopping-list-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 20px;
+          border: 1px solid rgba($color: vars.$black, $alpha: 0.3);
+          padding: 16px 35px;
+
+          button {
+            color: vars.$white;
+            transition: 0.3s all ease;
+            border-radius: 20px;
+            padding: 8px 30px;
+          }
+
+          span {
+            font-weight: 500;
+            color: rgba($color: vars.$black, $alpha: 0.7);
+          }
+
+          .delete-item-btn {
+            background-color: vars.$red;
+            &:hover {
+              background-color: vars.$black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
