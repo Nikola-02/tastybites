@@ -31,6 +31,7 @@ header .my-container .logo-name a .logo img {
 }
 header .my-container .logo-name a h1 {
   color: #ff6464;
+  margin: 0;
 }
 header .my-container nav {
   width: 50%;
