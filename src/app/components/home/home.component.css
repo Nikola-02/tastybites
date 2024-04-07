@@ -38,7 +38,7 @@ main .popular-recipes .my-container .content {
 main .popular-recipes .my-container .content .card {
   width: 30%;
   transition: ease 0.3s all;
-  padding: 10px;
+  padding: 20px;
 }
 main .popular-recipes .my-container .content .card img {
   width: 100%;
