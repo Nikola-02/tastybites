@@ -74,72 +74,75 @@ main {
           grid-template-columns: repeat(2, 1fr);
           row-gap: 56px;
           column-gap: 50px;
-          .recipe-item {
-            width: 100%;
-            border: 1px solid #e9e9e9;
-            border-radius: 10px;
-            display: flex;
-            .recipe-image {
-              width: 35%;
-              img {
-                object-fit: cover;
-                height: auto;
-                width: 100%;
-                border-radius: 10px 0px 0px 10px;
-              }
-            }
-
-            .recipes-text {
-              width: 65%;
-              padding: 15px;
-
-              .category-text {
-                font-size: 14px;
-                font-weight: 600;
-                color: rgba($color: vars.$black, $alpha: 0.3);
+          a {
+            text-decoration: none;
+            .recipe-item {
+              width: 100%;
+              border: 1px solid #e9e9e9;
+              border-radius: 10px;
+              display: flex;
+              .recipe-image {
+                width: 35%;
+                img {
+                  object-fit: cover;
+                  height: auto;
+                  width: 100%;
+                  border-radius: 10px 0px 0px 10px;
+                }
               }
 
-              h5 {
-                font-size: 22px;
-                font-weight: 600;
-                color: vars.$black;
-                margin-top: 3px;
-                margin-bottom: 0;
-              }
+              .recipes-text {
+                width: 65%;
+                padding: 15px;
 
-              .author {
-                margin-top: 5px;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: 1px;
-                color: rgba($color: vars.$black, $alpha: 0.7);
-              }
-
-              .desc {
-                margin-top: 5px;
-                font-size: 14px;
-                font-weight: 500;
-                color: rgba($color: vars.$black, $alpha: 0.35);
-              }
-
-              .ingredients-rating {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 15px;
-
-                p {
+                .category-text {
                   font-size: 14px;
-                  font-weight: 500;
-                  margin: 0;
-                  padding: 0;
+                  font-weight: 600;
+                  color: rgba($color: vars.$black, $alpha: 0.3);
                 }
 
-                .ratings-stars {
+                h5 {
+                  font-size: 22px;
+                  font-weight: 600;
+                  color: vars.$black;
+                  margin-top: 3px;
+                  margin-bottom: 0;
+                }
+
+                .author {
+                  margin-top: 5px;
+                  font-size: 14px;
+                  font-weight: 400;
+                  letter-spacing: 1px;
+                  color: rgba($color: vars.$black, $alpha: 0.7);
+                }
+
+                .desc {
+                  margin-top: 5px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  color: rgba($color: vars.$black, $alpha: 0.35);
+                }
+
+                .ingredients-rating {
                   display: flex;
+                  justify-content: space-between;
                   align-items: center;
-                  i {
+                  margin-top: 15px;
+                  color: vars.$black;
+                  p {
                     font-size: 14px;
+                    font-weight: 500;
+                    margin: 0;
+                    padding: 0;
+                  }
+
+                  .ratings-stars {
+                    display: flex;
+                    align-items: center;
+                    i {
+                      font-size: 14px;
+                    }
                   }
                 }
               }
@@ -152,7 +155,7 @@ main {
           justify-content: center;
           padding: 20px;
 
-          a {
+          button {
             display: flex;
             justify-content: center;
             align-items: center;
