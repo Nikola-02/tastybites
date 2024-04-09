@@ -22,13 +22,14 @@ export class RecipesService {
         map((recipes) => {
           return recipes.map((recipe) => ({
             ...recipe,
-            name: this.capitalizeFirstLetter(recipe.name),
+            category: recipe.category.toUpperCase(),
             description: this.trimAndAppendDots(recipe.description),
           }));
         })
       )
       .subscribe(
         (response: any) => {
+          console.log(response);
           this.recipesSubject.next(response);
           this.recipes = response;
         },
@@ -36,10 +37,6 @@ export class RecipesService {
           console.log(error);
         }
       );
-  }
-
-  capitalizeFirstLetter(str: string): string {
-    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   trimAndAppendDots(description: string): string {

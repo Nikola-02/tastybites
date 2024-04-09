@@ -54,6 +54,7 @@ main {
           width: 30%;
           transition: ease 0.3s all;
           padding: 20px;
+          cursor: pointer;
           img {
             width: 100%;
             object-fit: cover;
@@ -65,7 +66,8 @@ main {
                 font-weight: 600;
                 color: rgba($color: $black, $alpha: 0.3);
                 font-size: 16px;
-                margin: 7px 0px 3px 0px;
+                margin-top: 7px;
+                letter-spacing: 0.8px;
               }
             }
             .name {

@@ -9,6 +9,7 @@ import { Subscription, map } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  public maxRating: number = 5;
   public popularRecipes: Recipe[];
   private recipeSubscription: Subscription;
 
@@ -24,6 +25,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((popularRecipes) => {
         this.popularRecipes = popularRecipes;
       });
+  }
+
+  counter(i: number) {
+    return new Array(i);
   }
 
   ngOnDestroy(): void {
