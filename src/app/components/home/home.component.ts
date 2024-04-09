@@ -9,7 +9,7 @@ import { Subscription, map } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  private popularRecipes: Recipe[];
+  public popularRecipes: Recipe[];
   private recipeSubscription: Subscription;
 
   constructor(private recipesService: RecipesService) {}

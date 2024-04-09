@@ -12,27 +12,26 @@
         <h2>Popular recipes</h2>
       </div>
       <div class="content">
-        <div *ngFor="" class="card">
-          <img
-            src="https://www.olivetomato.com/wp-content/uploads/2016/02/SAM4952-1.jpg"
-            alt=""
-          />
+        <div *ngFor="let item of popularRecipes" class="card">
+          <img src="{{ item.image }}" alt="{{ item.name }}" />
           <div class="text">
             <div class="category">
-              <p>BREAKFAST</p>
+              <p>{{ item.category }}</p>
             </div>
             <div class="name">
-              <p>OMELLETE</p>
+              <p>{{ item.name }}</p>
               <span class="details">(click for details)</span>
             </div>
             <div class="description">
               <p>
-                This is a classic French omelette. It’s light, fluffy, and
-                packed with flavors. 
+                {{ item.description }}
               </p>
             </div>
             <div class="ingredients-number">
-              <p>6 ingredients</p>
+              <p>
+                {{ item.ingredients.length }}
+                {{ item.ingredients.length > 1 ? "ingredients" : "ingredient" }}
+              </p>
             </div>
             <div class="ratings">
               <div class="stars">
@@ -42,7 +41,10 @@
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
-              <div class="ratings-count">(1,234 ratings)</div>
+              <div class="ratings-count">
+                ({{ item.rating_count }}
+                {{ item.rating_count > 1 ? "ratings" : "rating" }})
+              </div>
             </div>
           </div>
         </div>
