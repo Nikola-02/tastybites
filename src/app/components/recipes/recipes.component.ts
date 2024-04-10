@@ -8,6 +8,7 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.scss'],
 })
 export class RecipesComponent implements OnInit {
+  public search: string;
   public recipes: Recipe[];
   categories: string[];
   authors: string[];
