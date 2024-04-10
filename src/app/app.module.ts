@@ -11,6 +11,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { PopularRecipeComponent } from './components/home/popular-recipe/popular-recipe.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     RecipeDetailComponent,
     ShoppingListComponent,
     ContactUsComponent,
+    PopularRecipeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

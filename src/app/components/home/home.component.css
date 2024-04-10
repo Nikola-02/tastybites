@@ -35,67 +35,6 @@ main .popular-recipes .my-container .content {
   display: flex;
   gap: 150px;
 }
-main .popular-recipes .my-container .content .card {
-  width: 30%;
-  transition: ease 0.3s all;
-  padding: 20px;
-}
-main .popular-recipes .my-container .content .card img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 262px;
-}
-main .popular-recipes .my-container .content .card .text .category p {
-  font-weight: 600;
-  color: rgba(42, 42, 42, 0.3);
-  font-size: 16px;
-  margin: 7px 0px 3px 0px;
-}
-main .popular-recipes .my-container .content .card .text .name {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
-}
-main .popular-recipes .my-container .content .card .text .name p {
-  font-weight: 600;
-  font-size: 25px;
-}
-main .popular-recipes .my-container .content .card .text .name .details {
-  font-size: 15px;
-  color: rgba(42, 42, 42, 0.3);
-}
-main .popular-recipes .my-container .content .card .text .description p {
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(42, 42, 42, 0.35);
-}
-main .popular-recipes .my-container .content .card .text .ingredients-number {
-  margin-top: 5px;
-  margin-bottom: 7px;
-}
-main .popular-recipes .my-container .content .card .text .ingredients-number p {
-  font-size: 15px;
-  font-weight: 500;
-}
-main .popular-recipes .my-container .content .card .text .ratings {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-}
-main .popular-recipes .my-container .content .card .text .ratings .stars i {
-  font-size: 15px;
-}
-main .popular-recipes .my-container .content .card .text .ratings .ratings-count {
-  font-size: 15px;
-  font-weight: 400;
-  color: rgba(42, 42, 42, 0.5);
-}
-main .popular-recipes .my-container .content .card:hover {
-  transform: scale(1.04);
-}
 main .what-you-want-to-cook {
   background-color: #ff6464;
   text-align: center;

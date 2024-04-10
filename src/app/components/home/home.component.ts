@@ -27,10 +27,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
-  counter(i: number) {
-    return new Array(i);
-  }
-
   ngOnDestroy(): void {
     this.recipeSubscription.unsubscribe();
   }

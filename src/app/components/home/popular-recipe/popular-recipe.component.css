@@ -1,0 +1,67 @@
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+.card {
+  transition: ease 0.3s all;
+  padding: 20px;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 262px;
+}
+.card .text .category p {
+  font-weight: 600;
+  color: rgba(42, 42, 42, 0.3);
+  font-size: 16px;
+  margin-top: 7px;
+  letter-spacing: 0.8px;
+}
+.card .text .name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.card .text .name p {
+  font-weight: 600;
+  font-size: 25px;
+}
+.card .text .name .details {
+  font-size: 15px;
+  color: rgba(42, 42, 42, 0.3);
+}
+.card .text .description p {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(42, 42, 42, 0.35);
+}
+.card .text .ingredients-number {
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+.card .text .ingredients-number p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.card .text .ratings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.card .text .ratings .stars i {
+  font-size: 15px;
+}
+.card .text .ratings .ratings-count {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(42, 42, 42, 0.5);
+}
+.card:hover {
+  transform: scale(1.04);
+}/*# sourceMappingURL=popular-recipe.component.css.map */

@@ -1,0 +1,36 @@
+<div routerLink="/recipes/{{ item.id }}" class="card">
+  <img src="{{ item.image }}" alt="{{ item.name }}" />
+  <div class="text">
+    <div class="category">
+      <p>{{ item.category }}</p>
+    </div>
+    <div class="name">
+      <p>{{ item.name }}</p>
+      <span class="details">(click for details)</span>
+    </div>
+    <div class="description">
+      <p>
+        {{ item.description }}
+      </p>
+    </div>
+    <div class="ingredients-number">
+      <p>
+        {{ item.ingredients.length }}
+        {{ item.ingredients.length > 1 ? "ingredients" : "ingredient" }}
+      </p>
+    </div>
+    <div class="ratings">
+      <div class="stars">
+        <i *ngFor="let i of counter(item.rating)" class="fa-solid fa-star"></i>
+        <i
+          *ngFor="let r of counter(maxRating - item.rating)"
+          class="fa-regular fa-star"
+        ></i>
+      </div>
+      <div class="ratings-count">
+        ({{ item.rating_count }}
+        {{ item.rating_count > 1 ? "ratings" : "rating" }})
+      </div>
+    </div>
+  </div>
+</div>

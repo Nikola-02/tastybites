@@ -1,0 +1,45 @@
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+main .contact-title .my-container {
+  margin-top: 65px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+main .get-in-touch-content {
+  background-color: #ff6464;
+  margin-bottom: 90px;
+}
+main .get-in-touch-content .my-container .git-items {
+  width: 60%;
+  padding: 90px 0px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+main .get-in-touch-content .my-container .git-items .git-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6f6;
+}
+main .get-in-touch-content .my-container .git-items .git-item i {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+main .get-in-touch-content .my-container .git-items .git-item h5 {
+  font-size: 30px;
+}
+main .get-in-touch-content .my-container .git-items .git-item p {
+  font-weight: 300;
+}
+main .about-us-content {
+  margin-bottom: 150px;
+}
+main .about-us-content .my-container .about-us-text {
+  width: 80%;
+  margin: 0px auto;
+}/*# sourceMappingURL=contact-us.component.css.map */
