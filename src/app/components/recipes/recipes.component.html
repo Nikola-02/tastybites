@@ -16,8 +16,12 @@
         placeholder="Search by name..."
       />
 
-      <select id="" class="form-select">
+      <select [(ngModel)]="sort" class="form-select" (change)="getRecipes()">
         <option value="0">Sort by:</option>
+        <option value="asc-rating">Rating ascending</option>
+        <option value="desc-rating">Rating descending</option>
+        <option value="asc-name">Name ascending</option>
+        <option value="desc-name">Name descending</option>
       </select>
     </div>
   </div>

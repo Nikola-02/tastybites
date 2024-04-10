@@ -12,6 +12,7 @@ export class RecipesComponent implements OnInit {
   private perPage: number = 6;
   public totalPages: number;
   public search: string;
+  public sort: string = '0';
   public recipes: Recipe[];
   categories: string[];
   authors: string[];
@@ -19,13 +20,11 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getRecipes();
-
-    //get all pages
   }
 
   getRecipes() {
     this.recipesService
-      .fetchRecipes(this.perPage, this.page, this.search)
+      .fetchRecipes(this.perPage, this.page, this.search, this.sort)
       .subscribe(
         (recipes: Recipe[]) => {
           this.recipes = recipes;

@@ -20,6 +20,26 @@ export class RecipesService {
       url.searchParams.append('name', search);
     }
 
+    if (sortBy != '0') {
+      if (sortBy == 'asc-rating') {
+        url.searchParams.append('sortBy', 'rating');
+      }
+
+      if (sortBy == 'desc-rating') {
+        url.searchParams.append('sortBy', 'rating');
+        url.searchParams.append('order', 'desc');
+      }
+
+      if (sortBy == 'asc-name') {
+        url.searchParams.append('sortBy', 'name');
+      }
+
+      if (sortBy == 'desc-name') {
+        url.searchParams.append('sortBy', 'name');
+        url.searchParams.append('order', 'desc');
+      }
+    }
+
     return this.http.get<Recipe[]>(url.toString()).pipe(
       map((recipes) => {
         return recipes.map((recipe) => ({
