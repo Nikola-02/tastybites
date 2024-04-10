@@ -1,24 +1,27 @@
 <main>
-  <div class="my-container">
+  <div *ngIf="recipe" class="my-container">
     <div class="recipe-detail-title">
-      <h2>STEAK</h2>
+      <h2>{{ recipe.name.toUpperCase() }}</h2>
       <div class="recipe-basic-info">
         <div class="info-item">
           <i class="fa-solid fa-user"></i>
-          <span>Becker M. Djo</span>
+          <span>{{ recipe.author }}</span>
         </div>
         <div class="info-item">
           <i class="fa-solid fa-calendar"></i>
-          <span>26 May 2024</span>
+          <span>{{ dateTransformed }}</span>
         </div>
         <div class="info-item">
           <i class="fa-solid fa-star"></i>
-          <span>4.3</span>
-          <span class="ratings-count">(1,500 ratings)</span>
+          <span>{{ recipe.rating }}</span>
+          <span class="ratings-count"
+            >({{ recipe.rating_count }}
+            {{ recipe.rating_count > 1 ? "ratings" : "rating" }})</span
+          >
         </div>
         <div class="info-item">
-          <i class="fa-solid fa-utensils"></i>
-          <span>Breakfast</span>
+          <i class="fa-solid fa-lemon"></i>
+          <span>{{ firstUppercase(recipe.category) }}</span>
         </div>
       </div>
     </div>
@@ -26,25 +29,22 @@
     <div class="recipe-detail-image-nutrition">
       <div class="image-times">
         <div class="recipe-detail-image">
-          <img
-            src="https://www.allrecipes.com/thmb/3cixVDmAtbb2hYxoFLVJ4VPQ7rA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/143809-best-steak-marinade-in-existence-ARMag-1x1-1-8105b6b8e5cb4931ba8061f0425243dd.jpg"
-            alt=""
-          />
+          <img src="{{ recipe.image }}" alt="{{ recipe.name }}" />
         </div>
         <div class="recipe-detail-times">
           <div class="times-item">
             <span>Prep time</span>
-            <p>5 min</p>
+            <p>{{ recipe.times.prep_time }} min</p>
           </div>
           <hr class="border border-1 opacity-75" />
           <div class="times-item">
-            <span>Prep time</span>
-            <p>5 min</p>
+            <span>Cook time</span>
+            <p>{{ recipe.times.cook_time }} min</p>
           </div>
           <hr class="border border-1 opacity-75" />
           <div class="times-item">
             <span>Servings</span>
-            <p>4</p>
+            <p>{{ recipe.times.prep_time }}</p>
           </div>
         </div>
       </div>
@@ -55,31 +55,31 @@
         <div class="nutrition-content">
           <div class="nutrition-item">
             <span>Calories</span>
-            <p>520 kCal</p>
+            <p>{{ recipe.nutrition_facts.calories }} kCal</p>
           </div>
           <div class="nutrition-item">
             <span>Carbs</span>
-            <p>80g</p>
+            <p>{{ recipe.nutrition_facts.carbs }}g</p>
           </div>
           <div class="nutrition-item">
             <span>Fat</span>
-            <p>50g</p>
+            <p>{{ recipe.nutrition_facts.fat }}g</p>
           </div>
           <div class="nutrition-item">
             <span>Protein</span>
-            <p>25g</p>
+            <p>{{ recipe.nutrition_facts.protein }}g</p>
           </div>
           <div class="nutrition-item">
             <span>Fiber</span>
-            <p>23g</p>
+            <p>{{ recipe.nutrition_facts.fiber }}g</p>
           </div>
           <div class="nutrition-item">
             <span>Cholesterol</span>
-            <p>0mg</p>
+            <p>{{ recipe.nutrition_facts.cholesterol }}mg</p>
           </div>
           <div class="nutrition-item">
             <span>Sodium</span>
-            <p>44mg</p>
+            <p>{{ recipe.nutrition_facts.sodium }}mg</p>
           </div>
         </div>
       </div>
@@ -88,11 +88,7 @@
     <div class="recipe-detail-desc">
       <h5 class="section-heading">Description</h5>
       <p>
-        This is a classic French omelette. It’s light, fluffy, and packed with
-        flavors. The eggs are perfectly cooked, resulting in a creamy and
-        delicate texture. The filling is just right - not too much, not too
-        little. It’s a high-quality dish that showcases the skill of the chef.
-        Enjoy every bite!
+        {{ recipe.description }}
       </p>
     </div>
 
@@ -102,47 +98,17 @@
         <button class="btn">Add to shopping list</button>
       </div>
       <div class="ingredients-content">
-        <p>- 1 tbsp sugar</p>
-        <p>- 2 tbsp dried tomatoes</p>
-        <p>- 3 tbsp rosemary water</p>
-        <p>- 1 tbsp sugar</p>
-        <p>- 2 tbsp dried tomatoes</p>
-        <p>- 1 tbsp rosemary water</p>
-        <p>- 3 tbsp sugar</p>
-        <p>- 2 tbsp dried tomatoes</p>
-        <p>- 1 tbsp rosemary water</p>
+        <p *ngFor="let i of recipe.ingredients">
+          - {{ i.amount }} {{ i.name }}
+        </p>
       </div>
     </div>
 
     <div class="recipe-detail-instructions">
       <h5 class="section-heading">Instructions:</h5>
       <ol>
-        <li>
-          <a
-            >This is a classic French omelette. It’s light, fluffy, and packed
-            with flavors. The eggs are perfectly cooked, resulting in a creamy
-            and delicate texture. The filling is just right - not too much, not
-            too little. It’s a high-quality dish that showcases the skill of the
-            chef. Enjoy every bite!</a
-          >
-        </li>
-        <li>
-          <a
-            >This is a classic French omelette. It’s light, fluffy, and packed
-            with flavors. The eggs are perfectly cooked, resulting in a creamy
-            and delicate texture. The filling is just right - not too much, not
-            too little. It’s a high-quality dish that showcases the skill of the
-            chef. Enjoy every bite!</a
-          >
-        </li>
-        <li>
-          <a
-            >This is a classic French omelette. It’s light, fluffy, and packed
-            with flavors. The eggs are perfectly cooked, resulting in a creamy
-            and delicate texture. The filling is just right - not too much, not
-            too little. It’s a high-quality dish that showcases the skill of the
-            chef. Enjoy every bite!</a
-          >
+        <li *ngFor="let ins of recipe.instructions">
+          <a>{{ ins }}</a>
         </li>
       </ol>
     </div>
