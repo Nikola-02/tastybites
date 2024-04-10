@@ -66,17 +66,26 @@
           ></app-recipe>
         </div>
         <div class="pagination-div">
-          <button href="#" class="btn last-page-btn">
+          <button
+            (click)="prevPage()"
+            class="btn last-page-btn"
+            [class.disabled]="page <= 1"
+          >
             <i class="fa-solid fa-chevron-left"></i>
           </button>
           <button
             *ngFor="let b of counter(totalPages); index as i"
             class="page-btn"
+            [class.current-page]="i + 1 == page"
             (click)="setPage(i + 1)"
           >
             {{ i + 1 }}
           </button>
-          <button href="#" class="btn next-page-btn">
+          <button
+            (click)="nextPage()"
+            class="btn next-page-btn"
+            [class.disabled]="page >= totalPages"
+          >
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>

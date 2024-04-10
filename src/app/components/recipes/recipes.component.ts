@@ -18,12 +18,10 @@ export class RecipesComponent implements OnInit {
   constructor(private recipesService: RecipesService) {}
 
   ngOnInit(): void {
+    this.getRecipes();
+
     //get all pages
-    this.recipesService
-      .getAllRecipesForTotalPages()
-      .subscribe((recipes: Recipe[]) => {
-        this.totalPages = Math.ceil(recipes.length / this.perPage);
-      });
+    this.getTotalPagesForRecipes();
   }
 
   firstUppercase(word: string): string {
@@ -38,7 +36,7 @@ export class RecipesComponent implements OnInit {
   }
 
   getRecipes() {
-    this.recipesService.fetchRecipes().subscribe(
+    this.recipesService.fetchRecipes(this.perPage, this.page).subscribe(
       (recipes: Recipe[]) => {
         this.recipes = recipes;
 
@@ -55,7 +53,30 @@ export class RecipesComponent implements OnInit {
     );
   }
 
-  setPage(page: number) {
-    this.page = page;
+  getTotalPagesForRecipes() {
+    this.recipesService
+      .getAllRecipesForTotalPages()
+      .subscribe((recipes: Recipe[]) => {
+        this.totalPages = Math.ceil(recipes.length / this.perPage);
+      });
+  }
+
+  setPage(newPage: number) {
+    this.page = newPage;
+    this.getRecipes();
+  }
+
+  prevPage() {
+    if (this.page > 1) {
+      this.page--;
+      this.getRecipes();
+    }
+  }
+
+  nextPage() {
+    if (this.page < this.totalPages) {
+      this.page++;
+      this.getRecipes();
+    }
   }
 }

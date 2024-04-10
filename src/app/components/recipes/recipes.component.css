@@ -73,8 +73,8 @@ main .filters-recipe-comp .my-container .recipes-content .pagination-div button 
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ff6464;
-  color: #ff6464;
+  border: 1px solid #2a2a2a;
+  color: #2a2a2a;
   text-decoration: none;
   font-size: 20px;
   margin: 0 4px;
@@ -84,6 +84,11 @@ main .filters-recipe-comp .my-container .recipes-content .pagination-div button 
   height: 40px;
 }
 main .filters-recipe-comp .my-container .recipes-content .pagination-div .page-btn {
-  background-color: #ff6464;
+  background-color: #2a2a2a;
   color: #f6f6f6;
+}
+main .filters-recipe-comp .my-container .recipes-content .pagination-div .current-page {
+  color: #f6f6f6;
+  background-color: #ff6464;
+  border: 1px solid #ff6464;
 }/*# sourceMappingURL=recipes.component.css.map */
