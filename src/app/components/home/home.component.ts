@@ -20,11 +20,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   fetchPopularRecipes() {
-    this.recipeSubscription = this.recipesService.recipes$
-      .pipe(map((recipes) => recipes.slice(0, 3)))
-      .subscribe((popularRecipes) => {
-        this.popularRecipes = popularRecipes;
-      });
+    this.recipeSubscription = this.recipesService.fetchRecipes().subscribe(
+      (response: Recipe[]) => {
+        this.popularRecipes = response.slice(0, 3);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   ngOnDestroy(): void {

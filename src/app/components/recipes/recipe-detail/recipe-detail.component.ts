@@ -30,7 +30,7 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
 
   getSingleRecipe() {
     this.recipeSub = this.recipeService.getRecipeById(this.id).subscribe(
-      (recipe) => {
+      (recipe: Recipe) => {
         this.recipe = recipe;
         let date = new Date(this.recipe.created_at);
         this.dateTransformed =

@@ -6,7 +6,7 @@
       <a routerLink="/recipes" class="find-recipes-btn">Find recipes</a>
     </div>
   </div>
-  <div class="popular-recipes">
+  <div *ngIf="popularRecipes" class="popular-recipes">
     <div class="my-container">
       <div class="title">
         <h2>Popular recipes</h2>

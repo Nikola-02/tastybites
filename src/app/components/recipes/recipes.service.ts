@@ -8,9 +8,6 @@ import { Recipe } from './recipe.model';
   providedIn: 'root',
 })
 export class RecipesService {
-  private recipesSubject = new BehaviorSubject<Recipe[]>([]);
-  recipes$ = this.recipesSubject.asObservable();
-
   constructor(private http: HttpClient) {
     this.fetchRecipes();
   }
@@ -18,25 +15,15 @@ export class RecipesService {
   fetchRecipes() {
     let url = 'https://660c5f723a0766e85dbe03c7.mockapi.io/recipes';
 
-    this.http
-      .get<Recipe[]>(url)
-      .pipe(
-        map((recipes) => {
-          return recipes.map((recipe) => ({
-            ...recipe,
-            category: recipe.category.toUpperCase(),
-            description: this.trimAndAppendDots(recipe.description),
-          }));
-        })
-      )
-      .subscribe(
-        (response: Recipe[]) => {
-          this.recipesSubject.next(response);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+    return this.http.get<Recipe[]>(url).pipe(
+      map((recipes) => {
+        return recipes.map((recipe) => ({
+          ...recipe,
+          category: recipe.category.toUpperCase(),
+          description: this.trimAndAppendDots(recipe.description),
+        }));
+      })
+    );
   }
 
   getRecipeById(id: string): Observable<Recipe> {
