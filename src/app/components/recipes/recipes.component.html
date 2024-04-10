@@ -10,6 +10,7 @@
         type="text"
         id="search"
         [(ngModel)]="search"
+        (keyup)="getRecipes()"
         name="search"
         class="form-control"
         placeholder="Search by name..."

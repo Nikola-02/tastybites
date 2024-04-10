@@ -12,10 +12,13 @@ export class RecipesService {
     this.fetchRecipes();
   }
 
-  fetchRecipes(limit = 6, page = 1) {
+  fetchRecipes(limit = 6, page = 1, search = '', sortBy = '') {
     const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
     url.searchParams.append('limit', limit.toString());
     url.searchParams.append('page', page.toString());
+    if (search != '') {
+      url.searchParams.append('name', search);
+    }
 
     return this.http.get<Recipe[]>(url.toString()).pipe(
       map((recipes) => {
@@ -28,8 +31,12 @@ export class RecipesService {
     );
   }
 
-  getAllRecipesForTotalPages() {
+  getAllRecipesForTotalPages(search = '') {
     const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
+
+    if (search != '') {
+      url.searchParams.append('name', search);
+    }
 
     return this.http.get<Recipe[]>(url.toString());
   }

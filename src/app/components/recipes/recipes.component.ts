@@ -21,24 +21,27 @@ export class RecipesComponent implements OnInit {
     this.getRecipes();
 
     //get all pages
-    this.getTotalPagesForRecipes();
-  }
-
-  firstUppercase(word: string): string {
-    word = word.toLowerCase();
-    if (!word) return ''; // Ako je reč prazna ili undefined, vratiti prazan string
-
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }
-
-  counter(i: number) {
-    return new Array(i);
   }
 
   getRecipes() {
-    this.recipesService.fetchRecipes(this.perPage, this.page).subscribe(
-      (recipes: Recipe[]) => {
-        this.recipes = recipes;
+    this.recipesService
+      .fetchRecipes(this.perPage, this.page, this.search)
+      .subscribe(
+        (recipes: Recipe[]) => {
+          this.recipes = recipes;
+          this.getTotalPagesForRecipes();
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }
+
+  getTotalPagesForRecipes() {
+    this.recipesService
+      .getAllRecipesForTotalPages(this.search)
+      .subscribe((recipes: Recipe[]) => {
+        this.totalPages = Math.ceil(recipes.length / this.perPage);
 
         this.categories = Array.from(
           new Set(recipes.map((recipe) => recipe.category))
@@ -46,18 +49,6 @@ export class RecipesComponent implements OnInit {
         this.authors = Array.from(
           new Set(recipes.map((recipe) => recipe.author))
         );
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-
-  getTotalPagesForRecipes() {
-    this.recipesService
-      .getAllRecipesForTotalPages()
-      .subscribe((recipes: Recipe[]) => {
-        this.totalPages = Math.ceil(recipes.length / this.perPage);
       });
   }
 
@@ -78,5 +69,16 @@ export class RecipesComponent implements OnInit {
       this.page++;
       this.getRecipes();
     }
+  }
+
+  firstUppercase(word: string): string {
+    word = word.toLowerCase();
+    if (!word) return ''; // Ako je reč prazna ili undefined, vratiti prazan string
+
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+
+  counter(i: number) {
+    return new Array(i);
   }
 }
