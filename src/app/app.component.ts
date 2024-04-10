@@ -6,10 +6,4 @@ import { RecipesService } from './components/recipes/recipes.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  constructor(private recipesService: RecipesService) {}
-
-  ngOnInit(): void {
-    this.recipesService.fetchRecipes();
-  }
-}
+export class AppComponent {}

@@ -12,10 +12,12 @@ export class RecipesService {
     this.fetchRecipes();
   }
 
-  fetchRecipes() {
-    let url = 'https://660c5f723a0766e85dbe03c7.mockapi.io/recipes';
+  fetchRecipes(limit = 6, page = 1) {
+    const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
+    url.searchParams.append('limit', limit.toString());
+    url.searchParams.append('page', page.toString());
 
-    return this.http.get<Recipe[]>(url).pipe(
+    return this.http.get<Recipe[]>(url.toString()).pipe(
       map((recipes) => {
         return recipes.map((recipe) => ({
           ...recipe,
@@ -24,6 +26,12 @@ export class RecipesService {
         }));
       })
     );
+  }
+
+  getAllRecipesForTotalPages() {
+    const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
+
+    return this.http.get<Recipe[]>(url.toString());
   }
 
   getRecipeById(id: string): Observable<Recipe> {
