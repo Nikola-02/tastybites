@@ -19,7 +19,7 @@
     </div>
   </div>
 
-  <div class="filters-recipe-comp">
+  <div class="filters-recipe-comp" *ngIf="recipes">
     <div class="my-container">
       <div class="filters">
         <h5>Filters</h5>
@@ -27,37 +27,16 @@
         <div class="category-filter">
           <p>CATEGORY</p>
           <form>
-            <div class="mb-3 form-check">
+            <div *ngFor="let c of categories" class="mb-3 form-check">
               <input
                 type="checkbox"
                 class="form-check-input category-checks"
-                id="breakfast"
+                [id]="c"
+                [value]="c"
               />
-              <label for="breakfast" class="form-check-label">Breakfast</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input category-checks"
-                id="lunch"
-              />
-              <label for="lunch" class="form-check-label">Lunch</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input category-checks"
-                id="dinner"
-              />
-              <label for="dinner" class="form-check-label">Dinner</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input category-checks"
-                id="snack"
-              />
-              <label for="snack" class="form-check-label">Snack</label>
+              <label [for]="c" class="form-check-label">{{
+                firstUppercase(c)
+              }}</label>
             </div>
           </form>
         </div>
@@ -65,58 +44,19 @@
         <div class="authors-filter">
           <p>AUTHORS</p>
           <form>
-            <div class="mb-3 form-check">
+            <div *ngFor="let a of authors" class="mb-3 form-check">
               <input
                 type="checkbox"
                 class="form-check-input authors-checks"
-                id="breakfast"
+                [id]="a"
+                [value]="a"
               />
-              <label for="breakfast" class="form-check-label">Djin</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input authors-checks"
-                id="lunch"
-              />
-              <label for="lunch" class="form-check-label">Ardi D. Becker</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input authors-checks"
-                id="dinner"
-              />
-              <label for="dinner" class="form-check-label">Made Bock</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input authors-checks"
-                id="snack"
-              />
-              <label for="snack" class="form-check-label">Fade K. Moil</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input authors-checks"
-                id="snack"
-              />
-              <label for="snack" class="form-check-label">Becker Decker</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input authors-checks"
-                id="snack"
-              />
-              <label for="snack" class="form-check-label">Meiker Faces</label>
+              <label [for]="a" class="form-check-label">{{ a }}</label>
             </div>
           </form>
         </div>
       </div>
-      <div class="recipes-content">
+      <div class="recipes-content" *ngIf="recipes">
         <div class="all-recipes">
           <a routerLink="/recipe-detail">
             <div class="recipe-item">
