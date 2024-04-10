@@ -60,7 +60,10 @@
       </div>
       <div class="recipes-content" *ngIf="recipes">
         <div class="all-recipes">
-          <app-recipe></app-recipe>
+          <app-recipe
+            *ngFor="let recipe of recipes"
+            [recipe]="recipe"
+          ></app-recipe>
         </div>
         <div class="pagination-div">
           <button href="#" class="btn last-page-btn">

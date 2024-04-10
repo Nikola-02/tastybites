@@ -21,11 +21,7 @@
     </div>
     <div class="ratings">
       <div class="stars">
-        <i *ngFor="let i of counter(item.rating)" class="fa-solid fa-star"></i>
-        <i
-          *ngFor="let r of counter(maxRating - item.rating)"
-          class="fa-regular fa-star"
-        ></i>
+        <app-stars [rating]="item.rating"></app-stars>
       </div>
       <div class="ratings-count">
         ({{ item.rating_count }}

@@ -7,10 +7,5 @@ import { Recipe } from '../../recipes/recipe.model';
   styleUrls: ['./popular-recipe.component.scss'],
 })
 export class PopularRecipeComponent {
-  public maxRating: number = 5;
   @Input('item') item: Recipe;
-
-  counter(i: number) {
-    return new Array(i);
-  }
 }

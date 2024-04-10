@@ -54,9 +54,6 @@
   justify-content: space-between;
   gap: 5px;
 }
-.card .text .ratings .stars i {
-  font-size: 15px;
-}
 .card .text .ratings .ratings-count {
   font-size: 15px;
   font-weight: 400;

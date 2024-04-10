@@ -1,27 +1,20 @@
-<a routerLink="/recipes/2">
+<a routerLink="/recipes/{{ recipe.id }}">
   <div class="recipe-item">
     <div class="recipe-image">
-      <img
-        src="https://www.olivetomato.com/wp-content/uploads/2016/02/SAM4952-1.jpg"
-        alt=""
-      />
+      <img src="{{ recipe.image }}" alt="{{ recipe.name }}" />
     </div>
     <div class="recipes-text">
-      <p class="category-text">BREAKFAST</p>
-      <h5>STEAK</h5>
-      <p class="author">Ardi</p>
-      <p class="desc">
-        This is a classic French omelette. It’s light, fluffy, and packed with
-        flavors. 
-      </p>
+      <p class="category-text">{{ recipe.category }}</p>
+      <h5>{{ recipe.name }}</h5>
+      <p class="author">{{ recipe.author }}</p>
+      <p class="desc">{{ recipe.description }} </p>
       <div class="ingredients-rating">
-        <p>6 ingredients</p>
+        <p>
+          {{ recipe.ingredients.length }}
+          {{ recipe.ingredients.length > 1 ? "ingredients" : "ingredient" }}
+        </p>
         <div class="ratings-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i>
-          <i class="fa-regular fa-star"></i>
+          <app-stars [rating]="recipe.rating"></app-stars>
         </div>
       </div>
     </div>

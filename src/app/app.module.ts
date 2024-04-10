@@ -14,6 +14,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { PopularRecipeComponent } from './components/home/popular-recipe/popular-recipe.component';
 import { FormsModule } from '@angular/forms';
 import { RecipeComponent } from './components/recipes/recipe/recipe.component';
+import { StarsComponent } from './shared/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RecipeComponent } from './components/recipes/recipe/recipe.component';
     ContactUsComponent,
     PopularRecipeComponent,
     RecipeComponent,
+    StarsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
