@@ -16,6 +16,11 @@ export class RecipesService {
     const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
     url.searchParams.append('limit', limit.toString());
     url.searchParams.append('page', page.toString());
+
+    //Dodaj filtere
+    // url.searchParams.append('author', 'Sophia Nguyen');
+    // url.searchParams.append('category', 'lunch');
+
     if (search != '') {
       url.searchParams.append('name', search);
     }

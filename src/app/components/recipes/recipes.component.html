@@ -36,8 +36,9 @@
           <form>
             <div *ngFor="let c of categories" class="mb-3 form-check">
               <input
-                type="checkbox"
-                class="form-check-input category-checks"
+                type="radio"
+                class="form-check-input category-radios"
+                name="category"
                 [id]="c"
                 [value]="c"
               />
@@ -53,8 +54,9 @@
           <form>
             <div *ngFor="let a of authors" class="mb-3 form-check">
               <input
-                type="checkbox"
-                class="form-check-input authors-checks"
+                type="radio"
+                name="authors"
+                class="form-check-input authors-radios"
                 [id]="a"
                 [value]="a"
               />
