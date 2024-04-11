@@ -53,14 +53,7 @@
           <p>AUTHORS</p>
           <form>
             <div *ngFor="let a of authors" class="mb-3 form-check">
-              <input
-                type="radio"
-                name="authors"
-                class="form-check-input authors-radios"
-                [id]="a"
-                [value]="a"
-              />
-              <label [for]="a" class="form-check-label">{{ a }}</label>
+              <app-radio [entity]="a" entityName="authors"></app-radio>
             </div>
           </form>
         </div>
