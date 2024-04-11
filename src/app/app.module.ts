@@ -15,6 +15,7 @@ import { PopularRecipeComponent } from './components/home/popular-recipe/popular
 import { FormsModule } from '@angular/forms';
 import { RecipeComponent } from './components/recipes/recipe/recipe.component';
 import { StarsComponent } from './shared/stars/stars.component';
+import { RadioComponent } from './shared/radio/radio.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { StarsComponent } from './shared/stars/stars.component';
     PopularRecipeComponent,
     RecipeComponent,
     StarsComponent,
+    RadioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
