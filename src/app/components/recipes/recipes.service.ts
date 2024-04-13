@@ -18,8 +18,8 @@ export class RecipesService {
     url.searchParams.append('page', page.toString());
 
     //Dodaj filtere
-    // url.searchParams.append('author', 'Sophia Nguyen');
-    // url.searchParams.append('category', 'lunch');
+    url.searchParams.append('author', 'Sophia Nguyen');
+    url.searchParams.append('category', 'lunch');
 
     if (search != '') {
       url.searchParams.append('name', search);
