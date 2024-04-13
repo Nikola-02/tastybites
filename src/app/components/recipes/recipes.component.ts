@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from './recipes.service';
-import { Recipe } from './recipe.model';
+import { IRecipe } from '../../shared/interfaces/i-recipe';
 
 @Component({
   selector: 'app-recipes',
@@ -13,7 +13,7 @@ export class RecipesComponent implements OnInit {
   public totalPages: number;
   public search: string;
   public sort: string = '0';
-  public recipes: Recipe[];
+  public recipes: IRecipe[];
   categories: string[];
   authors: string[];
   constructor(private recipesService: RecipesService) {}
@@ -26,7 +26,7 @@ export class RecipesComponent implements OnInit {
     this.recipesService
       .fetchRecipes(this.perPage, this.page, this.search, this.sort)
       .subscribe(
-        (recipes: Recipe[]) => {
+        (recipes: IRecipe[]) => {
           this.recipes = recipes;
           this.getTotalPagesForRecipes();
         },
@@ -39,7 +39,7 @@ export class RecipesComponent implements OnInit {
   getTotalPagesForRecipes() {
     this.recipesService
       .getAllRecipesForTotalPages(this.search)
-      .subscribe((recipes: Recipe[]) => {
+      .subscribe((recipes: IRecipe[]) => {
         this.totalPages = Math.ceil(recipes.length / this.perPage);
 
         this.categories = Array.from(

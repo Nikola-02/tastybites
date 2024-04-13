@@ -35,16 +35,7 @@
           <p>CATEGORY</p>
           <form>
             <div *ngFor="let c of categories" class="mb-3 form-check">
-              <input
-                type="radio"
-                class="form-check-input category-radios"
-                name="category"
-                [id]="c"
-                [value]="c"
-              />
-              <label [for]="c" class="form-check-label">{{
-                firstUppercase(c)
-              }}</label>
+              <app-radio [entity]="c" entityName="category"></app-radio>
             </div>
           </form>
         </div>

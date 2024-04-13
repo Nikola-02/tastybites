@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Recipe } from '../recipe.model';
+import { IRecipe } from '../../../shared/interfaces/i-recipe';
 
 @Component({
   selector: 'app-recipe',
@@ -7,5 +7,5 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe.component.scss'],
 })
 export class RecipeComponent {
-  @Input('recipe') recipe: Recipe;
+  @Input('recipe') recipe: IRecipe;
 }

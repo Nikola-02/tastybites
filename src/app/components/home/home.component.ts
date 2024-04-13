@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RecipesService } from '../recipes/recipes.service';
-import { Recipe } from '../recipes/recipe.model';
+import { IRecipe } from '../../shared/interfaces/i-recipe';
 import { Subscription, map } from 'rxjs';
 
 @Component({
@@ -10,7 +10,7 @@ import { Subscription, map } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public maxRating: number = 5;
-  public popularRecipes: Recipe[];
+  public popularRecipes: IRecipe[];
   private recipeSubscription: Subscription;
 
   constructor(private recipesService: RecipesService) {}
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   fetchPopularRecipes() {
     this.recipeSubscription = this.recipesService.fetchRecipes().subscribe(
-      (response: Recipe[]) => {
+      (response: IRecipe[]) => {
         this.popularRecipes = response.slice(0, 3);
       },
       (error) => {

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Recipe } from '../recipe.model';
+import { IRecipe } from '../../../shared/interfaces/i-recipe';
 import { RecipesService } from '../recipes.service';
 import { Subscription, filter, map, take } from 'rxjs';
 
@@ -12,7 +12,7 @@ import { Subscription, filter, map, take } from 'rxjs';
 export class RecipeDetailComponent implements OnInit, OnDestroy {
   private id: string;
   public dateTransformed: string = '';
-  public recipe: Recipe;
+  public recipe: IRecipe;
   private recipeSub: Subscription;
 
   constructor(
@@ -30,7 +30,7 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
 
   getSingleRecipe() {
     this.recipeSub = this.recipeService.getRecipeById(this.id).subscribe(
-      (recipe: Recipe) => {
+      (recipe: IRecipe) => {
         this.recipe = recipe;
         let date = new Date(this.recipe.created_at);
         this.dateTransformed =

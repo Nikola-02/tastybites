@@ -14,8 +14,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { PopularRecipeComponent } from './components/home/popular-recipe/popular-recipe.component';
 import { FormsModule } from '@angular/forms';
 import { RecipeComponent } from './components/recipes/recipe/recipe.component';
-import { StarsComponent } from './shared/stars/stars.component';
-import { RadioComponent } from './shared/radio/radio.component';
+import { StarsComponent } from './shared/abstract/stars/stars.component';
+import { RadioComponent } from './shared/abstract/radio/radio.component';
 
 @NgModule({
   declarations: [

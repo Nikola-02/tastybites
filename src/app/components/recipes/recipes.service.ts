@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Recipe } from './recipe.model';
+import { IRecipe } from '../../shared/interfaces/i-recipe';
 
 @Injectable({
   providedIn: 'root',
@@ -45,7 +45,7 @@ export class RecipesService {
       }
     }
 
-    return this.http.get<Recipe[]>(url.toString()).pipe(
+    return this.http.get<IRecipe[]>(url.toString()).pipe(
       map((recipes) => {
         return recipes.map((recipe) => ({
           ...recipe,
@@ -63,13 +63,13 @@ export class RecipesService {
       url.searchParams.append('name', search);
     }
 
-    return this.http.get<Recipe[]>(url.toString());
+    return this.http.get<IRecipe[]>(url.toString());
   }
 
-  getRecipeById(id: string): Observable<Recipe> {
+  getRecipeById(id: string): Observable<IRecipe> {
     let url = 'https://660c5f723a0766e85dbe03c7.mockapi.io/recipes/' + id;
 
-    return this.http.get<Recipe>(url);
+    return this.http.get<IRecipe>(url);
   }
 
   private trimAndAppendDots(description: string): string {
