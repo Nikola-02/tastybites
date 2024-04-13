@@ -1,4 +1,4 @@
-import { Ingredient } from 'src/app/shared/classes/ingredient.model';
+import { IIngredient } from 'src/app/shared/interfaces/i-ingredient';
 
 export interface IRecipe {
   id: string;
@@ -17,7 +17,7 @@ export interface IRecipe {
     cholesterol: number;
     sodium: number;
   };
-  ingredients: Ingredient[];
+  ingredients: IIngredient[];
   times: {
     prep_time: number;
     cook_time: number;
