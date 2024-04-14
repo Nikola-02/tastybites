@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ShoppingListService } from './shopping-list.service';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 import { Subscription } from 'rxjs';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-shopping-list',
@@ -23,6 +24,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   deleteItem(id: number) {
     this.shoppingListService.deleteItemFromShoppingList(id);
+  }
+
+  onClearForm(form: NgForm) {
+    form.reset();
   }
 
   ngOnDestroy(): void {

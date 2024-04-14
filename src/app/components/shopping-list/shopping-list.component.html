@@ -7,20 +7,22 @@
     <div class="shopping-list-div">
       <div class="name-amount-btns">
         <div class="name-amount">
-          <input
-            type="text"
-            class="form-control name-input"
-            placeholder="Name..."
-          />
-          <input
-            type="text"
-            class="form-control amount-input"
-            placeholder="Amount..."
-          />
+          <form #f="ngForm">
+            <input
+              type="text"
+              class="form-control name-input"
+              placeholder="Name..."
+            />
+            <input
+              type="text"
+              class="form-control amount-input"
+              placeholder="Amount..."
+            />
+          </form>
         </div>
         <div class="add-clear-btn">
           <button class="btn add-update-btn">Add</button>
-          <button class="btn clear-btn">Clear</button>
+          <button class="btn clear-btn" (click)="onClearForm(f)">Clear</button>
         </div>
       </div>
 
