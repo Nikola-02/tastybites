@@ -35,7 +35,10 @@
         </div>
       </form>
 
-      <div class="shopping-list-items" *ngIf="shoppingList; else emptyList">
+      <div
+        class="shopping-list-items"
+        *ngIf="shoppingList.length; else emptyList"
+      >
         <app-shopping-item
           *ngFor="let item of shoppingList"
           [item]="item"

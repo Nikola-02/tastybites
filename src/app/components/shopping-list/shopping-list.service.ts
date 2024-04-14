@@ -56,6 +56,7 @@ export class ShoppingListService {
 
   deleteItemFromShoppingList(id: number) {
     this.shoppingList = this.shoppingList.filter((item) => item.id != id);
+
     this._shoppingListSubject.next(this.shoppingList);
   }
 }
