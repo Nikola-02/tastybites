@@ -24,32 +24,15 @@
         </div>
       </div>
 
-      <div class="shopping-list-items">
-        <div class="shopping-list-item">
-          <span>Tomato (10)</span>
-          <button class="btn delete-item-btn">Delete item</button>
-        </div>
-        <div class="shopping-list-item">
-          <span>Tomato (10)</span>
-          <button class="btn delete-item-btn">Delete item</button>
-        </div>
-        <div class="shopping-list-item">
-          <span>Tomato (10)</span>
-          <button class="btn delete-item-btn">Delete item</button>
-        </div>
-        <div class="shopping-list-item">
-          <span>Tomato (10)</span>
-          <button class="btn delete-item-btn">Delete item</button>
-        </div>
-        <div class="shopping-list-item">
-          <span>Tomato (10)</span>
-          <button class="btn delete-item-btn">Delete item</button>
-        </div>
+      <div class="shopping-list-items" *ngIf="shoppingList; else emptyList">
         <div class="shopping-list-item">
           <span>Tomato (10)</span>
           <button class="btn delete-item-btn">Delete item</button>
         </div>
       </div>
+      <ng-template #emptyList>
+        <div class="alert alert-danger mt-4">No added items</div>
+      </ng-template>
     </div>
   </div>
 </main>
