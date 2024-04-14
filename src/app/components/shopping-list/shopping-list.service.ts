@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { IIngredient } from 'src/app/shared/interfaces/i-ingredient';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 
 @Injectable({
@@ -31,6 +32,10 @@ export class ShoppingListService {
   shoppingList$ = this._shoppingListSubject.asObservable();
 
   constructor() {}
+
+  addItemToShoppingList(formObj: IIngredient) {
+    this._shoppingListSubject.next(this.shoppingList);
+  }
 
   deleteItemFromShoppingList(id: number) {
     this.shoppingList = this.shoppingList.filter((item) => item.id != id);

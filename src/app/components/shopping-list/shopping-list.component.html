@@ -5,28 +5,35 @@
       <p>Add ingredients to your shopping list</p>
     </div>
     <div class="shopping-list-div">
-      <div class="name-amount-btns">
-        <div class="name-amount">
-          <form #f="ngForm">
+      <form #f="ngForm" (ngSubmit)="onAddItem(f)">
+        <div class="name-amount-btns">
+          <div class="name-amount">
             <input
               type="text"
               class="form-control name-input"
               placeholder="Name..."
               name="name"
+              ngModel
+              required
             />
             <input
               type="text"
               class="form-control amount-input"
               placeholder="Amount..."
               name="amount"
+              ngModel
+              required
+              pattern="^[1-9]+[0-9]*$"
             />
-          </form>
+          </div>
+          <div class="add-clear-btn">
+            <button type="submit" class="btn add-update-btn">Add</button>
+            <button type="button" class="btn clear-btn" (click)="onClearForm()">
+              Clear
+            </button>
+          </div>
         </div>
-        <div class="add-clear-btn">
-          <button class="btn add-update-btn">Add</button>
-          <button class="btn clear-btn" (click)="f.resetForm()">Clear</button>
-        </div>
-      </div>
+      </form>
 
       <div class="shopping-list-items" *ngIf="shoppingList; else emptyList">
         <app-shopping-item

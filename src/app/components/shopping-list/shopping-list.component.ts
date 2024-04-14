@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ShoppingListService } from './shopping-list.service';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 import { Subscription } from 'rxjs';
@@ -12,6 +12,7 @@ import { NgForm } from '@angular/forms';
 export class ShoppingListComponent implements OnInit, OnDestroy {
   public shoppingList: IShoppingItem[];
   private shoppingListSubscription: Subscription;
+  @ViewChild('f', { static: false }) form: NgForm;
 
   constructor(private shoppingListService: ShoppingListService) {}
 
@@ -22,12 +23,21 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       });
   }
 
+  onAddItem(form: NgForm) {
+    let nameControl = form.controls['name'];
+    let amountControl = form.controls['amount'];
+
+    if (form.valid) {
+      this.shoppingListService.
+    }
+  }
+
   deleteItem(id: number) {
     this.shoppingListService.deleteItemFromShoppingList(id);
   }
 
-  onClearForm(form: NgForm) {
-    form.resetForm();
+  onClearForm() {
+    this.form.resetForm();
   }
 
   ngOnDestroy(): void {
