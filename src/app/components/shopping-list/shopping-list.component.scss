@@ -25,13 +25,15 @@ main {
         padding-bottom: 35px;
         border-bottom: 1px solid rgba($color: vars.$black, $alpha: 0.3);
         .name-amount {
-          display: flex;
-          gap: 30px;
-          .name-input {
-          }
+          form {
+            display: flex;
+            gap: 30px;
+            .name-input {
+            }
 
-          .amount-input {
-            width: 45%;
+            .amount-input {
+              width: 45%;
+            }
           }
         }
         .add-clear-btn {

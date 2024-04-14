@@ -26,11 +26,11 @@ main .my-container .shopping-list-div .name-amount-btns {
   padding-bottom: 35px;
   border-bottom: 1px solid rgba(42, 42, 42, 0.3);
 }
-main .my-container .shopping-list-div .name-amount-btns .name-amount {
+main .my-container .shopping-list-div .name-amount-btns .name-amount form {
   display: flex;
   gap: 30px;
 }
-main .my-container .shopping-list-div .name-amount-btns .name-amount .amount-input {
+main .my-container .shopping-list-div .name-amount-btns .name-amount form .amount-input {
   width: 45%;
 }
 main .my-container .shopping-list-div .name-amount-btns .add-clear-btn {

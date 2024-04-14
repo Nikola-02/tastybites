@@ -12,17 +12,19 @@
               type="text"
               class="form-control name-input"
               placeholder="Name..."
+              name="name"
             />
             <input
               type="text"
               class="form-control amount-input"
               placeholder="Amount..."
+              name="amount"
             />
           </form>
         </div>
         <div class="add-clear-btn">
           <button class="btn add-update-btn">Add</button>
-          <button class="btn clear-btn" (click)="onClearForm(f)">Clear</button>
+          <button class="btn clear-btn" (click)="f.resetForm()">Clear</button>
         </div>
       </div>
 
