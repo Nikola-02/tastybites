@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IRecipe } from '../../../shared/interfaces/i-recipe';
 import { RecipesService } from '../recipes.service';
 import { Subscription, filter, map, take } from 'rxjs';
+import { ShoppingListService } from '../../shopping-list/shopping-list.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -18,7 +19,8 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipesService,
-    private router: Router
+    private router: Router,
+    private shoppingListService: ShoppingListService
   ) {}
 
   ngOnInit(): void {
@@ -40,6 +42,12 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
         this.router.navigate(['']);
         console.log(error);
       }
+    );
+  }
+
+  addIngredientsToShoppingList() {
+    this.shoppingListService.addItemsToShoppingListFromRecipe(
+      this.recipe.ingredients
     );
   }
 

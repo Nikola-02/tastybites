@@ -95,11 +95,13 @@
     <div class="recipe-detail-ingredients">
       <div class="ingredients-title">
         <h5 class="section-heading">Ingredients</h5>
-        <button class="btn">Add to shopping list</button>
+        <button (click)="addIngredientsToShoppingList()" class="btn">
+          Add to shopping list
+        </button>
       </div>
       <div class="ingredients-content">
         <p *ngFor="let i of recipe.ingredients">
-          - {{ i.amount }} {{ i.name }}
+          - {{ i.amount }} {{ firstUppercase(i.name) }}
         </p>
       </div>
     </div>

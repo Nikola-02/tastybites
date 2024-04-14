@@ -37,10 +37,12 @@ export class RecipesComponent implements OnInit {
     this.getRecipes();
   }
 
-  clearFilters() {
+  clearFilters(form: NgForm) {
     this.author = '';
     this.category = '';
     this.radioStatus = false;
+
+    form.reset();
 
     this.getRecipes();
   }

@@ -18,11 +18,12 @@ export class RadioComponent {
     value: string;
     entityName: string;
   }>();
+  public value: string;
 
   onChange(event: Event) {
-    let value = (event.target as HTMLInputElement).value;
+    // let value = (event.target as HTMLInputElement).value;
 
-    this.valueChanged.emit({ value: value, entityName: this.entityName });
+    this.valueChanged.emit({ value: this.value, entityName: this.entityName });
   }
 
   firstUppercaseLetter(word: string): string {

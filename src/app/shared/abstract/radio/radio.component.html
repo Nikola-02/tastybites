@@ -5,7 +5,7 @@
   [id]="entity"
   [value]="entity"
   (change)="onChange($event)"
-  [checked]="radioStatus"
+  [(ngModel)]="value"
 />
 <label [for]="entity" class="form-check-label">{{
   entityName == "category" ? firstUppercaseLetter(entity) : entity

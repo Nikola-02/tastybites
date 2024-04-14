@@ -33,7 +33,7 @@
 
         <div class="category-filter">
           <p>CATEGORY</p>
-          <form>
+          <form #f="ngForm">
             <div *ngFor="let c of categories" class="mb-3 form-check">
               <app-radio
                 (valueChanged)="setSelectedFilters($event)"
@@ -59,7 +59,7 @@
           </form>
         </div>
 
-        <button (click)="clearFilters()" class="btn clear-filters-btn">
+        <button (click)="clearFilters(f)" class="btn clear-filters-btn">
           Clear filters
         </button>
       </div>

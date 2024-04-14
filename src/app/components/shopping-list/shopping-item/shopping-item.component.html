@@ -1,5 +1,7 @@
 <div class="shopping-list-item">
-  <span>{{ shoppingItem.name }} ({{ shoppingItem.amount }})</span>
+  <span
+    >{{ firstUppercase(shoppingItem.name) }} ({{ shoppingItem.amount }})</span
+  >
   <button
     class="btn delete-item-btn"
     (click)="onDeleteItemFromShoppingList(shoppingItem.id)"
