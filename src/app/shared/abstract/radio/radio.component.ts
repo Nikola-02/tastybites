@@ -1,6 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Subject } from 'rxjs';
-
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 @Component({
   selector: 'app-radio',
   templateUrl: './radio.component.html',
@@ -9,6 +13,7 @@ import { Subject } from 'rxjs';
 export class RadioComponent {
   @Input('entity') entity: string;
   @Input('entityName') entityName: string;
+  @Input('status') radioStatus: boolean;
   @Output('valueChanged') valueChanged = new EventEmitter<{
     value: string;
     entityName: string;

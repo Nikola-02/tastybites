@@ -33,12 +33,13 @@
 
         <div class="category-filter">
           <p>CATEGORY</p>
-          <form #catForm="ngForm">
+          <form>
             <div *ngFor="let c of categories" class="mb-3 form-check">
               <app-radio
                 (valueChanged)="setSelectedFilters($event)"
                 [entity]="c"
                 entityName="category"
+                [status]="radioStatus"
               ></app-radio>
             </div>
           </form>
@@ -46,21 +47,19 @@
 
         <div class="authors-filter">
           <p>AUTHORS</p>
-          <form #autForm="ngForm">
+          <form>
             <div *ngFor="let a of authors" class="mb-3 form-check">
               <app-radio
                 (valueChanged)="setSelectedFilters($event)"
                 [entity]="a"
                 entityName="authors"
+                [status]="radioStatus"
               ></app-radio>
             </div>
           </form>
         </div>
 
-        <button
-          (click)="clearFilters(catForm, autForm)"
-          class="btn clear-filters-btn"
-        >
+        <button (click)="clearFilters()" class="btn clear-filters-btn">
           Clear filters
         </button>
       </div>
