@@ -24,11 +24,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   }
 
   onAddItem(form: NgForm) {
-    let nameControl = form.controls['name'];
-    let amountControl = form.controls['amount'];
-
     if (form.valid) {
-      this.shoppingListService.
+      this.shoppingListService.addItemToShoppingList(form.value);
+
+      form.reset();
     }
   }
 

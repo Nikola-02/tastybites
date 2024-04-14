@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, last } from 'rxjs';
 import { IIngredient } from 'src/app/shared/interfaces/i-ingredient';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 
@@ -33,7 +33,24 @@ export class ShoppingListService {
 
   constructor() {}
 
-  addItemToShoppingList(formObj: IIngredient) {
+  addItemToShoppingList(newItem: IIngredient) {
+    let lastId = 1;
+
+    if (this.shoppingList.length > 0) {
+      this.shoppingList.map((item: IShoppingItem) => {
+        if (item.id >= lastId) {
+          lastId = item.id;
+        }
+      });
+    }
+
+    let itemToAdd: IShoppingItem = {
+      ...newItem,
+      id: lastId + 1,
+    };
+
+    this.shoppingList.push(itemToAdd);
+
     this._shoppingListSubject.next(this.shoppingList);
   }
 
