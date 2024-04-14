@@ -21,7 +21,7 @@ export class RecipesComponent implements OnInit {
   categories: string[];
   authors: string[];
   error: string;
-  radioStatus: boolean = true;
+  radioStatus: boolean = false;
 
   constructor(private recipesService: RecipesService) {}
 
