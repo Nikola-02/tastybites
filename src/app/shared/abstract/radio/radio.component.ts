@@ -19,4 +19,11 @@ export class RadioComponent {
 
     this.valueChanged.emit({ value: value, entityName: this.entityName });
   }
+
+  firstUppercaseLetter(word: string): string {
+    word = word.toLowerCase();
+    if (!word) return '';
+
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
 }

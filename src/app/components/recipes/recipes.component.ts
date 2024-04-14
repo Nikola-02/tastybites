@@ -101,7 +101,7 @@ export class RecipesComponent implements OnInit {
 
   firstUppercase(word: string): string {
     word = word.toLowerCase();
-    if (!word) return ''; // Ako je reč prazna ili undefined, vratiti prazan string
+    if (!word) return '';
 
     return word.charAt(0).toUpperCase() + word.slice(1);
   }
