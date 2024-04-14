@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipesService } from './recipes.service';
 import { IRecipe } from '../../shared/interfaces/i-recipe';
 import { RadioComponent } from 'src/app/shared/abstract/radio/radio.component';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-recipes',
@@ -34,9 +35,11 @@ export class RecipesComponent implements OnInit {
     this.getRecipes();
   }
 
-  clearFilters() {
+  clearFilters(catForm: NgForm, autForm: NgForm) {
     this.author = '';
     this.category = '';
+    catForm.reset();
+    autForm.reset();
 
     this.getRecipes();
   }
