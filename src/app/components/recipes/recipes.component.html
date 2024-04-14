@@ -35,21 +35,33 @@
           <p>CATEGORY</p>
           <form>
             <div *ngFor="let c of categories" class="mb-3 form-check">
-              <app-radio [entity]="c" entityName="category"></app-radio>
+              <app-radio
+                (valueChanged)="setSelectedFilters($event)"
+                [entity]="c"
+                entityName="category"
+              ></app-radio>
             </div>
           </form>
         </div>
 
         <div class="authors-filter">
           <p>AUTHORS</p>
-          <form>
+          <form #f>
             <div *ngFor="let a of authors" class="mb-3 form-check">
-              <app-radio [entity]="a" entityName="authors"></app-radio>
+              <app-radio
+                (valueChanged)="setSelectedFilters($event)"
+                [entity]="a"
+                entityName="authors"
+              ></app-radio>
             </div>
           </form>
         </div>
+
+        <button (click)="clearFilters()" class="btn clear-filters-btn">
+          Clear filters
+        </button>
       </div>
-      <div class="recipes-content" *ngIf="recipes">
+      <div class="recipes-content" *ngIf="recipes && !error; else errorBlock">
         <div class="all-recipes">
           <app-recipe
             *ngFor="let recipe of recipes"
@@ -81,6 +93,11 @@
           </button>
         </div>
       </div>
+      <ng-template #errorBlock>
+        <div class="alert alert-danger error-div">
+          {{ error ? error : "Error occured" }}
+        </div>
+      </ng-template>
     </div>
   </div>
 </main>

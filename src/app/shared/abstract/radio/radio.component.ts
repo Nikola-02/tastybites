@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-radio',
@@ -8,4 +9,14 @@ import { Component, Input } from '@angular/core';
 export class RadioComponent {
   @Input('entity') entity: string;
   @Input('entityName') entityName: string;
+  @Output('valueChanged') valueChanged = new EventEmitter<{
+    value: string;
+    entityName: string;
+  }>();
+
+  onChange(event: Event) {
+    let value = (event.target as HTMLInputElement).value;
+
+    this.valueChanged.emit({ value: value, entityName: this.entityName });
+  }
 }

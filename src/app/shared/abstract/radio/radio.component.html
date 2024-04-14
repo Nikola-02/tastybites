@@ -4,7 +4,8 @@
   class="form-check-input entityName-radios"
   [id]="entity"
   [value]="entity"
+  (change)="onChange($event)"
 />
 <label [for]="entity" class="form-check-label">{{
-  entityName == "category" ? (entity | uppercase) : entity
+  entityName == "category" ? firstUppercaseLetter(entity) : entity
 }}</label>

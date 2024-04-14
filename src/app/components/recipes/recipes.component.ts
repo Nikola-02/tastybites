@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from './recipes.service';
 import { IRecipe } from '../../shared/interfaces/i-recipe';
+import { RadioComponent } from 'src/app/shared/abstract/radio/radio.component';
 
 @Component({
   selector: 'app-recipes',
@@ -14,41 +15,69 @@ export class RecipesComponent implements OnInit {
   public search: string;
   public sort: string = '0';
   public recipes: IRecipe[];
+  public author: string;
+  public category: string;
   categories: string[];
   authors: string[];
+  error: string;
   constructor(private recipesService: RecipesService) {}
 
   ngOnInit(): void {
+    this.getRecipes(true);
+  }
+
+  setSelectedFilters(data: { value: string; entityName: string }) {
+    if (data.entityName === 'authors') this.author = data.value;
+
+    if (data.entityName === 'category') this.category = data.value;
+
     this.getRecipes();
   }
 
-  getRecipes() {
+  clearFilters() {
+    this.author = '';
+    this.category = '';
+
+    this.getRecipes();
+  }
+
+  getRecipes(init: boolean = false) {
     this.recipesService
-      .fetchRecipes(this.perPage, this.page, this.search, this.sort)
+      .fetchRecipes(
+        this.perPage,
+        this.page,
+        this.search,
+        this.sort,
+        this.author,
+        this.category
+      )
       .subscribe(
         (recipes: IRecipe[]) => {
+          this.error = '';
           this.recipes = recipes;
-          this.getTotalPagesForRecipes();
+          this.getTotalPagesForRecipes(init);
         },
         (error) => {
-          console.log(error);
+          this.error = 'There is no recipes for this combination.';
         }
       );
   }
 
-  getTotalPagesForRecipes() {
+  getTotalPagesForRecipes(init: boolean = false) {
     this.recipesService
-      .getAllRecipesForTotalPages(this.search)
+      .getAllRecipesForTotalPages(this.search, this.author, this.category)
       .subscribe((recipes: IRecipe[]) => {
         this.totalPages = Math.ceil(recipes.length / this.perPage);
 
-        this.categories = Array.from(
-          new Set(recipes.map((recipe) => recipe.category))
-        );
-        this.authors = Array.from(
-          new Set(recipes.map((recipe) => recipe.author))
-        );
+        if (init) this.initSetFilters(recipes);
       });
+  }
+
+  initSetFilters(recipes: IRecipe[]) {
+    this.categories = Array.from(
+      new Set(recipes.map((recipe) => recipe.category))
+    );
+    this.authors = Array.from(new Set(recipes.map((recipe) => recipe.author)));
   }
 
   setPage(newPage: number) {

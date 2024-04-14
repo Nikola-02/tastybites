@@ -33,7 +33,7 @@ main .popular-recipes {
 }
 main .popular-recipes .my-container .content {
   display: flex;
-  gap: 150px;
+  gap: 100px;
 }
 main .what-you-want-to-cook {
   background-color: #ff6464;
