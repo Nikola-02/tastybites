@@ -1,0 +1,29 @@
+@use "../../../shared/abstract/variables" as vars;
+
+.shopping-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba($color: vars.$black, $alpha: 0.3);
+  padding: 16px 35px;
+
+  button {
+    color: vars.$white;
+    transition: 0.3s all ease;
+    border-radius: 20px;
+    padding: 8px 30px;
+  }
+
+  span {
+    font-weight: 500;
+    color: rgba($color: vars.$black, $alpha: 0.7);
+  }
+
+  .delete-item-btn {
+    background-color: vars.$red;
+    &:hover {
+      background-color: vars.$black;
+    }
+  }
+}

@@ -1,1 +1,9 @@
-<p>shopping-item works!</p>
+<div class="shopping-list-item">
+  <span>{{ shoppingItem.name }} ({{ shoppingItem.amount }})</span>
+  <button
+    class="btn delete-item-btn"
+    (click)="onDeleteItemFromShoppingList(shoppingItem.id)"
+  >
+    Delete item
+  </button>
+</div>
