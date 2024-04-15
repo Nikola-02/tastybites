@@ -64,6 +64,9 @@
 }
 
 @media only screen and (max-width: 1280px) {
+  .card .text .category p {
+    margin-top: 10px;
+  }
   .card .text .name p {
     font-size: 22px;
   }
