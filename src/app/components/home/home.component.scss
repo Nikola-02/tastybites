@@ -134,3 +134,15 @@ main {
     }
   }
 }
+
+@media only screen and (max-width: 1280px) {
+  main {
+    .popular-recipes {
+      .my-container {
+        .content {
+          gap: 60px;
+        }
+      }
+    }
+  }
+}

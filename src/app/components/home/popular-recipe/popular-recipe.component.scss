@@ -69,3 +69,19 @@
     transform: scale(1.04);
   }
 }
+
+@media only screen and (max-width: 1280px) {
+  .card {
+    .text {
+      .name {
+        p {
+          font-size: 22px;
+        }
+        .details {
+          font-size: 15px;
+          color: rgba($color: vars.$black, $alpha: 0.3);
+        }
+      }
+    }
+  }
+}

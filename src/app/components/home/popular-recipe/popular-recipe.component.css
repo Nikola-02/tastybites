@@ -61,4 +61,14 @@
 }
 .card:hover {
   transform: scale(1.04);
+}
+
+@media only screen and (max-width: 1280px) {
+  .card .text .name p {
+    font-size: 22px;
+  }
+  .card .text .name .details {
+    font-size: 15px;
+    color: rgba(42, 42, 42, 0.3);
+  }
 }/*# sourceMappingURL=popular-recipe.component.css.map */
