@@ -92,8 +92,8 @@ export class RecipesService {
   }
 
   private trimAndAppendDots(description: string): string {
-    if (description.length > 65) {
-      return description.slice(0, 65) + '...';
+    if (description.length > 63) {
+      return description.slice(0, 63) + '...';
     } else {
       return description;
     }

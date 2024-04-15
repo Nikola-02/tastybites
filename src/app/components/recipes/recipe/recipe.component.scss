@@ -19,7 +19,6 @@ a {
 
     .recipes-text {
       width: 65%;
-      padding: 15px;
 
       .category-text {
         font-size: 14px;
@@ -68,6 +67,53 @@ a {
           align-items: center;
           i {
             font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  a {
+    .recipe-item {
+      align-items: center;
+      .recipe-image {
+        width: 40%;
+      }
+      .recipes-text {
+        width: 60%;
+        padding: 0px 15px;
+        .category-text {
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        h5 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-top: 3px;
+          margin-bottom: 0;
+        }
+
+        .author {
+          margin-top: 5px;
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+
+        .desc {
+          margin-top: 5px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .ingredients-rating {
+          margin-top: 5px;
+          p {
+            font-size: 13px;
+            font-weight: 500;
           }
         }
       }

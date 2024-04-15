@@ -1,1 +1,5 @@
-/*# sourceMappingURL=radio.component.css.map */
+@media only screen and (max-width: 1280px) {
+  label {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=radio.component.css.map */

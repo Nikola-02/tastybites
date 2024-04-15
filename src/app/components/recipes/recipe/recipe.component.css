@@ -24,7 +24,6 @@ a .recipe-item .recipe-image img {
 }
 a .recipe-item .recipes-text {
   width: 65%;
-  padding: 15px;
 }
 a .recipe-item .recipes-text .category-text {
   font-size: 14px;
@@ -70,4 +69,45 @@ a .recipe-item .recipes-text .ingredients-rating .ratings-stars {
 }
 a .recipe-item .recipes-text .ingredients-rating .ratings-stars i {
   font-size: 14px;
+}
+
+@media only screen and (max-width: 1280px) {
+  a .recipe-item {
+    align-items: center;
+  }
+  a .recipe-item .recipe-image {
+    width: 40%;
+  }
+  a .recipe-item .recipes-text {
+    width: 60%;
+    padding: 0px 15px;
+  }
+  a .recipe-item .recipes-text .category-text {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  a .recipe-item .recipes-text h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+  a .recipe-item .recipes-text .author {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  a .recipe-item .recipes-text .desc {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  a .recipe-item .recipes-text .ingredients-rating {
+    margin-top: 5px;
+  }
+  a .recipe-item .recipes-text .ingredients-rating p {
+    font-size: 13px;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=recipe.component.css.map */
