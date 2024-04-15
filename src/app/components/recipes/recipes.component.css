@@ -117,5 +117,6 @@ main .filters-recipe-comp .my-container .error-div {
     -moz-column-gap: 40px;
          column-gap: 40px;
     height: 560px;
+    align-content: start;
   }
 }/*# sourceMappingURL=recipes.component.css.map */
