@@ -108,6 +108,9 @@ footer .upper .my-container .right .content a {
 footer .upper .my-container .right .content a:hover {
   color: #ff6464;
 }
+footer .upper .my-container .right .content a.active {
+  color: #ff6464;
+}
 footer .down {
   background-color: #ff6464;
   padding: 28px 0px;
