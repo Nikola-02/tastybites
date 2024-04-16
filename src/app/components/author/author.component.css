@@ -8,7 +8,7 @@ main .my-container .author {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 80px;
 }
 main .my-container .author .author-image {
   width: 25%;

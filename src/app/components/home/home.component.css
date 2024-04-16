@@ -46,9 +46,8 @@ main .what-you-want-to-cook .my-container .text h2 {
 main .what-you-want-to-cook .my-container .text p {
   font-weight: 300;
   margin-top: 5px;
-  margin-bottom: 25px;
   color: rgba(42, 42, 42, 0.8);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 main .what-can-you-find-here {
   margin-top: 60px;
