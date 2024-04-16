@@ -1,7 +1,10 @@
 <a routerLink="/recipes/{{ recipe.id }}">
   <div class="recipe-item">
     <div class="recipe-image">
-      <img src="{{ recipe.image }}" alt="{{ recipe.name }}" />
+      <img
+        src="../../../../assets/images/{{ recipe.image }}"
+        alt="{{ recipe.name }}"
+      />
     </div>
     <div class="recipes-text">
       <p class="category-text">{{ recipe.category }}</p>
