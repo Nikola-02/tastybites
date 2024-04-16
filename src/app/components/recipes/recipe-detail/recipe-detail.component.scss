@@ -183,3 +183,24 @@ main {
     }
   }
 }
+
+@media only screen and (max-width: 1280px) {
+  main {
+    .my-container {
+      .recipe-detail-image-nutrition {
+        .image-times {
+          .recipe-detail-times {
+            gap: 30px;
+
+            .times-item {
+              justify-content: center;
+              &:not(:last-child) {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

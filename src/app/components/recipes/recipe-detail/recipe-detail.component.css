@@ -168,4 +168,16 @@ main .my-container .recipe-detail-instructions ol li a {
   font-weight: 400;
   font-size: 22px;
   color: rgba(42, 42, 42, 0.7);
+}
+
+@media only screen and (max-width: 1280px) {
+  main .my-container .recipe-detail-image-nutrition .image-times .recipe-detail-times {
+    gap: 30px;
+  }
+  main .my-container .recipe-detail-image-nutrition .image-times .recipe-detail-times .times-item {
+    justify-content: center;
+  }
+  main .my-container .recipe-detail-image-nutrition .image-times .recipe-detail-times .times-item:not(:last-child) {
+    padding-right: 20px;
+  }
 }/*# sourceMappingURL=recipe-detail.component.css.map */
