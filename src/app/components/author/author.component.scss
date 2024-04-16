@@ -3,14 +3,24 @@
 main {
   .my-container {
     .author {
+      margin: 80px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
       .author-image {
+        width: 30%;
         img {
           width: 100%;
         }
       }
       .author-text {
         p {
+          font-size: 25px;
           color: vars.$black;
+          strong {
+            font-size: 28px;
+          }
         }
       }
     }

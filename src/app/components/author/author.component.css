@@ -3,9 +3,23 @@
   margin: 0px auto;
 }
 
+main .my-container .author {
+  margin: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+main .my-container .author .author-image {
+  width: 30%;
+}
 main .my-container .author .author-image img {
   width: 100%;
 }
 main .my-container .author .author-text p {
+  font-size: 25px;
   color: #2a2a2a;
+}
+main .my-container .author .author-text p strong {
+  font-size: 28px;
 }/*# sourceMappingURL=author.component.css.map */
