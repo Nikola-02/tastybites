@@ -1,0 +1,11 @@
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+main .my-container .author .author-image img {
+  width: 100%;
+}
+main .my-container .author .author-text p {
+  color: #2a2a2a;
+}/*# sourceMappingURL=author.component.css.map */

@@ -1,0 +1,18 @@
+@use "../../shared/abstract/variables" as vars;
+
+main {
+  .my-container {
+    .author {
+      .author-image {
+        img {
+          width: 100%;
+        }
+      }
+      .author-text {
+        p {
+          color: vars.$black;
+        }
+      }
+    }
+  }
+}
