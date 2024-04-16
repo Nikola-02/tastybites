@@ -42,4 +42,31 @@ main .about-us-content {
 main .about-us-content .my-container .about-us-text {
   width: 80%;
   margin: 0px auto;
+}
+@media only screen and (max-width: 1280px) {
+  main .contact-title .my-container {
+    margin-top: 65px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  main .get-in-touch-content {
+    margin-bottom: 90px;
+  }
+  main .get-in-touch-content .my-container .git-items {
+    width: 75%;
+    padding: 90px 0px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  main .about-us-content {
+    margin-bottom: 90px;
+  }
+  main .about-us-content .my-container .about-us-text {
+    width: 80%;
+    margin: 0px auto;
+  }
+  main .about-us-content .my-container .about-us-text p {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=contact-us.component.css.map */
