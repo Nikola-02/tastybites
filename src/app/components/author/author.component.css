@@ -11,15 +11,16 @@ main .my-container .author {
   gap: 40px;
 }
 main .my-container .author .author-image {
-  width: 30%;
+  width: 25%;
 }
 main .my-container .author .author-image img {
   width: 100%;
 }
 main .my-container .author .author-text p {
-  font-size: 25px;
+  font-size: 22px;
   color: #2a2a2a;
 }
 main .my-container .author .author-text p strong {
-  font-size: 28px;
+  font-size: 23px;
+  color: #ff6464;
 }/*# sourceMappingURL=author.component.css.map */

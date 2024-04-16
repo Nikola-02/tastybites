@@ -9,17 +9,18 @@ main {
       align-items: center;
       gap: 40px;
       .author-image {
-        width: 30%;
+        width: 25%;
         img {
           width: 100%;
         }
       }
       .author-text {
         p {
-          font-size: 25px;
+          font-size: 22px;
           color: vars.$black;
           strong {
-            font-size: 28px;
+            font-size: 23px;
+            color: vars.$red;
           }
         }
       }
