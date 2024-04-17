@@ -10,13 +10,16 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./shopping-list.component.scss'],
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
-  public shoppingList: IShoppingItem[];
+  public shoppingList: IShoppingItem[] = [];
   private shoppingListSubscription: Subscription;
   @ViewChild('f', { static: false }) form: NgForm;
 
   constructor(private shoppingListService: ShoppingListService) {}
 
   ngOnInit(): void {
+    //Get initial shopping list
+    this.shoppingList = this.shoppingListService.getShoppingListFromLS();
+
     this.shoppingListSubscription =
       this.shoppingListService.shoppingList$.subscribe((list) => {
         this.shoppingList = list;
