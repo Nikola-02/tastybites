@@ -13,9 +13,9 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   public shoppingList: IShoppingItem[] = [];
   private shoppingListSubscription: Subscription;
   public workMode: string = 'create';
-  // public itemToEdit: IShoppingItem;
   public itemToEditName: string;
   public itemToEditAmount: number;
+  public itemToEditId: number;
 
   @ViewChild('f', { static: false }) form: NgForm;
 
@@ -33,20 +33,32 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   onSubmitItem(form: NgForm) {
     if (form.valid) {
-      this.shoppingListService.addItemToShoppingList(form.value);
+      if (this.workMode == 'edit') {
+        this.shoppingListService.updateItemInShoppingList(
+          form.value,
+          this.itemToEditId
+        );
+      } else {
+        this.shoppingListService.addItemToShoppingList(form.value);
+      }
 
       form.reset();
     }
   }
 
   deleteItem(id: number) {
+    if (id == this.itemToEditId) {
+      this.form.reset();
+      this.workMode = 'create';
+      console.log(this.itemToEditName);
+    }
     this.shoppingListService.deleteItemFromShoppingList(id);
   }
 
   onSwapMode(obj: { item: IShoppingItem | null; mode: string }) {
     this.workMode = obj.mode;
     if (obj.item && obj.mode == 'edit') {
-      // this.itemToEdit = obj.item;
+      this.itemToEditId = obj.item.id;
       this.itemToEditName = obj.item.name;
       this.itemToEditAmount = obj.item.amount;
     } else {

@@ -55,6 +55,23 @@ export class ShoppingListService implements OnInit {
     this.setShoppingListToLS();
   }
 
+  updateItemInShoppingList(newValues: IIngredient, id: number) {
+    this.shoppingList = this.getShoppingListFromLS();
+
+    this.shoppingList = this.shoppingList.map((item) => {
+      if (item.id == id) {
+        item.name = newValues.name;
+        item.amount = newValues.amount;
+      }
+
+      return item;
+    });
+
+    this._shoppingListSubject.next(this.shoppingList);
+
+    this.setShoppingListToLS();
+  }
+
   addItemsToShoppingListFromRecipe(items: IIngredient[]) {
     this.shoppingList = this.getShoppingListFromLS();
 

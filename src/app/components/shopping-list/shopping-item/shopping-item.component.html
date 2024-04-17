@@ -3,7 +3,10 @@
   [ngClass]="{ 'edit-mode': mode == 'edit' }"
   (click)="onChangeMode()"
 >
-  <span>{{ shoppingItem.name }} ({{ shoppingItem.amount }})</span>
+  <span
+    >{{ shoppingItem.name }} ({{ shoppingItem.amount }})
+    <strong *ngIf="mode == 'edit'">(Item in editing mode...)</strong></span
+  >
   <button
     class="btn delete-item-btn"
     (click)="onDeleteItemFromShoppingList(shoppingItem.id)"
