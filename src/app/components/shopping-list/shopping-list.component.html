@@ -13,19 +13,17 @@
               class="form-control name-input"
               placeholder="Name..."
               name="name"
-              ngModel
+              [(ngModel)]="itemToEditName"
               required
-              [value]="itemToEdit ? itemToEdit.name : ''"
             />
             <input
               type="text"
               class="form-control amount-input"
               placeholder="Amount..."
               name="amount"
-              ngModel
+              [(ngModel)]="itemToEditAmount"
               required
               pattern="^[1-9]+[0-9]*$"
-              [value]="itemToEdit ? itemToEdit.amount : ''"
             />
           </div>
           <div class="add-clear-btn">
