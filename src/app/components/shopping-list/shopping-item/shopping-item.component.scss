@@ -5,8 +5,9 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid rgba($color: vars.$black, $alpha: 0.3);
+  border: 2px solid rgba($color: vars.$black, $alpha: 0.3);
   padding: 16px 35px;
+  cursor: pointer;
 
   button {
     color: vars.$white;
@@ -26,4 +27,8 @@
       background-color: vars.$black;
     }
   }
+}
+
+.edit-mode {
+  border-color: vars.$green;
 }

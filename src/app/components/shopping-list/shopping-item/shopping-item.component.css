@@ -8,8 +8,9 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid rgba(42, 42, 42, 0.3);
+  border: 2px solid rgba(42, 42, 42, 0.3);
   padding: 16px 35px;
+  cursor: pointer;
 }
 .shopping-list-item button {
   color: #f6f6f6;
@@ -26,4 +27,8 @@
 }
 .shopping-list-item .delete-item-btn:hover {
   background-color: #2a2a2a;
+}
+
+.edit-mode {
+  border-color: #64ff79;
 }/*# sourceMappingURL=shopping-item.component.css.map */

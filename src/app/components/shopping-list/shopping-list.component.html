@@ -43,6 +43,7 @@
           *ngFor="let item of shoppingList"
           [item]="item"
           (deleteItemEmitter)="deleteItem($event)"
+          (swapMode)="onSwapMode($event)"
         ></app-shopping-item>
       </div>
       <ng-template #emptyList>

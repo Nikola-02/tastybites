@@ -9,9 +9,21 @@ import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 export class ShoppingItemComponent {
   @Input('item') shoppingItem: IShoppingItem;
   @Output('deleteItemEmitter') deleteItemEmitter = new EventEmitter<number>();
+  @Output('swapMode') swapMode = new EventEmitter<string>();
+  public mode: string = 'create';
 
   onDeleteItemFromShoppingList(id: number) {
     this.deleteItemEmitter.emit(id);
+  }
+
+  onChangeMode() {
+    if (this.mode == 'create') {
+      this.mode = 'edit';
+    } else {
+      this.mode = 'create';
+    }
+
+    this.swapMode.emit(this.mode);
   }
 
   firstUppercase(word: string): string {

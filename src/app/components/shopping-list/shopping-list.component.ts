@@ -12,6 +12,8 @@ import { NgForm } from '@angular/forms';
 export class ShoppingListComponent implements OnInit, OnDestroy {
   public shoppingList: IShoppingItem[] = [];
   private shoppingListSubscription: Subscription;
+  public workMode: string = 'create';
+
   @ViewChild('f', { static: false }) form: NgForm;
 
   constructor(private shoppingListService: ShoppingListService) {}
@@ -36,6 +38,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
 
   deleteItem(id: number) {
     this.shoppingListService.deleteItemFromShoppingList(id);
+  }
+
+  onSwapMode(name: string) {
+    console.log(name);
   }
 
   onClearForm() {
