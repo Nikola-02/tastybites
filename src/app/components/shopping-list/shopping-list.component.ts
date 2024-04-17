@@ -40,8 +40,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     this.shoppingListService.deleteItemFromShoppingList(id);
   }
 
-  onSwapMode(name: string) {
-    console.log(name);
+  onSwapMode(obj: { id: number; mode: string }) {
+    console.log(obj);
   }
 
   onClearForm() {

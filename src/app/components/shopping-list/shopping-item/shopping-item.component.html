@@ -1,7 +1,7 @@
 <div
   class="shopping-list-item"
   [ngClass]="{ 'edit-mode': mode == 'edit' }"
-  (click)="onChangeMode()"
+  (click)="onChangeMode(shoppingItem.id)"
 >
   <span
     >{{ firstUppercase(shoppingItem.name) }} ({{ shoppingItem.amount }})</span
