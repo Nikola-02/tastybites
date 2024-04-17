@@ -10,7 +10,7 @@ export class ShoppingItemComponent {
   @Input('item') shoppingItem: IShoppingItem;
   @Output('deleteItemEmitter') deleteItemEmitter = new EventEmitter<number>();
   @Output('swapMode') swapMode = new EventEmitter<{
-    id: number;
+    item: IShoppingItem | null;
     mode: string;
   }>();
   public mode: string = 'create';
@@ -19,19 +19,19 @@ export class ShoppingItemComponent {
     this.deleteItemEmitter.emit(id);
   }
 
-  onChangeMode(id: number) {
+  onChangeMode() {
     if (this.mode == 'create') {
       this.mode = 'edit';
+      this.swapMode.emit({ item: this.shoppingItem, mode: this.mode });
     } else {
       this.mode = 'create';
+      this.swapMode.emit({ item: null, mode: this.mode });
     }
-
-    this.swapMode.emit({ id: id, mode: this.mode });
   }
 
-  firstUppercase(word: string): string {
-    if (!word) return '';
+  // firstUppercase(word: string): string {
+  //   if (!word) return '';
 
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }
+  //   return word.charAt(0).toUpperCase() + word.slice(1);
+  // }
 }

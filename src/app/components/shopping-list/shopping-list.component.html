@@ -5,7 +5,7 @@
       <p>Add ingredients to your shopping list</p>
     </div>
     <div class="shopping-list-div">
-      <form #f="ngForm" (ngSubmit)="onAddItem(f)">
+      <form #f="ngForm" (ngSubmit)="onSubmitItem(f)">
         <div class="name-amount-btns">
           <div class="name-amount">
             <input
@@ -15,6 +15,7 @@
               name="name"
               ngModel
               required
+              [value]="itemToEdit ? itemToEdit.name : ''"
             />
             <input
               type="text"
@@ -24,10 +25,13 @@
               ngModel
               required
               pattern="^[1-9]+[0-9]*$"
+              [value]="itemToEdit ? itemToEdit.amount : ''"
             />
           </div>
           <div class="add-clear-btn">
-            <button type="submit" class="btn add-update-btn">Add</button>
+            <button type="submit" class="btn add-update-btn">
+              {{ workMode == "create" ? "Add" : "Edit" }}
+            </button>
             <button type="button" class="btn clear-btn" (click)="onClearForm()">
               Clear
             </button>

@@ -1,11 +1,9 @@
 <div
   class="shopping-list-item"
   [ngClass]="{ 'edit-mode': mode == 'edit' }"
-  (click)="onChangeMode(shoppingItem.id)"
+  (click)="onChangeMode()"
 >
-  <span
-    >{{ firstUppercase(shoppingItem.name) }} ({{ shoppingItem.amount }})</span
-  >
+  <span>{{ shoppingItem.name }} ({{ shoppingItem.amount }})</span>
   <button
     class="btn delete-item-btn"
     (click)="onDeleteItemFromShoppingList(shoppingItem.id)"
