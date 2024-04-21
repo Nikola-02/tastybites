@@ -4,7 +4,6 @@
 
 # APP DESCRIPTION
 
-- This Laravel-based web application is designed to streamline the food ordering process, offering a seamless experience for users from browsing restaurants to placing orders.
 
 # Key Features:
 - Database Management with Eloquent (ORM): This application efficiently manages data storage and retrieval, ensuring seamless interaction with the underlying database.
