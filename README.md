@@ -10,14 +10,6 @@
   
 - MVC Architecture Implementation: Utilizing Models, Views (Blades), and Controllers, the application follows the MVC pattern, enhancing code organization and maintainability.
   
-- Advanced Data Handling: Incorporates filtering, sorting, and pagination functionalities across various sections of the application.
-  
-- User Authentication and Persistence: Users can register and log in securely, allowing for personalized experiences where their activities and preferences are saved within the database.
-  
-- Restaurant and Meal Management: Enables users to search, filter, and sort restaurants and meals and find their wants.
-  
-- Order Processing and History: Users can add selected meals to their cart and place orders. Order history is maintained, offering users a convenient reference for past transactions.
-  
 # Technologies Used:
 - HTML, CSS(SASS), JavaScript, Angular.
 
