@@ -8,8 +8,6 @@
 # Key Features:
 - Database Management with Eloquent (ORM): This application efficiently manages data storage and retrieval, ensuring seamless interaction with the underlying database.
   
-- MVC Architecture Implementation: Utilizing Models, Views (Blades), and Controllers, the application follows the MVC pattern, enhancing code organization and maintainability.
-  
 # Technologies Used:
 - HTML, CSS(SASS), JavaScript, Angular.
 
