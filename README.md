@@ -26,9 +26,7 @@
 - Order Processing and History: Users can add selected meals to their cart and place orders. Order history is maintained, offering users a convenient reference for past transactions.
   
 # Technologies Used:
-- Laravel, PHP, MySQL, HTML, CSS(SASS), BOOTSTRAP, JavaScript, jQuery.
-
-# Tastybites
+- HTML, CSS(SASS), JavaScript, Angular.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
