@@ -1,9 +1,9 @@
 # Tastybites (Recipe Book Angular Application)
 
 # HOW TO RUN APP
-- Run command npm install
-- Run app by command ng serve
-- Navigate to "http://localhost:4200/"
+- Run command: npm install
+- Run app by command: ng serve
+- Navigate to "http://localhost:4200/" (if port is free)
 
 # APP DESCRIPTION
 - The Recipe Book Angular Application is a user-friendly platform designed to simplify your cooking experience. With its intuitive interface and robust features, this app allows you to explore a wide array of popular recipes, manage your ingredients effortlessly, and streamline your shopping process.
