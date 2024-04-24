@@ -52,10 +52,13 @@ main .filters-recipe-comp .my-container .filters p {
   font-weight: 600;
   margin-bottom: 10px;
 }
-main .filters-recipe-comp .my-container .filters form {
+main .filters-recipe-comp .my-container .filters form .category-filter {
   margin-bottom: 50px;
 }
-main .filters-recipe-comp .my-container .filters .clear-filters-btn {
+main .filters-recipe-comp .my-container .filters form .authors-filter {
+  margin-bottom: 50px;
+}
+main .filters-recipe-comp .my-container .filters form .clear-filters-btn {
   background-color: #ff6464;
   color: #f6f6f6;
 }

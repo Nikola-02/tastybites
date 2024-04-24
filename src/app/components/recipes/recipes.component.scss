@@ -52,22 +52,18 @@ main {
           margin-bottom: 10px;
         }
         form {
-          margin-bottom: 50px;
-          input {
+          .category-filter {
+            margin-bottom: 50px;
           }
 
-          label {
+          .authors-filter {
+            margin-bottom: 50px;
           }
-        }
-        .category-filter {
-        }
 
-        .authors-filter {
-        }
-
-        .clear-filters-btn {
-          background-color: vars.$red;
-          color: vars.$white;
+          .clear-filters-btn {
+            background-color: vars.$red;
+            color: vars.$white;
+          }
         }
       }
 

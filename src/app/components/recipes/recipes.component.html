@@ -31,43 +31,30 @@
       <div class="filters">
         <h5>Filters</h5>
 
-        <div class="category-filter">
-          <p>CATEGORY</p>
-          <form #f="ngForm">
+        <form #f="ngForm">
+          <div class="category-filter">
+            <p>CATEGORY</p>
             <app-radio
               [items]="categories"
               [entityName]="'category'"
               (valueChanged)="setSelectedFilters($event)"
             ></app-radio>
-            <!-- <div *ngFor="let c of categories" class="mb-3 form-check">
-              <app-radio
-                [items]="categories"
-                (valueChanged)="setSelectedFilters($event)"
-                [entity]="c"
-                entityName="category"
-                [status]="radioStatus"
-              ></app-radio>
-            </div> -->
-          </form>
-        </div>
+          </div>
 
-        <!-- <div class="authors-filter">
-          <p>AUTHORS</p>
-          <form>
-            <div *ngFor="let a of authors" class="mb-3 form-check">
-              <app-radio
-                (valueChanged)="setSelectedFilters($event)"
-                [entity]="a"
-                entityName="authors"
-                [status]="radioStatus"
-              ></app-radio>
-            </div>
-          </form>
-        </div> -->
+          <div class="authors-filter">
+            <p>AUTHORS</p>
+            <app-radio
+              [items]="authors"
+              [entityName]="'authors'"
+              (valueChanged)="setSelectedFilters($event)"
+              [(ngModel)]="radioStatus"
+            ></app-radio>
+          </div>
 
-        <button (click)="clearFilters(f)" class="btn clear-filters-btn">
-          Clear filters
-        </button>
+          <button (click)="clearFilters(f)" class="btn clear-filters-btn">
+            Clear filters
+          </button>
+        </form>
       </div>
       <div class="recipes-content" *ngIf="recipes && !error; else errorBlock">
         <div class="all-recipes">

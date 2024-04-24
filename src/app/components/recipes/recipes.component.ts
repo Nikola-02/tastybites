@@ -40,12 +40,10 @@ export class RecipesComponent implements OnInit {
   clearFilters(form: NgForm) {
     this.author = '';
     this.category = '';
-    this.radioStatus = false;
 
     form.reset();
-    this.categories = JSON.parse(JSON.stringify(this.categories));
-    // this.authors = cloneDeep(this.authors);
-    this.radioStatus = !this.radioStatus;
+
+    this.radioStatus = false;
 
     this.getRecipes();
   }
