@@ -43,6 +43,9 @@ export class RecipesComponent implements OnInit {
     this.radioStatus = false;
 
     form.reset();
+    this.categories = JSON.parse(JSON.stringify(this.categories));
+    // this.authors = cloneDeep(this.authors);
+    this.radioStatus = !this.radioStatus;
 
     this.getRecipes();
   }

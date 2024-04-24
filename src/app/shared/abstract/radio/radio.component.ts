@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 @Component({
   selector: 'app-radio',
   templateUrl: './radio.component.html',
@@ -13,6 +20,10 @@ export class RadioComponent {
     entityName: string;
   }>();
   public value: string;
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+  }
 
   onChange(event: Event) {
     // let value = (event.target as HTMLInputElement).value;
