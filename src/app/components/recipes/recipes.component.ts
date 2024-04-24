@@ -61,6 +61,8 @@ export class RecipesComponent implements OnInit {
       )
       .subscribe(
         (recipes: IRecipe[]) => {
+          console.log(recipes);
+
           this.error = '';
           this.recipes = recipes;
           this.getTotalPagesForRecipes(init);

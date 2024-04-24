@@ -20,41 +20,43 @@ export class RecipesService {
     author = '',
     category = ''
   ) {
-    const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
-    url.searchParams.append('limit', limit.toString());
-    url.searchParams.append('page', page.toString());
+    const url = 'shared/json/recipes.json';
 
-    if (search != '') {
-      url.searchParams.append('name', search);
-    }
+    // const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
+    // url.searchParams.append('limit', limit.toString());
+    // url.searchParams.append('page', page.toString());
 
-    if (author != '') {
-      url.searchParams.append('author', author);
-    }
+    // if (search != '') {
+    //   url.searchParams.append('name', search);
+    // }
 
-    if (category != '') {
-      url.searchParams.append('category', category);
-    }
+    // if (author != '') {
+    //   url.searchParams.append('author', author);
+    // }
 
-    if (sortBy != '0') {
-      if (sortBy == 'asc-rating') {
-        url.searchParams.append('sortBy', 'rating');
-      }
+    // if (category != '') {
+    //   url.searchParams.append('category', category);
+    // }
 
-      if (sortBy == 'desc-rating') {
-        url.searchParams.append('sortBy', 'rating');
-        url.searchParams.append('order', 'desc');
-      }
+    // if (sortBy != '0') {
+    //   if (sortBy == 'asc-rating') {
+    //     url.searchParams.append('sortBy', 'rating');
+    //   }
 
-      if (sortBy == 'asc-name') {
-        url.searchParams.append('sortBy', 'name');
-      }
+    //   if (sortBy == 'desc-rating') {
+    //     url.searchParams.append('sortBy', 'rating');
+    //     url.searchParams.append('order', 'desc');
+    //   }
 
-      if (sortBy == 'desc-name') {
-        url.searchParams.append('sortBy', 'name');
-        url.searchParams.append('order', 'desc');
-      }
-    }
+    //   if (sortBy == 'asc-name') {
+    //     url.searchParams.append('sortBy', 'name');
+    //   }
+
+    //   if (sortBy == 'desc-name') {
+    //     url.searchParams.append('sortBy', 'name');
+    //     url.searchParams.append('order', 'desc');
+    //   }
+    // }
 
     return this.http.get<IRecipe[]>(url.toString()).pipe(
       map((recipes) => {
