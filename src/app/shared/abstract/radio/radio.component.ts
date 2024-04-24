@@ -1,33 +1,19 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-radio',
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.scss'],
 })
 export class RadioComponent {
-  @Input('entity') entity: string;
   @Input('entityName') entityName: string;
-  @Input('status') radioStatus: boolean;
   @Output('valueChanged') valueChanged = new EventEmitter<{
     value: string;
     entityName: string;
   }>();
-  public value: string;
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
-  }
+  @Input() items: Array<any>;
 
   onChange(event: Event) {
-    // let value = (event.target as HTMLInputElement).value;
-
     this.valueChanged.emit({ value: this.value, entityName: this.entityName });
   }
 

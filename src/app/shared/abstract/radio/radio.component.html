@@ -1,12 +1,10 @@
-<input
-  type="radio"
-  [name]="entityName"
-  class="form-check-input entityName-radios"
-  [id]="entity"
-  [value]="entity"
-  (change)="onChange($event)"
-  [(ngModel)]="value"
-/>
-<label [for]="entity" class="form-check-label">{{
-  entityName == "category" ? firstUppercaseLetter(entity) : entity
-}}</label>
+<div *ngFor="let i of items" class="mb-3 form-check">
+  <input
+    type="radio"
+    [name]="entityName"
+    class="form-check-input entityName-radios"
+  />
+  <label [for]="entity" class="form-check-label">{{
+    entityName == "category" ? firstUppercaseLetter(entity) : entity
+  }}</label>
+</div>

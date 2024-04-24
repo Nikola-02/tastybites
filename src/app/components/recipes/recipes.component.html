@@ -34,14 +34,16 @@
         <div class="category-filter">
           <p>CATEGORY</p>
           <form #f="ngForm">
-            <div *ngFor="let c of categories" class="mb-3 form-check">
+            <app-radio [items]="categories"></app-radio>
+            <!-- <div *ngFor="let c of categories" class="mb-3 form-check">
               <app-radio
+                [items]="categories"
                 (valueChanged)="setSelectedFilters($event)"
                 [entity]="c"
                 entityName="category"
                 [status]="radioStatus"
               ></app-radio>
-            </div>
+            </div> -->
           </form>
         </div>
 
