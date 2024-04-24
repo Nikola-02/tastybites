@@ -21,7 +21,6 @@ export class RecipesComponent implements OnInit {
   categories: string[];
   authors: string[];
   error: string;
-  radioStatus: boolean = false;
 
   constructor(private recipesService: RecipesService) {}
 
@@ -37,13 +36,15 @@ export class RecipesComponent implements OnInit {
     this.getRecipes();
   }
 
+  onSubmit(ngForm: NgForm) {
+    ngForm.reset();
+  }
+
   clearFilters(form: NgForm) {
     this.author = '';
     this.category = '';
 
     form.reset();
-
-    this.radioStatus = false;
 
     this.getRecipes();
   }

@@ -31,7 +31,7 @@
       <div class="filters">
         <h5>Filters</h5>
 
-        <form #f="ngForm">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
           <div class="category-filter">
             <p>CATEGORY</p>
             <app-radio
@@ -47,11 +47,14 @@
               [items]="authors"
               [entityName]="'authors'"
               (valueChanged)="setSelectedFilters($event)"
-              [(ngModel)]="radioStatus"
             ></app-radio>
           </div>
 
-          <button (click)="clearFilters(f)" class="btn clear-filters-btn">
+          <button
+            (click)="clearFilters(f)"
+            type="submit"
+            class="btn clear-filters-btn"
+          >
             Clear filters
           </button>
         </form>

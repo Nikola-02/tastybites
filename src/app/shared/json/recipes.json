@@ -1,0 +1,1291 @@
+[
+  {
+    "name": "Avocado Toast",
+    "description": "Avocado toast is a simple yet delicious breakfast or snack option. Creamy avocado is spread on toasted bread and seasoned with salt, pepper, and optional toppings. It's quick to make and packed with nutrients.",
+    "author": "Sophia Nguyen",
+    "rating": 2,
+    "rating_count": 15,
+    "category": "breakfast",
+    "nutrition_facts": {
+      "calories": 220,
+      "carbs": 15,
+      "fat": 15,
+      "protein": 5,
+      "fiber": 7,
+      "cholesterol": 0,
+      "sodium": 230
+    },
+    "ingredients": [
+      {
+        "name": "avocado",
+        "amount": 1
+      },
+      {
+        "name": "whole grain bread",
+        "amount": 2
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 5,
+      "servings": 2
+    },
+    "instructions": [
+      "Toast the whole grain bread slices until golden brown.",
+      "Cut the avocado in half, remove the pit, and scoop out the flesh into a bowl.",
+      "Mash the avocado with a fork until smooth but still slightly chunky.",
+      "Spread the mashed avocado evenly onto the toasted bread slices.",
+      "Sprinkle with salt and black pepper to taste.",
+      "Add optional toppings as desired, such as sliced cherry tomatoes, a pinch of red pepper flakes, or crumbled feta cheese.",
+      "Serve immediately and enjoy!"
+    ],
+    "image": "avocado-toast.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "1"
+  },
+  {
+    "name": "Scrambled Eggs",
+    "description": "A simple yet delicious breakfast option, scrambled eggs are quick to make and satisfying. Perfect for a hearty start to the day.",
+    "author": "Daniel Smith",
+    "rating": 2,
+    "rating_count": 125,
+    "category": "breakfast",
+    "nutrition_facts": {
+      "calories": 220,
+      "carbs": 2,
+      "fat": 15,
+      "protein": 18,
+      "fiber": 1,
+      "cholesterol": 340,
+      "sodium": 420
+    },
+    "ingredients": [
+      {
+        "name": "eggs",
+        "amount": 3
+      },
+      {
+        "name": "butter",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 5,
+      "servings": 2
+    },
+    "instructions": [
+      "Crack the eggs into a bowl.",
+      "Whisk the eggs until smooth.",
+      "Melt the butter in a pan over medium heat.",
+      "Pour the eggs into the pan.",
+      "Stir the eggs continuously until they reach the desired consistency.",
+      "Serve hot and enjoy!"
+    ],
+    "image": "scrambled-eggs.png",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "2"
+  },
+  {
+    "name": "Grilled Salad",
+    "description": "A refreshing and nutritious lunch option, grilled chicken salad is packed with protein and fresh vegetables. It's light, flavorful, and perfect for a midday meal.",
+    "author": "Olivia Taylor",
+    "rating": 5,
+    "rating_count": 165,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 350,
+      "carbs": 12,
+      "fat": 18,
+      "protein": 30,
+      "fiber": 5,
+      "cholesterol": 75,
+      "sodium": 600
+    },
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "amount": 2
+      },
+      {
+        "name": "lettuce",
+        "amount": 1
+      },
+      {
+        "name": "tomatoes",
+        "amount": 2
+      },
+      {
+        "name": "cucumber",
+        "amount": 1
+      },
+      {
+        "name": "olive oil",
+        "amount": 2
+      },
+      {
+        "name": "lemon juice",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 15,
+      "servings": 2
+    },
+    "instructions": [
+      "Preheat the grill to medium-high heat.",
+      "Season the chicken breasts with salt and pepper.",
+      "Grill the chicken for 6-7 minutes per side, or until cooked through.",
+      "Let the chicken rest for 5 minutes, then slice it thinly.",
+      "In a large bowl, combine the lettuce, tomatoes, and cucumber.",
+      "Add the sliced chicken to the bowl.",
+      "Drizzle the salad with olive oil and lemon juice.",
+      "Toss gently to combine.",
+      "Season with additional salt and pepper if needed.",
+      "Serve immediately and enjoy!"
+    ],
+    "image": "grilled-salad.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "3"
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "description": "An Italian classic, spaghetti carbonara is a rich and creamy pasta dish that's perfect for a cozy dinner. With crispy pancetta and a silky sauce, it's sure to become a favorite.",
+    "author": "Daniel Smith",
+    "rating": 1,
+    "rating_count": 295,
+    "category": "dinner",
+    "nutrition_facts": {
+      "calories": 580,
+      "carbs": 45,
+      "fat": 28,
+      "protein": 30,
+      "fiber": 3,
+      "cholesterol": 110,
+      "sodium": 680
+    },
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "amount": 8
+      },
+      {
+        "name": "eggs",
+        "amount": 4
+      },
+      {
+        "name": "pancetta",
+        "amount": 6
+      },
+      {
+        "name": "parmesan cheese",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 15,
+      "servings": 4
+    },
+    "instructions": [
+      "Bring a large pot of salted water to a boil.",
+      "Add the spaghetti and cook until al dente, according to package instructions.",
+      "Meanwhile, heat a large skillet over medium heat.",
+      "Add the pancetta and cook until crispy, about 5 minutes.",
+      "In a bowl, whisk together the eggs, parmesan cheese, and black pepper.",
+      "Once the spaghetti is cooked, reserve 1/2 cup of the cooking water, then drain the pasta.",
+      "Add the hot spaghetti to the skillet with the pancetta, tossing to coat.",
+      "Remove the skillet from the heat and quickly pour in the egg mixture, tossing the pasta continuously to coat it in the sauce.",
+      "If the sauce seems too thick, add some of the reserved pasta water to loosen it.",
+      "Serve immediately, garnished with additional parmesan cheese and black pepper.",
+      "Enjoy!"
+    ],
+    "image": "spaghetti-carbonara.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "4"
+  },
+  {
+    "name": "Fruit Salad",
+    "description": "A refreshing and healthy snack option, fruit salad is perfect for satisfying your sweet cravings while providing essential vitamins and minerals. Enjoy it as a light snack or dessert.",
+    "author": "Olivia Taylor",
+    "rating": 3,
+    "rating_count": 295,
+    "category": "snack",
+    "nutrition_facts": {
+      "calories": 120,
+      "carbs": 30,
+      "fat": 0,
+      "protein": 2,
+      "fiber": 5,
+      "cholesterol": 0,
+      "sodium": 5
+    },
+    "ingredients": [
+      {
+        "name": "strawberries",
+        "amount": 1
+      },
+      {
+        "name": "blueberries",
+        "amount": 1
+      },
+      {
+        "name": "kiwi",
+        "amount": 1
+      },
+      {
+        "name": "orange",
+        "amount": 1
+      },
+      {
+        "name": "banana",
+        "amount": 1
+      },
+      {
+        "name": "honey",
+        "amount": 1
+      },
+      {
+        "name": "mint leaves",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 0,
+      "servings": 2
+    },
+    "instructions": [
+      "Wash and prepare all the fruits.",
+      "Slice the strawberries, kiwi, and banana.",
+      "Peel and segment the orange.",
+      "In a large bowl, combine all the fruits.",
+      "Drizzle with honey and toss gently to coat.",
+      "Garnish with fresh mint leaves.",
+      "Serve immediately or chill in the refrigerator before serving.",
+      "Enjoy!"
+    ],
+    "image": "fruit-salad.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "5"
+  },
+  {
+    "name": "Mango Smoothie",
+    "description": "A refreshing and nutritious snack option, mango smoothie is made with ripe mangoes, creamy yogurt, and sweet honey. It's smooth, creamy, and bursting with tropical flavor.",
+    "author": "Giuseppe Rossi",
+    "rating": 4,
+    "rating_count": 1115,
+    "category": "snack",
+    "nutrition_facts": {
+      "calories": 180,
+      "carbs": 40,
+      "fat": 2,
+      "protein": 4,
+      "fiber": 3,
+      "cholesterol": 5,
+      "sodium": 60
+    },
+    "ingredients": [
+      {
+        "name": "ripe mango",
+        "amount": 2
+      },
+      {
+        "name": "Greek yogurt",
+        "amount": 1
+      },
+      {
+        "name": "honey",
+        "amount": 1
+      },
+      {
+        "name": "milk",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 0,
+      "servings": 2
+    },
+    "instructions": [
+      "Peel and dice the ripe mangoes.",
+      "In a blender, combine the diced mangoes, Greek yogurt, honey, and milk.",
+      "Blend until smooth and creamy.",
+      "Taste and adjust sweetness as needed, adding more honey if desired.",
+      "Pour the smoothie into glasses and serve immediately.",
+      "Enjoy!"
+    ],
+    "image": "mango-smoothie.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "6"
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "description": "A convenient and satisfying lunch option, chicken caesar wrap combines tender chicken, crisp lettuce, and creamy caesar dressing in a portable package. Perfect for on-the-go meals.",
+    "author": "Alice Johnson",
+    "rating": 3,
+    "rating_count": 905,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 420,
+      "carbs": 30,
+      "fat": 22,
+      "protein": 25,
+      "fiber": 4,
+      "cholesterol": 60,
+      "sodium": 880
+    },
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "amount": 2
+      },
+      {
+        "name": "whole wheat tortillas",
+        "amount": 2
+      },
+      {
+        "name": "romaine lettuce",
+        "amount": 1
+      },
+      {
+        "name": "caesar dressing",
+        "amount": 1
+      },
+      {
+        "name": "parmesan cheese",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 15,
+      "servings": 2
+    },
+    "instructions": [
+      "Grill the chicken breasts until cooked through, about 6-7 minutes per side.",
+      "Let the chicken rest for 5 minutes, then slice thinly.",
+      "Warm the tortillas in a dry skillet or microwave for a few seconds to make them pliable.",
+      "Spread a spoonful of caesar dressing onto each tortilla.",
+      "Layer the sliced chicken and romaine lettuce on top of the dressing.",
+      "Sprinkle with parmesan cheese.",
+      "Fold in the sides of the tortilla, then roll up tightly.",
+      "Cut the wraps in half and serve immediately.",
+      "Enjoy!"
+    ],
+    "image": "chicken-caesar-wraps.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "7"
+  },
+  {
+    "name": "Beef Stir Fry",
+    "description": "A flavorful and satisfying dinner option, beef stir fry is packed with tender beef, crisp vegetables, and a savory sauce. Quick and easy to make, it's perfect for busy weeknights.",
+    "author": "Alice Johnson",
+    "rating": 4,
+    "rating_count": 715,
+    "category": "dinner",
+    "nutrition_facts": {
+      "calories": 450,
+      "carbs": 25,
+      "fat": 28,
+      "protein": 30,
+      "fiber": 5,
+      "cholesterol": 75,
+      "sodium": 820
+    },
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "amount": 1
+      },
+      {
+        "name": "bell peppers",
+        "amount": 2
+      },
+      {
+        "name": "onion",
+        "amount": 1
+      },
+      {
+        "name": "garlic",
+        "amount": 3
+      },
+      {
+        "name": "soy sauce",
+        "amount": 1
+      },
+      {
+        "name": "sesame oil",
+        "amount": 1
+      },
+      {
+        "name": "cornstarch",
+        "amount": 1
+      },
+      {
+        "name": "rice",
+        "amount": 2
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 15,
+      "servings": 4
+    },
+    "instructions": [
+      "Slice the beef into thin strips.",
+      "In a small bowl, whisk together the soy sauce, sesame oil, and cornstarch to make the sauce.",
+      "Heat a large skillet or wok over high heat.",
+      "Add a drizzle of oil to the skillet.",
+      "Add the beef and stir fry until browned, about 2-3 minutes.",
+      "Remove the beef from the skillet and set aside.",
+      "Add another drizzle of oil to the skillet.",
+      "Add the bell peppers, onion, and garlic to the skillet.",
+      "Stir fry until the vegetables are tender-crisp, about 3-4 minutes.",
+      "Return the beef to the skillet.",
+      "Pour the sauce over the beef and vegetables.",
+      "Stir fry for another 1-2 minutes, until everything is heated through and coated in the sauce.",
+      "Serve hot over cooked rice.",
+      "Enjoy!"
+    ],
+    "image": "beef-stir-fry.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "8"
+  },
+  {
+    "name": "Greek Yogurt Parfait",
+    "description": "A healthy and delicious snack option, Greek yogurt parfait is made with creamy yogurt, fresh fruit, and crunchy granola. It's perfect for satisfying your sweet tooth while nourishing your body.",
+    "author": "Emily Patel",
+    "rating": 5,
+    "rating_count": 195,
+    "category": "snack",
+    "nutrition_facts": {
+      "calories": 250,
+      "carbs": 40,
+      "fat": 6,
+      "protein": 12,
+      "fiber": 4,
+      "cholesterol": 10,
+      "sodium": 120
+    },
+    "ingredients": [
+      {
+        "name": "Greek yogurt",
+        "amount": 1
+      },
+      {
+        "name": "granola",
+        "amount": 1
+      },
+      {
+        "name": "strawberries",
+        "amount": 1
+      },
+      {
+        "name": "blueberries",
+        "amount": 1
+      },
+      {
+        "name": "honey",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 0,
+      "servings": 1
+    },
+    "instructions": [
+      "In a glass or bowl, layer Greek yogurt, granola, and fresh fruit.",
+      "Drizzle with honey.",
+      "Repeat the layers until the glass or bowl is filled.",
+      "Serve immediately and enjoy!"
+    ],
+    "image": "greek-yogurt-parfait.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "9"
+  },
+  {
+    "name": "Vegetable Omelette",
+    "description": "A nutritious and satisfying breakfast option, vegetable omelette is packed with eggs, cheese, and a variety of fresh vegetables. It's a delicious way to start your day on the right foot.",
+    "author": "Giuseppe Rossi",
+    "rating": 1,
+    "rating_count": 855,
+    "category": "breakfast",
+    "nutrition_facts": {
+      "calories": 280,
+      "carbs": 10,
+      "fat": 20,
+      "protein": 18,
+      "fiber": 3,
+      "cholesterol": 340,
+      "sodium": 620
+    },
+    "ingredients": [
+      {
+        "name": "eggs",
+        "amount": 3
+      },
+      {
+        "name": "bell peppers",
+        "amount": 1
+      },
+      {
+        "name": "onion",
+        "amount": 1
+      },
+      {
+        "name": "mushrooms",
+        "amount": 3
+      },
+      {
+        "name": "cheddar cheese",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 10,
+      "servings": 2
+    },
+    "instructions": [
+      "Dice the bell peppers, onion, and mushrooms.",
+      "In a bowl, whisk the eggs until smooth.",
+      "Heat a non-stick skillet over medium heat.",
+      "Add a drizzle of oil to the skillet.",
+      "Add the diced vegetables and sauté until tender, about 5 minutes.",
+      "Pour the whisked eggs over the vegetables in the skillet.",
+      "Let the eggs cook undisturbed until the edges start to set.",
+      "Using a spatula, gently lift the edges of the omelette and tilt the skillet to let the uncooked eggs flow to the edges.",
+      "Once the omelette is mostly set but still slightly runny on top, sprinkle the shredded cheddar cheese over one half of the omelette.",
+      "Fold the other half of the omelette over the cheese.",
+      "Cook for another 1-2 minutes, until the cheese is melted and the omelette is cooked through.",
+      "Slide the omelette onto a plate and serve hot.",
+      "Enjoy!"
+    ],
+    "image": "vegetable-omelette.jpeg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "10"
+  },
+  {
+    "name": "Caprese Salad",
+    "description": "A simple and elegant lunch option, Caprese salad is made with ripe tomatoes, fresh mozzarella, and fragrant basil. Drizzled with balsamic glaze, it's a refreshing and flavorful dish.",
+    "author": "Sophia Nguyen",
+    "rating": 5,
+    "rating_count": 884,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 200,
+      "carbs": 7,
+      "fat": 15,
+      "protein": 10,
+      "fiber": 2,
+      "cholesterol": 30,
+      "sodium": 280
+    },
+    "ingredients": [
+      {
+        "name": "tomatoes",
+        "amount": 2
+      },
+      {
+        "name": "fresh mozzarella",
+        "amount": 1
+      },
+      {
+        "name": "fresh basil",
+        "amount": 1
+      },
+      {
+        "name": "balsamic glaze",
+        "amount": 1
+      },
+      {
+        "name": "olive oil",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 0,
+      "servings": 2
+    },
+    "instructions": [
+      "Slice the tomatoes and fresh mozzarella into rounds.",
+      "Arrange the tomato and mozzarella slices on a serving platter, alternating and overlapping them.",
+      "Tuck fresh basil leaves between the tomato and mozzarella slices.",
+      "Drizzle with balsamic glaze and olive oil.",
+      "Season with salt and black pepper to taste.",
+      "Serve immediately and enjoy!"
+    ],
+    "image": "caprese-salad.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "11"
+  },
+  {
+    "name": "Beef Burritos",
+    "description": "A hearty and flavorful dinner option, beef burritos are filled with seasoned beef, rice, beans, and cheese. They're easy to make and customizable to suit your taste preferences.",
+    "author": "Daniel Smith",
+    "rating": 3,
+    "rating_count": 915,
+    "category": "dinner",
+    "nutrition_facts": {
+      "calories": 550,
+      "carbs": 45,
+      "fat": 25,
+      "protein": 30,
+      "fiber": 6,
+      "cholesterol": 80,
+      "sodium": 1080
+    },
+    "ingredients": [
+      {
+        "name": "ground beef",
+        "amount": 1
+      },
+      {
+        "name": "tortillas",
+        "amount": 4
+      },
+      {
+        "name": "cooked rice",
+        "amount": 2
+      },
+      {
+        "name": "black beans",
+        "amount": 1
+      },
+      {
+        "name": "cheddar cheese",
+        "amount": 1
+      },
+      {
+        "name": "salsa",
+        "amount": 1
+      },
+      {
+        "name": "sour cream",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 20,
+      "servings": 4
+    },
+    "instructions": [
+      "In a large skillet, cook the ground beef over medium heat until browned and cooked through, breaking it up with a spoon as it cooks.",
+      "Drain any excess fat from the skillet.",
+      "Add the cooked rice, black beans, and salsa to the skillet with the beef.",
+      "Stir to combine and heat through.",
+      "Warm the tortillas in a dry skillet or microwave for a few seconds to make them pliable.",
+      "Divide the beef and rice mixture among the tortillas, placing it in the center of each tortilla.",
+      "Top with shredded cheddar cheese and a dollop of sour cream.",
+      "Fold in the sides of the tortillas, then roll up tightly to form burritos.",
+      "Serve immediately, garnished with additional salsa and sour cream if desired.",
+      "Enjoy!"
+    ],
+    "image": "beef-buritos.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "12"
+  },
+  {
+    "name": "Peanut Butter Banana",
+    "description": "A simple and satisfying breakfast option, peanut butter banana toast combines creamy peanut butter, sweet bananas, and crunchy toast. It's perfect for busy mornings or a quick snack.",
+    "author": "Olivia Taylor",
+    "rating": 5,
+    "rating_count": 165,
+    "category": "breakfast",
+    "nutrition_facts": {
+      "calories": 280,
+      "carbs": 35,
+      "fat": 12,
+      "protein": 8,
+      "fiber": 5,
+      "cholesterol": 0,
+      "sodium": 220
+    },
+    "ingredients": [
+      {
+        "name": "whole grain bread",
+        "amount": 2
+      },
+      {
+        "name": "peanut butter",
+        "amount": 2
+      },
+      {
+        "name": "banana",
+        "amount": 1
+      },
+      {
+        "name": "honey",
+        "amount": 1
+      },
+      {
+        "name": "cinnamon",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 5,
+      "servings": 2
+    },
+    "instructions": [
+      "Toast the bread until golden brown.",
+      "Spread peanut butter evenly over each slice of toast.",
+      "Slice the banana into rounds and arrange them on top of the peanut butter.",
+      "Drizzle with honey and sprinkle with cinnamon.",
+      "Serve immediately and enjoy!"
+    ],
+    "image": "banana-peanut-butter-toast.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "13"
+  },
+  {
+    "name": "Quinoa Salad",
+    "description": "A nutritious and flavorful lunch option, quinoa salad is made with protein-rich quinoa, fresh vegetables, and a zesty vinaigrette. It's light, refreshing, and perfect for a midday meal.",
+    "author": "Daniel Smith",
+    "rating": 2,
+    "rating_count": 415,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 320,
+      "carbs": 45,
+      "fat": 12,
+      "protein": 10,
+      "fiber": 6,
+      "cholesterol": 0,
+      "sodium": 420
+    },
+    "ingredients": [
+      {
+        "name": "quinoa",
+        "amount": 1
+      },
+      {
+        "name": "cucumber",
+        "amount": 1
+      },
+      {
+        "name": "tomatoes",
+        "amount": 2
+      },
+      {
+        "name": "red onion",
+        "amount": 1
+      },
+      {
+        "name": "bell pepper",
+        "amount": 1
+      },
+      {
+        "name": "olive oil",
+        "amount": 1
+      },
+      {
+        "name": "lemon juice",
+        "amount": 1
+      },
+      {
+        "name": "fresh parsley",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 15,
+      "servings": 2
+    },
+    "instructions": [
+      "Rinse the quinoa under cold water until the water runs clear.",
+      "In a medium saucepan, bring 2 cups of water to a boil.",
+      "Add the quinoa and a pinch of salt to the boiling water.",
+      "Reduce the heat to low, cover, and simmer for 15 minutes, or until the quinoa is cooked and the water is absorbed.",
+      "Remove the quinoa from the heat and let it cool slightly.",
+      "Meanwhile, dice the cucumber, tomatoes, red onion, and bell pepper.",
+      "In a large bowl, combine the cooked quinoa, diced vegetables, olive oil, lemon juice, and chopped fresh parsley.",
+      "Season with salt and black pepper to taste.",
+      "Toss gently to combine.",
+      "Serve immediately or refrigerate until ready to serve.",
+      "Enjoy!"
+    ],
+    "image": "quinoa-salad.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "14"
+  },
+  {
+    "name": "Hummus Veggie Wrap",
+    "description": "A tasty and nutritious lunch option, hummus and veggie wrap combines creamy hummus, crunchy vegetables, and soft tortillas. It's quick to make and perfect for a healthy meal on the go.",
+    "author": "Emily Patel",
+    "rating": 3,
+    "rating_count": 215,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 300,
+      "carbs": 35,
+      "fat": 15,
+      "protein": 8,
+      "fiber": 6,
+      "cholesterol": 0,
+      "sodium": 620
+    },
+    "ingredients": [
+      {
+        "name": "hummus",
+        "amount": 1
+      },
+      {
+        "name": "whole wheat tortillas",
+        "amount": 2
+      },
+      {
+        "name": "cucumber",
+        "amount": 1
+      },
+      {
+        "name": "bell pepper",
+        "amount": 1
+      },
+      {
+        "name": "carrot",
+        "amount": 1
+      },
+      {
+        "name": "spinach",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 10,
+      "cook_time": 0,
+      "servings": 2
+    },
+    "instructions": [
+      "Warm the tortillas in a dry skillet or microwave for a few seconds to make them pliable.",
+      "Spread a generous layer of hummus onto each tortilla.",
+      "Thinly slice the cucumber, bell pepper, and carrot.",
+      "Layer the sliced vegetables and spinach leaves on top of the hummus.",
+      "Fold in the sides of the tortillas, then roll up tightly to form wraps.",
+      "Cut the wraps in half and serve immediately, or wrap them tightly in foil for an on-the-go meal.",
+      "Enjoy!"
+    ],
+    "image": "hummus-veggie-wrap.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "15"
+  },
+  {
+    "name": "Mango Smoothie",
+    "description": "A refreshing and nutritious snack option, mango smoothie is made with ripe mangoes, creamy yogurt, and sweet honey. It's smooth, creamy, and bursting with tropical flavor.",
+    "author": "Giuseppe Rossi",
+    "rating": 4,
+    "rating_count": 1115,
+    "category": "snack",
+    "nutrition_facts": {
+      "calories": 180,
+      "carbs": 40,
+      "fat": 2,
+      "protein": 4,
+      "fiber": 3,
+      "cholesterol": 5,
+      "sodium": 60
+    },
+    "ingredients": [
+      {
+        "name": "ripe mango",
+        "amount": 2
+      },
+      {
+        "name": "Greek yogurt",
+        "amount": 1
+      },
+      {
+        "name": "honey",
+        "amount": 1
+      },
+      {
+        "name": "milk",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 5,
+      "cook_time": 0,
+      "servings": 2
+    },
+    "instructions": [
+      "Peel and dice the ripe mangoes.",
+      "In a blender, combine the diced mangoes, Greek yogurt, honey, and milk.",
+      "Blend until smooth and creamy.",
+      "Taste and adjust sweetness as needed, adding more honey if desired.",
+      "Pour the smoothie into glasses and serve immediately.",
+      "Enjoy!"
+    ],
+    "image": "mango-smoothie.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "16"
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "description": "A colorful and flavorful dinner option, vegetable stir fry is made with a variety of fresh vegetables and a savory sauce. It's quick, easy, and perfect for a healthy weeknight meal.",
+    "author": "Sophia Nguyen",
+    "rating": 4,
+    "rating_count": 615,
+    "category": "dinner",
+    "nutrition_facts": {
+      "calories": 250,
+      "carbs": 30,
+      "fat": 12,
+      "protein": 8,
+      "fiber": 6,
+      "cholesterol": 0,
+      "sodium": 680
+    },
+    "ingredients": [
+      {
+        "name": "bell peppers",
+        "amount": 2
+      },
+      {
+        "name": "broccoli",
+        "amount": 1
+      },
+      {
+        "name": "carrot",
+        "amount": 1
+      },
+      {
+        "name": "onion",
+        "amount": 1
+      },
+      {
+        "name": "garlic",
+        "amount": 3
+      },
+      {
+        "name": "soy sauce",
+        "amount": 1
+      },
+      {
+        "name": "sesame oil",
+        "amount": 1
+      },
+      {
+        "name": "cornstarch",
+        "amount": 1
+      },
+      {
+        "name": "rice",
+        "amount": 2
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 15,
+      "servings": 4
+    },
+    "instructions": [
+      "Cut the bell peppers into strips.",
+      "Cut the broccoli into florets.",
+      "Peel and slice the carrot into thin rounds.",
+      "Slice the onion thinly.",
+      "Mince the garlic.",
+      "In a small bowl, whisk together the soy sauce, sesame oil, and cornstarch to make the sauce.",
+      "Heat a large skillet or wok over high heat.",
+      "Add a drizzle of oil to the skillet.",
+      "Add the bell peppers, broccoli, carrot, onion, and garlic to the skillet.",
+      "Stir fry until the vegetables are tender-crisp, about 3-4 minutes.",
+      "Pour the sauce over the vegetables in the skillet.",
+      "Stir fry for another 1-2 minutes, until everything is heated through and coated in the sauce.",
+      "Serve hot over cooked rice.",
+      "Enjoy!"
+    ],
+    "image": "vegetable-stir-fry.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "17"
+  },
+  {
+    "name": "Banana Bread",
+    "description": "A classic and comforting snack option, banana bread is moist, tender, and bursting with banana flavor. Enjoy it warm out of the oven or toasted with a smear of butter.",
+    "author": "Daniel Smith",
+    "rating": 3,
+    "rating_count": 784,
+    "category": "snack",
+    "nutrition_facts": {
+      "calories": 220,
+      "carbs": 30,
+      "fat": 10,
+      "protein": 4,
+      "fiber": 2,
+      "cholesterol": 30,
+      "sodium": 180
+    },
+    "ingredients": [
+      {
+        "name": "ripe bananas",
+        "amount": 2
+      },
+      {
+        "name": "flour",
+        "amount": 1
+      },
+      {
+        "name": "sugar",
+        "amount": 1
+      },
+      {
+        "name": "butter",
+        "amount": 1
+      },
+      {
+        "name": "eggs",
+        "amount": 2
+      },
+      {
+        "name": "baking soda",
+        "amount": 1
+      },
+      {
+        "name": "vanilla extract",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "cinnamon",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 60,
+      "servings": 8
+    },
+    "instructions": [
+      "Preheat the oven to 350°F (175°C).",
+      "Grease a 9x5-inch loaf pan and set aside.",
+      "In a large mixing bowl, mash the ripe bananas with a fork or potato masher until smooth.",
+      "Add the melted butter, sugar, eggs, and vanilla extract to the mashed bananas.",
+      "Stir until well combined.",
+      "In a separate bowl, whisk together the flour, baking soda, salt, and cinnamon.",
+      "Gradually add the dry ingredients to the wet ingredients, stirring until just combined.",
+      "Pour the batter into the prepared loaf pan.",
+      "Bake for 50-60 minutes, or until a toothpick inserted into the center comes out clean.",
+      "Remove from the oven and let the banana bread cool in the pan for 10 minutes.",
+      "Transfer the banana bread to a wire rack to cool completely before slicing.",
+      "Slice and serve.",
+      "Enjoy!"
+    ],
+    "image": "banana-bread.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "18"
+  },
+  {
+    "name": "Chicken Sandwich",
+    "description": "A classic and satisfying lunch option, chicken salad sandwich is made with tender chicken, crunchy celery, and creamy mayonnaise. Enjoy it between two slices of bread for a delicious meal.",
+    "author": "Olivia Taylor",
+    "rating": 4,
+    "rating_count": 415,
+    "category": "lunch",
+    "nutrition_facts": {
+      "calories": 350,
+      "carbs": 30,
+      "fat": 18,
+      "protein": 20,
+      "fiber": 2,
+      "cholesterol": 60,
+      "sodium": 680
+    },
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "amount": 1
+      },
+      {
+        "name": "celery",
+        "amount": 2
+      },
+      {
+        "name": "mayonnaise",
+        "amount": 1
+      },
+      {
+        "name": "mustard",
+        "amount": 1
+      },
+      {
+        "name": "lemon juice",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      },
+      {
+        "name": "lettuce",
+        "amount": 1
+      },
+      {
+        "name": "bread",
+        "amount": 2
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 15,
+      "servings": 2
+    },
+    "instructions": [
+      "Cook the chicken breast until fully cooked, either by grilling, baking, or poaching.",
+      "Let the chicken cool, then dice it into small pieces.",
+      "Chop the celery into small pieces.",
+      "In a large mixing bowl, combine the diced chicken, chopped celery, mayonnaise, mustard, and lemon juice.",
+      "Season with salt and black pepper to taste.",
+      "Stir until everything is well coated in the dressing.",
+      "Toast the bread slices until golden brown.",
+      "Layer lettuce leaves on one slice of bread.",
+      "Top with the chicken salad mixture.",
+      "Place the second slice of bread on top.",
+      "Cut the sandwich in half, if desired, and serve immediately.",
+      "Enjoy!"
+    ],
+    "image": "chicken-sandwich.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "19"
+  },
+  {
+    "name": "Vegetable Soup",
+    "description": "A comforting and nutritious dinner option, vegetable soup is made with a variety of fresh vegetables, beans, and aromatic herbs. It's warm, hearty, and perfect for chilly evenings.",
+    "author": "Daniel Smith",
+    "rating": 2,
+    "rating_count": 515,
+    "category": "dinner",
+    "nutrition_facts": {
+      "calories": 180,
+      "carbs": 30,
+      "fat": 5,
+      "protein": 8,
+      "fiber": 8,
+      "cholesterol": 0,
+      "sodium": 680
+    },
+    "ingredients": [
+      {
+        "name": "carrots",
+        "amount": 2
+      },
+      {
+        "name": "celery",
+        "amount": 2
+      },
+      {
+        "name": "onion",
+        "amount": 1
+      },
+      {
+        "name": "garlic",
+        "amount": 3
+      },
+      {
+        "name": "potatoes",
+        "amount": 2
+      },
+      {
+        "name": "vegetable broth",
+        "amount": 1
+      },
+      {
+        "name": "tomatoes",
+        "amount": 2
+      },
+      {
+        "name": "cannellini beans",
+        "amount": 1
+      },
+      {
+        "name": "bay leaves",
+        "amount": 2
+      },
+      {
+        "name": "thyme",
+        "amount": 1
+      },
+      {
+        "name": "salt",
+        "amount": 1
+      },
+      {
+        "name": "black pepper",
+        "amount": 1
+      }
+    ],
+    "times": {
+      "prep_time": 15,
+      "cook_time": 30,
+      "servings": 4
+    },
+    "instructions": [
+      "Peel and dice the carrots, celery, onion, and potatoes.",
+      "Mince the garlic.",
+      "In a large pot, heat a drizzle of olive oil over medium heat.",
+      "Add the diced vegetables and minced garlic to the pot.",
+      "Cook, stirring occasionally, until the vegetables are tender, about 5-7 minutes.",
+      "Add the vegetable broth, diced tomatoes (with their juices), cannellini beans (drained and rinsed), bay leaves, and thyme to the pot.",
+      "Season with salt and black pepper to taste.",
+      "Bring the soup to a simmer, then reduce the heat to low.",
+      "Cover and let the soup simmer for 20-25 minutes, stirring occasionally, until the flavors have melded together and the vegetables are soft.",
+      "Remove the bay leaves and thyme sprigs before serving.",
+      "Taste and adjust seasoning if needed.",
+      "Serve hot, garnished with fresh herbs if desired.",
+      "Enjoy!"
+    ],
+    "image": "vegetable-soup.jpg",
+    "created_at": "2024-04-08T01:02:51.030Z",
+    "id": "20"
+  }
+]

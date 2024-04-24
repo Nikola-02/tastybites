@@ -11,7 +11,6 @@ export class RadioComponent {
     entityName: string;
   }>();
   @Input() items: Array<any>;
-  public isSelected: boolean = false;
 
   onChange(event: Event) {
     let value = (event.target as HTMLInputElement).id;
