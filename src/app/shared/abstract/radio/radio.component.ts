@@ -12,8 +12,8 @@ export class RadioComponent {
   }>();
   @Input() items: Array<any>;
 
-  onChange(event: Event) {
-    console.log(event);
+  onChange(event: HTMLInputElement) {
+    console.log(event.id);
 
     // this.valueChanged.emit({ value: this.value, entityName: this.entityName });
   }
