@@ -20,77 +20,56 @@ export class RecipesService {
     author = '',
     category = ''
   ) {
-    const url = 'shared/json/recipes.json';
+    const url = '../../../assets/json/recipes.json';
 
-    // const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
-    // url.searchParams.append('limit', limit.toString());
-    // url.searchParams.append('page', page.toString());
-
-    // if (search != '') {
-    //   url.searchParams.append('name', search);
-    // }
-
-    // if (author != '') {
-    //   url.searchParams.append('author', author);
-    // }
-
-    // if (category != '') {
-    //   url.searchParams.append('category', category);
-    // }
-
-    // if (sortBy != '0') {
-    //   if (sortBy == 'asc-rating') {
-    //     url.searchParams.append('sortBy', 'rating');
-    //   }
-
-    //   if (sortBy == 'desc-rating') {
-    //     url.searchParams.append('sortBy', 'rating');
-    //     url.searchParams.append('order', 'desc');
-    //   }
-
-    //   if (sortBy == 'asc-name') {
-    //     url.searchParams.append('sortBy', 'name');
-    //   }
-
-    //   if (sortBy == 'desc-name') {
-    //     url.searchParams.append('sortBy', 'name');
-    //     url.searchParams.append('order', 'desc');
-    //   }
-    // }
-
-    return this.http.get<IRecipe[]>(url.toString()).pipe(
+    return this.http.get<IRecipe[]>(url).pipe(
       map((recipes) => {
         return recipes.map((recipe) => ({
           ...recipe,
           category: recipe.category.toUpperCase(),
           description: this.trimAndAppendDots(recipe.description),
         }));
+      }),
+      map((newRecipes) => {
+        let filteredRecipes = newRecipes;
+
+        let startIndex = limit * (page - 1);
+        let endIndex = limit * page;
+
+        return filteredRecipes.slice(startIndex, endIndex);
       })
     );
   }
 
   getAllRecipesForTotalPages(search = '', author = '', category = '') {
-    const url = new URL('https://660c5f723a0766e85dbe03c7.mockapi.io/recipes');
+    const url = '../../../assets/json/recipes.json';
 
-    if (search != '') {
-      url.searchParams.append('name', search);
-    }
-
-    if (author != '') {
-      url.searchParams.append('author', author);
-    }
-
-    if (category != '') {
-      url.searchParams.append('category', category);
-    }
-
-    return this.http.get<IRecipe[]>(url.toString());
+    return this.http.get<IRecipe[]>(url).pipe(
+      map((recipes: IRecipe[]) => {
+        //Dodaj filtere za search, author i category
+        return recipes;
+      })
+    );
   }
 
-  getRecipeById(id: string): Observable<IRecipe> {
-    let url = 'https://660c5f723a0766e85dbe03c7.mockapi.io/recipes/' + id;
+  getRecipeById(id: string): Observable<IRecipe | undefined> {
+    const url = '../../../assets/json/recipes.json';
+    //let url = 'https://660c5f723a0766e85dbe03c7.mockapi.io/recipes/' + id;
 
-    return this.http.get<IRecipe>(url);
+    return this.http.get<IRecipe[]>(url).pipe(
+      map((recipes: IRecipe[]) => {
+        return recipes.map((recipe) => ({
+          ...recipe,
+          category: recipe.category.toUpperCase(),
+          description: this.trimAndAppendDots(recipe.description),
+        }));
+      }),
+      map((updatedRecipes: IRecipe[]) => {
+        return updatedRecipes.find((r: IRecipe) => r.id === id);
+      })
+    );
+
+    //return this.http.get<IRecipe>(url);
   }
 
   private trimAndAppendDots(description: string): string {

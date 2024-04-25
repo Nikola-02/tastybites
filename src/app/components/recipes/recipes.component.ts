@@ -25,7 +25,8 @@ export class RecipesComponent implements OnInit {
   constructor(private recipesService: RecipesService) {}
 
   ngOnInit(): void {
-    this.getRecipes(true);
+    this.getRecipes();
+    this.getTotalPagesForRecipes();
   }
 
   setSelectedFilters(data: { value: string; entityName: string }) {
@@ -49,7 +50,7 @@ export class RecipesComponent implements OnInit {
     this.getRecipes();
   }
 
-  getRecipes(init: boolean = false) {
+  getRecipes() {
     this.recipesService
       .fetchRecipes(
         this.perPage,
@@ -61,11 +62,9 @@ export class RecipesComponent implements OnInit {
       )
       .subscribe(
         (recipes: IRecipe[]) => {
-          console.log(recipes);
-
           this.error = '';
           this.recipes = recipes;
-          this.getTotalPagesForRecipes(init);
+          this.getTotalPagesForRecipes();
         },
         (error) => {
           this.error = 'There is no recipes for this combination.';
@@ -73,21 +72,12 @@ export class RecipesComponent implements OnInit {
       );
   }
 
-  getTotalPagesForRecipes(init: boolean = false) {
+  getTotalPagesForRecipes() {
     this.recipesService
       .getAllRecipesForTotalPages(this.search, this.author, this.category)
       .subscribe((recipes: IRecipe[]) => {
         this.totalPages = Math.ceil(recipes.length / this.perPage);
-
-        if (init) this.initSetFilters(recipes);
       });
-  }
-
-  initSetFilters(recipes: IRecipe[]) {
-    this.categories = Array.from(
-      new Set(recipes.map((recipe) => recipe.category))
-    );
-    this.authors = Array.from(new Set(recipes.map((recipe) => recipe.author)));
   }
 
   setPage(newPage: number) {

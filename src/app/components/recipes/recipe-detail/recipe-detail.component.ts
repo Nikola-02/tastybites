@@ -31,18 +31,19 @@ export class RecipeDetailComponent implements OnInit, OnDestroy {
   }
 
   getSingleRecipe() {
-    this.recipeSub = this.recipeService.getRecipeById(this.id).subscribe(
-      (recipe: IRecipe) => {
-        this.recipe = recipe;
-        let date = new Date(this.recipe.created_at);
-        this.dateTransformed =
-          date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear();
-      },
-      (error) => {
+    this.recipeSub = this.recipeService
+      .getRecipeById(this.id)
+      .subscribe((recipe: IRecipe | undefined) => {
+        if (recipe) {
+          this.recipe = recipe;
+          let date = new Date(this.recipe.created_at);
+          this.dateTransformed =
+            date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear();
+          return;
+        }
+
         this.router.navigate(['']);
-        console.log(error);
-      }
-    );
+      });
   }
 
   addIngredientsToShoppingList() {
