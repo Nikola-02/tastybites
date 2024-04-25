@@ -31,14 +31,50 @@ export class RecipesService {
         }));
       }),
       map((newRecipes) => {
+        //Filters
+        newRecipes = this.filteredRecipes(newRecipes, search, author, category);
+
         let filteredRecipes = newRecipes;
+
+        //Pagination
 
         let startIndex = limit * (page - 1);
         let endIndex = limit * page;
 
         return filteredRecipes.slice(startIndex, endIndex);
+
+        //Sort
+
+        //newRecipes = this.sortRecipes(newRecipes, sort);
       })
     );
+  }
+
+  filteredRecipes(
+    recipes: IRecipe[],
+    search: string,
+    author: string,
+    category: string
+  ): IRecipe[] {
+    if (search) {
+      recipes = recipes.filter((r) => {
+        return r.name.toLowerCase().includes(search.toLowerCase());
+      });
+    }
+
+    if (author) {
+      recipes = recipes.filter((r) => {
+        return r.author.toLowerCase() == author.toLowerCase();
+      });
+    }
+
+    if (category) {
+      recipes = recipes.filter((r) => {
+        return r.category.toLowerCase() == category.toLowerCase();
+      });
+    }
+
+    return recipes;
   }
 
   getAllRecipesForTotalPages(search = '', author = '', category = '') {
@@ -70,6 +106,24 @@ export class RecipesService {
     );
 
     //return this.http.get<IRecipe>(url);
+  }
+
+  getFilters() {
+    const authorsUrl = '../../../assets/json/authors.json';
+    const categoriesUrl = '../../../assets/json/categories.json';
+
+    let authors = this.getAuthors(authorsUrl);
+    let categories = this.getAuthors(categoriesUrl);
+
+    return { authors: authors, categories: categories };
+  }
+
+  getAuthors(url: string) {
+    return this.http.get<string[]>(url);
+  }
+
+  getCategories(url: string) {
+    return this.http.get<string[]>(url);
   }
 
   private trimAndAppendDots(description: string): string {

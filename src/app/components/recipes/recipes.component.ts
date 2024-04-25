@@ -3,6 +3,8 @@ import { RecipesService } from './recipes.service';
 import { IRecipe } from '../../shared/interfaces/i-recipe';
 import { RadioComponent } from 'src/app/shared/abstract/radio/radio.component';
 import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-recipes',
@@ -21,12 +23,14 @@ export class RecipesComponent implements OnInit {
   categories: string[];
   authors: string[];
   error: string;
+  observableFilter: any;
 
   constructor(private recipesService: RecipesService) {}
 
   ngOnInit(): void {
     this.getRecipes();
     this.getTotalPagesForRecipes();
+    this.setFilters();
   }
 
   setSelectedFilters(data: { value: string; entityName: string }) {
@@ -35,6 +39,18 @@ export class RecipesComponent implements OnInit {
     if (data.entityName === 'category') this.category = data.value;
 
     this.getRecipes();
+  }
+
+  setFilters() {
+    let filtersObservable = this.recipesService.getFilters();
+
+    filtersObservable.authors.subscribe((authors) => {
+      this.authors = authors;
+    });
+
+    filtersObservable.categories.subscribe((categories) => {
+      this.categories = categories;
+    });
   }
 
   onSubmit(ngForm: NgForm) {
@@ -60,16 +76,17 @@ export class RecipesComponent implements OnInit {
         this.author,
         this.category
       )
-      .subscribe(
-        (recipes: IRecipe[]) => {
-          this.error = '';
-          this.recipes = recipes;
-          this.getTotalPagesForRecipes();
-        },
-        (error) => {
+      .subscribe((recipes: IRecipe[]) => {
+        if (!recipes.length) {
+          console.log('da');
+
           this.error = 'There is no recipes for this combination.';
+          return;
         }
-      );
+        this.error = '';
+        this.recipes = recipes;
+        this.getTotalPagesForRecipes();
+      });
   }
 
   getTotalPagesForRecipes() {
