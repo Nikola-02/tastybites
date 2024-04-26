@@ -32,7 +32,7 @@ export class RecipesService {
       }),
       map((newRecipes) => {
         //Filters
-        newRecipes = this.filteredRecipes(newRecipes, search, author, category);
+        newRecipes = this.filterRecipes(newRecipes, search, author, category);
 
         let filteredRecipes = newRecipes;
 
@@ -41,16 +41,16 @@ export class RecipesService {
         let startIndex = limit * (page - 1);
         let endIndex = limit * page;
 
-        return filteredRecipes.slice(startIndex, endIndex);
+        filteredRecipes = filteredRecipes.slice(startIndex, endIndex);
 
         //Sort
 
-        //newRecipes = this.sortRecipes(newRecipes, sort);
+        return this.sortRecipes(filteredRecipes, sortBy);
       })
     );
   }
 
-  filteredRecipes(
+  filterRecipes(
     recipes: IRecipe[],
     search: string,
     author: string,
@@ -72,6 +72,13 @@ export class RecipesService {
       recipes = recipes.filter((r) => {
         return r.category.toLowerCase() == category.toLowerCase();
       });
+    }
+
+    return recipes;
+  }
+
+  sortRecipes(recipes: IRecipe[], sortBy: string) {
+    if (sortBy && recipes.length) {
     }
 
     return recipes;
