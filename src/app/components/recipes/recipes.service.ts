@@ -36,16 +36,16 @@ export class RecipesService {
 
         let filteredRecipes = newRecipes;
 
+        //Sort
+
+        filteredRecipes = this.sortRecipes(filteredRecipes, sortBy);
+
         //Pagination
 
         let startIndex = limit * (page - 1);
         let endIndex = limit * page;
 
-        filteredRecipes = filteredRecipes.slice(startIndex, endIndex);
-
-        //Sort
-
-        return this.sortRecipes(filteredRecipes, sortBy);
+        return filteredRecipes.slice(startIndex, endIndex);
       })
     );
   }
@@ -128,7 +128,7 @@ export class RecipesService {
 
     return this.http.get<IRecipe[]>(url).pipe(
       map((recipes: IRecipe[]) => {
-        //Dodaj filtere za search, author i category
+        recipes = this.filterRecipes(recipes, search, author, category);
         return recipes;
       })
     );
