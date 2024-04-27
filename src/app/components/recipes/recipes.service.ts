@@ -79,6 +79,45 @@ export class RecipesService {
 
   sortRecipes(recipes: IRecipe[], sortBy: string) {
     if (sortBy && recipes.length) {
+      if (sortBy == 'asc-rating') {
+        recipes.sort((a, b) => {
+          return a.rating - b.rating;
+        });
+      }
+
+      if (sortBy == 'desc-rating') {
+        recipes.sort((a, b) => {
+          return b.rating - a.rating;
+        });
+      }
+
+      if (sortBy == 'asc-name') {
+        recipes.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+
+          if (a.name > b.name) {
+            return 1;
+          }
+
+          return 0;
+        });
+      }
+
+      if (sortBy == 'desc-name') {
+        recipes.sort((a, b) => {
+          if (a.name > b.name) {
+            return -1;
+          }
+
+          if (a.name < b.name) {
+            return 1;
+          }
+
+          return 0;
+        });
+      }
     }
 
     return recipes;
