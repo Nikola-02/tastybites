@@ -18,6 +18,7 @@ import { StarsComponent } from './shared/abstract/stars/stars.component';
 import { RadioComponent } from './shared/abstract/radio/radio.component';
 import { ShoppingItemComponent } from './components/shopping-list/shopping-item/shopping-item.component';
 import { AuthorComponent } from './components/author/author.component';
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AuthorComponent } from './components/author/author.component';
     RadioComponent,
     ShoppingItemComponent,
     AuthorComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
