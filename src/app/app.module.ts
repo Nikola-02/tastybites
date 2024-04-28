@@ -19,6 +19,7 @@ import { RadioComponent } from './shared/abstract/radio/radio.component';
 import { ShoppingItemComponent } from './components/shopping-list/shopping-item/shopping-item.component';
 import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LoginComponent } from './components/auth/login/login.component';
     ShoppingItemComponent,
     AuthorComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
