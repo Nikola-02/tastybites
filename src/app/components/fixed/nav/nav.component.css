@@ -63,17 +63,20 @@ header .my-container .auth-div a {
   font-size: 18px;
   padding: 12px 35px;
   text-decoration: none;
-  font-weight: 700;
+  transition: 0.3s ease all;
 }
 header .my-container .auth-div .login-btn {
   border-radius: 32px;
   background-color: #ff6464;
   color: #f6f6f6;
-  transition: 0.3s ease all;
+  font-weight: 700;
 }
 header .my-container .auth-div .login-btn:hover {
   background-color: #2a2a2a;
 }
 header .my-container .auth-div .register-btn {
   color: #2a2a2a;
+}
+header .my-container .auth-div .register-btn:hover {
+  color: #ff6464;
 }/*# sourceMappingURL=nav.component.css.map */

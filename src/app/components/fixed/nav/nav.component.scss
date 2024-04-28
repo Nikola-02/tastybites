@@ -73,14 +73,14 @@ header {
         font-size: 18px;
         padding: 12px 35px;
         text-decoration: none;
-        font-weight: 700;
+        transition: 0.3s ease all;
       }
       .login-btn {
         border-radius: 32px;
         background-color: $red;
         color: $white;
+        font-weight: 700;
 
-        transition: 0.3s ease all;
         &:hover {
           background-color: $black;
         }
@@ -88,6 +88,9 @@ header {
 
       .register-btn {
         color: $black;
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
