@@ -6,6 +6,8 @@ import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AuthorComponent } from './components/author/author.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'author', component: AuthorComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
