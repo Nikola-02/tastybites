@@ -1,9 +1,9 @@
-<div class="main">
+<main>
+  <div class="auth-title">
+    <h2>Register</h2>
+    <p>You can register your new account here.</p>
+  </div>
   <div class="my-container">
-    <div class="auth-title">
-      <h2>Register</h2>
-      <p>You can register your new account here.</p>
-    </div>
     <form>
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
@@ -17,7 +17,11 @@
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" />
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p class="have-acc">
+        You already have an account?
+        <a routerLink="/login" routerLinkActive="active">Login here</a>
+      </p>
     </form>
   </div>
-</div>
+</main>

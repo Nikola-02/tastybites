@@ -1,16 +1,26 @@
 @use "../../../shared/abstract/variables" as vars;
 
 main {
-  .my-container {
-    .auth-title {
-      text-align: center;
-      margin: 65px 0px 80px 0px;
-      h2 {
-        font-weight: 700;
-      }
+  .auth-title {
+    text-align: center;
+    margin: 65px 0px 50px 0px;
+    h2 {
+      font-weight: 700;
+    }
 
-      p {
-        color: rgba($color: vars.$black, $alpha: 0.8);
+    p {
+      color: rgba($color: vars.$black, $alpha: 0.8);
+    }
+  }
+  .my-container {
+    margin-bottom: 90px;
+    form {
+      margin: 0px auto;
+      width: 40%;
+      .have-acc {
+        margin-top: 15px;
+        span {
+        }
       }
     }
   }
