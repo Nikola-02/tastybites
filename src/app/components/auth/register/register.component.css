@@ -1,0 +1,15 @@
+.my-container {
+  width: 90%;
+  margin: 0px auto;
+}
+
+main .my-container .auth-title {
+  text-align: center;
+  margin: 65px 0px 80px 0px;
+}
+main .my-container .auth-title h2 {
+  font-weight: 700;
+}
+main .my-container .auth-title p {
+  color: rgba(42, 42, 42, 0.8);
+}/*# sourceMappingURL=register.component.css.map */
