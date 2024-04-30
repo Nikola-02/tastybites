@@ -6,5 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   constructor() {}
 
-  register() {}
+  register(formValues: { username: string; email: string; password: string }) {
+    console.log(formValues);
+  }
 }
