@@ -4,7 +4,7 @@
     <p>You can register your new account here.</p>
   </div>
   <div class="my-container">
-    <form>
+    <form #f="ngForm" (ngSubmit)="register(f)">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" />
