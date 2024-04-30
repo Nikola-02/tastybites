@@ -14,7 +14,14 @@
           class="form-control"
           name="username"
           id="username"
+          #name="ngModel"
         />
+      </div>
+      <div
+        *ngIf="name.invalid && (name.dirty || name.touched)"
+        class="alert alert-danger"
+      >
+        Username is required.
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
@@ -26,7 +33,14 @@
           class="form-control"
           name="email"
           id="email"
+          #email="ngModel"
         />
+      </div>
+      <div
+        *ngIf="email.invalid && (email.dirty || email.touched)"
+        class="alert alert-danger"
+      >
+        Format is invalid (example: example@example.com).
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
@@ -37,7 +51,14 @@
           ngModel
           name="password"
           id="password"
+          #password="ngModel"
         />
+      </div>
+      <div
+        *ngIf="password.invalid && (password.dirty || password.touched)"
+        class="alert alert-danger"
+      >
+        Password is required.
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
       <p class="have-acc">
