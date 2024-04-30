@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
+  emailError: string;
+  passwordError: string;
+  usernameError: string;
   constructor(private authService: AuthService) {}
 
   register(f: NgForm) {

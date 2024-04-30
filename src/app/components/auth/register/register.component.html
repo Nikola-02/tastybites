@@ -9,6 +9,7 @@
         <label for="username" class="form-label">Username</label>
         <input
           type="text"
+          required
           ngModel
           class="form-control"
           name="username"
@@ -20,6 +21,8 @@
         <input
           type="email"
           ngModel
+          required
+          email
           class="form-control"
           name="email"
           id="email"
@@ -29,6 +32,7 @@
         <label for="password" class="form-label">Password</label>
         <input
           type="password"
+          required
           class="form-control"
           ngModel
           name="password"
