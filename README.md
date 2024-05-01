@@ -11,7 +11,7 @@
 # Key Features:
 - Displaying popular recipes on the homepage.
   
-- Viewing, filtering, sorting, and paginating recipes using mockAPI (my custom JSON for recipes).
+- Viewing, filtering, sorting, and paginating recipes using JSONs.
   
 - Detailed information about each recipe on a single recipe page.
 
@@ -20,6 +20,8 @@
 - Manipulation of shopping list items (add, edit, delete).
 
 - Persistent storage of shopping list data in Local Storage.
+
+- Login and register mechanism (in Frontend only)
   
 # Technologies Used:
 - HTML, CSS(SASS), JavaScript, Angular.
