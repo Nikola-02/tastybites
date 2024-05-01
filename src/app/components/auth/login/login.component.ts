@@ -11,6 +11,6 @@ export class LoginComponent {
   constructor(private authService: AuthService) {}
 
   register(f: NgForm) {
-    this.authService.register(f.value);
+    this.authService.login(f.value);
   }
 }
