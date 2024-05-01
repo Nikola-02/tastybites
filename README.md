@@ -22,6 +22,8 @@
 - Persistent storage of shopping list data in Local Storage.
 
 - Login and register mechanism (in Frontend only)
+
+- Admin panel for CRUD operations for recipes
   
 # Technologies Used:
 - HTML, CSS(SASS), JavaScript, Angular.
