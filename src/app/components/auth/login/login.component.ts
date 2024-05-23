@@ -13,14 +13,18 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login(f: NgForm) {
+    console.log('da');
+
     let userOrFalse = this.authService.login(f.value);
 
     if (userOrFalse) {
-      this.badCredentials = true;
-      this.router.navigate(['/home']);
+      this.badCredentials = false;
+      this.router.navigate(['/']);
     } else {
       this.badCredentials = true;
-      this.router.navigate(['/login']);
+      setTimeout(() => {
+        this.badCredentials = false;
+      }, 8000);
     }
   }
 }

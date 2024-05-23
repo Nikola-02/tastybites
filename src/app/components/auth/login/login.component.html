@@ -18,10 +18,7 @@
           #email="ngModel"
         />
       </div>
-      <div
-        *ngIf="email.invalid && (email.dirty || email.touched)"
-        class="alert alert-danger"
-      >
+      <div *ngIf="email.invalid" class="alert alert-danger">
         Format is invalid (example: example@example.com).
       </div>
       <div class="mb-3">
@@ -36,15 +33,23 @@
           #password="ngModel"
         />
       </div>
-      <div
-        *ngIf="password.invalid && (password.dirty || password.touched)"
-        class="alert alert-danger"
-      >
+      <div *ngIf="password.invalid" class="alert alert-danger">
         Password is required.
       </div>
 
-      <div class="bad-credentials" *ngIf="user"></div>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <div
+        class="bad-credentials alert alert-danger p-3"
+        *ngIf="badCredentials"
+      >
+        Bad credentials.
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="password.invalid || email.invalid"
+      >
+        Login
+      </button>
       <p class="have-acc">
         You don't have an account?
         <a routerLink="/register" routerLinkActive="active">Register here</a>

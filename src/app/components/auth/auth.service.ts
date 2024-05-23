@@ -24,7 +24,11 @@ export class AuthService {
           user.password === formValues.password
       );
 
-      return user ? user : false;
+      if (user.length == 1) {
+        return user;
+      }
+
+      return false;
     }
 
     return false;
