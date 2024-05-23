@@ -1,12 +1,32 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { IUser } from 'src/app/shared/interfaces/i-user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  user: IUser;
+  constructor(private router: Router) {}
 
-  register(formValues: { username: string; email: string; password: string }) {}
+  register(formValues: IUser) {}
 
-  login(formValues: { email: string; password: string }) {}
+  login(formValues: { email: string; password: string }) {
+    let registeredUsersString: string | null =
+      localStorage.getItem('registeredUsers');
+
+    if (registeredUsersString) {
+      let registeredUsers = JSON.parse(registeredUsersString);
+
+      let user = registeredUsers.filter(
+        (user: IUser) =>
+          user.email === formValues.email &&
+          user.password === formValues.password
+      );
+
+      return user ? user : false;
+    }
+
+    return false;
+  }
 }

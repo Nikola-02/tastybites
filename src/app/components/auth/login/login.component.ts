@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(private authService: AuthService) {}
+  badCredentials = false;
+  constructor(private authService: AuthService, private router: Router) {}
 
-  register(f: NgForm) {
-    this.authService.login(f.value);
+  login(f: NgForm) {
+    let userOrFalse = this.authService.login(f.value);
+
+    if (userOrFalse) {
+      this.badCredentials = true;
+      this.router.navigate(['/home']);
+    } else {
+      this.badCredentials = true;
+      this.router.navigate(['/login']);
+    }
   }
 }
