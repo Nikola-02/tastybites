@@ -8,7 +8,14 @@ import { IUser } from './shared/interfaces/i-user';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    let user: IUser = {};
-    localStorage.setItem();
+    let userArray: IUser[] = [
+      {
+        username: 'user',
+        email: 'user@gmail.com',
+        password: 'user123',
+      },
+    ];
+
+    localStorage.setItem('registeredUsers', JSON.stringify(userArray));
   }
 }
