@@ -27,8 +27,6 @@ export class AuthService {
       if (user.length == 1) {
         return user;
       }
-
-      return false;
     }
 
     return false;
