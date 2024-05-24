@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
         username: 'admin',
         email: 'admin@gmail.com',
         password: 'admin123',
-        role: 'admin2',
+        role: 'admin',
       },
     ];
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ISystemUser } from 'src/app/shared/interfaces/i-system-user';
 import { IUser } from 'src/app/shared/interfaces/i-user';
 
@@ -7,7 +8,7 @@ import { IUser } from 'src/app/shared/interfaces/i-user';
   providedIn: 'root',
 })
 export class AuthService {
-  user: ISystemUser;
+  user$: Observable<ISystemUser> = new Observable<ISystemUser>();
 
   register(formValues: IUser) {}
 
