@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { ISystemUser } from 'src/app/shared/interfaces/i-system-user';
 import { IUser } from 'src/app/shared/interfaces/i-user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  user: IUser;
-  constructor(private router: Router) {}
+  user: ISystemUser;
 
   register(formValues: IUser) {}
 
@@ -25,6 +25,8 @@ export class AuthService {
       );
 
       if (user.length == 1) {
+        this.user = user[0];
+
         return user;
       }
     }

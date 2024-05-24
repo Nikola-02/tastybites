@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './shared/interfaces/i-user';
+import { ISystemUser } from './shared/interfaces/i-system-user';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,12 @@ import { IUser } from './shared/interfaces/i-user';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    let userArray: IUser[] = [
+    let userArray: ISystemUser[] = [
       {
-        username: 'user',
-        email: 'user@gmail.com',
-        password: 'user123',
+        username: 'admin',
+        email: 'admin@gmail.com',
+        password: 'admin123',
+        role: 'admin',
       },
     ];
 
