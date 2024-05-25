@@ -79,7 +79,7 @@ export class AuthService implements OnInit {
         this.user = user[0];
         localStorage.setItem('loginUser', JSON.stringify(user));
 
-        this.user$.next(user);
+        this.user$.next(this.user);
 
         return user;
       }

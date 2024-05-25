@@ -56,11 +56,11 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
           <i class="fa-solid fa-user"></i>
-          <span class="mx-4">Neko</span>
+          <span class="mx-4">{{ user.username }}</span>
         </button>
         <button mat-menu-item>
-          <i class="fa-solid fa-ticket"></i>
-          <span class="mx-4">User</span>
+          <i class="fa-regular fa-address-book"></i>
+          <span class="mx-4">{{ user.role }}</span>
         </button>
         <button mat-menu-item>
           <button class="btn m-0 p-0" (click)="logout()">Logout</button>
