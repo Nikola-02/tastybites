@@ -26,7 +26,41 @@ export class AuthService implements OnInit {
     }
   }
 
-  register(formValues: IUser) {}
+  register(formValues: IUser) {
+    let registeredUsersString: string | null =
+      localStorage.getItem('registeredUsers');
+
+    if (registeredUsersString) {
+      let registeredUsers = JSON.parse(registeredUsersString);
+
+      let userWithSameEmail = registeredUsers.filter(
+        (user: IUser) => user.email === formValues.email
+      );
+
+      if (userWithSameEmail.length > 0) {
+        return {
+          error: true,
+          message: 'User with same email already registered.',
+        };
+      }
+
+      let lastUser: ISystemUser = registeredUsers[registeredUsers.length - 1];
+
+      let newUser: ISystemUser = {
+        id: lastUser.id + 1,
+        username: formValues.username,
+        email: formValues.email,
+        password: formValues.password,
+        role: 'user',
+      };
+
+      registeredUsers.push(newUser);
+
+      localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+    }
+
+    return { error: false };
+  }
 
   login(formValues: { email: string; password: string }) {
     let registeredUsersString: string | null =

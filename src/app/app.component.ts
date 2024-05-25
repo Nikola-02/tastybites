@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     let userArray: ISystemUser[] = [
       {
+        id: 1,
         username: 'admin',
         email: 'admin@gmail.com',
         password: 'admin123',
