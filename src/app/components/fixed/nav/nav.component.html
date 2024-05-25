@@ -40,7 +40,32 @@
       >
     </div>
     <div class="auth-div" *ngIf="user">
-      <button class="btn logout-btn" (click)="logout()">Logout</button>
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+        class="btn m-0 p-0"
+      >
+        <img
+          src="https://static-00.iconduck.com/assets.00/user-circle-icon-256x256-vmrs52ri.png"
+          alt="Default profile picture"
+          width="45px"
+          height="45px"
+        />
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Neko</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>User</span>
+        </button>
+        <button mat-menu-item>
+          <button class="btn m-0 p-0" (click)="logout()">Logout</button>
+        </button>
+      </mat-menu>
     </div>
   </div>
 </header>

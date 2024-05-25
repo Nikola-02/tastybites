@@ -20,6 +20,9 @@ import { ShoppingItemComponent } from './components/shopping-list/shopping-item/
 import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,15 @@ import { RegisterComponent } from './components/auth/register/register.component
     LoginComponent,
     RegisterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
