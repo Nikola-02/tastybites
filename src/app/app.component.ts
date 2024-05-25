@@ -21,7 +21,11 @@ export class AppComponent implements OnInit {
       },
     ];
 
-    localStorage.setItem('registeredUsers', JSON.stringify(userArray));
+    let stringLocalStorageRegUsers = localStorage.getItem('registeredUsers');
+
+    if (!stringLocalStorageRegUsers) {
+      localStorage.setItem('registeredUsers', JSON.stringify(userArray));
+    }
 
     this.authService.checkIfUserIsLoggedIn();
   }
