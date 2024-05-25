@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './shared/interfaces/i-user';
 import { ISystemUser } from './shared/interfaces/i-system-user';
+import { AuthService } from './components/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { ISystemUser } from './shared/interfaces/i-system-user';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  constructor(private authService: AuthService) {}
   ngOnInit(): void {
     let userArray: ISystemUser[] = [
       {
@@ -19,5 +21,7 @@ export class AppComponent implements OnInit {
     ];
 
     localStorage.setItem('registeredUsers', JSON.stringify(userArray));
+
+    this.authService.checkIfUserIsLoggedIn();
   }
 }

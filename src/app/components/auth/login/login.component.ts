@@ -13,8 +13,6 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login(f: NgForm) {
-    console.log('da');
-
     let userOrFalse = this.authService.login(f.value);
 
     if (userOrFalse) {

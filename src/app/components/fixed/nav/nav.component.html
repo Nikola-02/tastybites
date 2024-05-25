@@ -31,13 +31,16 @@
         </li>
       </ul>
     </nav>
-    <div class="auth-div">
+    <div class="auth-div" *ngIf="!user">
       <a routerLink="/login" class="login-btn" routerLinkActive="active"
         >Login</a
       >
       <a routerLink="/register" class="register-btn" routerLinkActive="active"
         >Register</a
       >
+    </div>
+    <div class="auth-div" *ngIf="user">
+      <button class="btn logout-btn" (click)="logout()">Logout</button>
     </div>
   </div>
 </header>

@@ -75,7 +75,8 @@ header {
         text-decoration: none;
         transition: 0.3s ease all;
       }
-      .login-btn {
+      .login-btn,
+      .logout-btn {
         border-radius: 32px;
         background-color: $red;
         color: $white;
@@ -86,12 +87,21 @@ header {
         }
       }
 
+      .logout-btn {
+        font-weight: 600;
+      }
+
       .register-btn {
         color: $black;
         &:hover {
           color: $red;
         }
       }
+    }
+
+    .logout-div {
+      width: 25%;
+      text-align: end;
     }
   }
 }
