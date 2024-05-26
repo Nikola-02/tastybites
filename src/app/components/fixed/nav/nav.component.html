@@ -62,6 +62,10 @@
           <i class="fa-regular fa-address-book"></i>
           <span class="mx-4">{{ user.role }}</span>
         </button>
+        <button mat-menu-item *ngIf="user.role == 'admin'">
+          <i class="fa-solid fa-lock"></i>
+          <span class="mx-4">Admin panel</span>
+        </button>
         <button mat-menu-item>
           <button class="btn m-0 p-0" (click)="logout()">Logout</button>
         </button>
