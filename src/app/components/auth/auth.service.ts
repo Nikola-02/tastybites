@@ -77,7 +77,7 @@ export class AuthService implements OnInit {
 
       if (user.length == 1) {
         this.user = user[0];
-        localStorage.setItem('loginUser', JSON.stringify(user));
+        localStorage.setItem('loginUser', JSON.stringify(this.user));
 
         this.user$.next(this.user);
 
