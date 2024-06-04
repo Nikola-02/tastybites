@@ -26,9 +26,18 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'admin',
-    loadChildren: () =>
-      import('./components/admin/admin.module').then((m) => m.AdminModule),
+    path: '',
+    component: Ad,
+    children: [
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'recipes', component: RecipesComponent },
+      { path: 'recipes/:id', component: RecipeDetailComponent },
+      { path: 'shopping-list', component: ShoppingListComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'author', component: AuthorComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+    ],
   },
 ];
 
