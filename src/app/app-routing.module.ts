@@ -17,9 +17,20 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'recipes', component: RecipesComponent },
-      { path: 'recipes/:id', component: RecipeDetailComponent },
-      { path: 'shopping-list', component: ShoppingListComponent },
+      {
+        path: 'recipes',
+        loadChildren: () =>
+          import('./components/recipes/recipes.module').then(
+            (m) => m.RecipesModule
+          ),
+      },
+      {
+        path: 'shopping-list',
+        loadChildren: () =>
+          import('./components/shopping-list/shopping-list.module').then(
+            (m) => m.ShoppingListModule
+          ),
+      },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'author', component: AuthorComponent },
       { path: 'login', component: LoginComponent },
