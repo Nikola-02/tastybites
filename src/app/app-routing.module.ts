@@ -11,25 +11,24 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'recipes', component: RecipesComponent },
-  { path: 'recipes/:id', component: RecipeDetailComponent },
-  { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'contact-us', component: ContactUsComponent },
-  { path: 'author', component: AuthorComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-
   {
     path: '',
     component: LayoutComponent,
     children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        component: HomeComponent,
-      },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'recipes', component: RecipesComponent },
+      { path: 'recipes/:id', component: RecipeDetailComponent },
+      { path: 'shopping-list', component: ShoppingListComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'author', component: AuthorComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
     ],
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./components/admin/admin.module').then((m) => m.AdminModule),
   },
 ];
 
