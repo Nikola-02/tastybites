@@ -8,6 +8,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,10 +19,17 @@ const routes: Routes = [
   { path: 'author', component: AuthorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+
   {
-    path: 'admin',
-    loadChildren: () =>
-      import('./components/admin/admin.module').then((m) => m.AdminModule),
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: HomeComponent,
+      },
+    ],
   },
 ];
 
