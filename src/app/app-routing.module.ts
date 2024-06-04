@@ -18,6 +18,11 @@ const routes: Routes = [
   { path: 'author', component: AuthorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./components/admin/').then((m) => m.AdminPanelModule),
+  },
 ];
 
 @NgModule({
