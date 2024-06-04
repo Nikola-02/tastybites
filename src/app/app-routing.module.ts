@@ -9,7 +9,7 @@ import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { AdminLayoutComponent } from './components/admin/admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from './components/layout/admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {
@@ -24,12 +24,13 @@ const routes: Routes = [
       { path: 'author', component: AuthorComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      {
+        path: 'admin',
+        component: AdminLayoutComponent,
+        loadChildren: () =>
+          import('./components/admin/admin.module').then((m) => m.AdminModule),
+      },
     ],
-  },
-  {
-    path: 'admin',
-    component: AdminLayoutComponent,
-    children: [{ path: '', component: HomeComponent, pathMatch: 'full' }], //izmeni ovo
   },
 ];
 

@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AdminLayoutComponent } from './components/layout/admin-layout/admin-layout.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     LoginComponent,
     RegisterComponent,
     LayoutComponent,
+    AdminLayoutComponent,
   ],
   imports: [
     BrowserModule,
