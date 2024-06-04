@@ -25,6 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AdminLayoutComponent } from './components/layout/admin-layout/admin-layout.component';
+import { AdminNavComponent } from './components/fixed/admin-nav/admin-nav.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AdminLayoutComponent } from './components/layout/admin-layout/admin-lay
     RegisterComponent,
     LayoutComponent,
     AdminLayoutComponent,
+    AdminNavComponent,
   ],
   imports: [
     BrowserModule,
