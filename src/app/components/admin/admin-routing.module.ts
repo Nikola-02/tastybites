@@ -5,7 +5,7 @@ import { EditRecipesComponent } from './recipes/edit-recipes/edit-recipes.compon
 import { CreateRecipesComponent } from './recipes/create-recipes/create-recipes.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'recipes/dashboard', pathMatch: 'full' },
   { path: 'recipes/dashboard', component: DashboardRecipesComponent },
   { path: 'recipes/:id/edit', component: EditRecipesComponent },
   { path: 'recipes/create', component: CreateRecipesComponent },
