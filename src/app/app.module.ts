@@ -23,6 +23,8 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { AdminComponent } from './components/layout/admin/admin.component';
+import { BaseComponent } from './components/layout/base/base.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
     AuthorComponent,
     LoginComponent,
     RegisterComponent,
+    AdminComponent,
+    BaseComponent,
   ],
   imports: [
     BrowserModule,
