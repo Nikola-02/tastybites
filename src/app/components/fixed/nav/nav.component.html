@@ -62,7 +62,7 @@
           <i class="fa-regular fa-address-book"></i>
           <span class="mx-4">{{ user.role }}</span>
         </button>
-        <button mat-menu-item *ngIf="user.role == 'admin'">
+        <button routerLink="/admin" mat-menu-item *ngIf="user.role == 'admin'">
           <i class="fa-solid fa-lock"></i>
           <span class="mx-4 w-100">Admin panel</span>
         </button>
