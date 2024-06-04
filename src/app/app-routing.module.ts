@@ -9,6 +9,7 @@ import { AuthorComponent } from './components/author/author.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AdminLayoutComponent } from './components/admin/admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {
@@ -26,18 +27,9 @@ const routes: Routes = [
     ],
   },
   {
-    path: '',
-    component: Ad,
-    children: [
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'recipes', component: RecipesComponent },
-      { path: 'recipes/:id', component: RecipeDetailComponent },
-      { path: 'shopping-list', component: ShoppingListComponent },
-      { path: 'contact-us', component: ContactUsComponent },
-      { path: 'author', component: AuthorComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
-    ],
+    path: 'admin',
+    component: AdminLayoutComponent,
+    children: [{ path: '', component: HomeComponent, pathMatch: 'full' }], //izmeni ovo
   },
 ];
 
