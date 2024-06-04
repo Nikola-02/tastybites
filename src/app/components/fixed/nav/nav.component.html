@@ -64,11 +64,9 @@
         </button>
         <button mat-menu-item *ngIf="user.role == 'admin'">
           <i class="fa-solid fa-lock"></i>
-          <span class="mx-4">Admin panel</span>
+          <span class="mx-4 w-100">Admin panel</span>
         </button>
-        <button mat-menu-item>
-          <button class="btn m-0 p-0" (click)="logout()">Logout</button>
-        </button>
+        <button mat-menu-item class="btn" (click)="logout()">Logout</button>
       </mat-menu>
     </div>
   </div>
