@@ -1,4 +1,4 @@
-<table class="table mt-4">
+<table class="table mt-4" *ngIf="recipes.length; else noRecipes">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -28,3 +28,6 @@
     </tr>
   </tbody>
 </table>
+<ng-template #noRecipes>
+  <p class="alert alert-danger mt-3">There is no recipes to show.</p>
+</ng-template>
