@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { IRecipe } from 'src/app/shared/interfaces/i-recipe';
 
 @Injectable({
@@ -26,7 +26,7 @@ export class AdminRecipesService {
     );
   }
 
-  getSingleRecipe(id) {
+  getSingleRecipe(id): Observable<IRecipe | undefined> {
     return this.getAllRecipesForDashboard().pipe(
       map((recipes: IRecipe[]) => {
         return recipes.find((r) => r.id == id);

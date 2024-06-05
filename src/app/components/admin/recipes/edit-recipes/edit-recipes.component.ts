@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminRecipesService } from '../admin-recipes.service';
 import { Subscription } from 'rxjs';
 import { IRecipe } from 'src/app/shared/interfaces/i-recipe';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-recipes',
@@ -15,6 +15,7 @@ export class EditRecipesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private adminRecipesService: AdminRecipesService
   ) {}
 
@@ -30,8 +31,12 @@ export class EditRecipesComponent implements OnInit {
     this.getSingleRecipeSub = this.adminRecipesService
       .getSingleRecipe(id)
       .subscribe({
-        next: (response) => {
-          this.recipe = response;
+        next: (recipe) => {
+          if (recipe) {
+            this.recipe = recipe;
+          } else {
+            this.router.navigate(['/admin']);
+          }
         },
         error: (error) => {
           console.log(error);
