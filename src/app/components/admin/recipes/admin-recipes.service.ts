@@ -35,4 +35,8 @@ export class AdminRecipesService {
   getAllForDdl(json: string) {
     return this.http.get(this.baseJsonUrl + json + '.json');
   }
+
+  insertNewRecipe(formValues) {
+    return this.http.post('http://localhost:5000/api/recipes/', formValues);
+  }
 }

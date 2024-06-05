@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AdminRecipesService } from '../admin-recipes.service';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
@@ -8,19 +8,20 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
   templateUrl: './create-recipes.component.html',
   styleUrls: ['./create-recipes.component.scss'],
 })
-export class CreateRecipesComponent implements OnInit {
+export class CreateRecipesComponent implements OnInit, OnDestroy {
   ratings: number[] = [1, 2, 3, 4, 5];
   authors: any = [];
   categories: any = [];
   authorSubscription: Subscription;
   categorySubscription: Subscription;
+  insertNewRecipeSub: Subscription;
 
   form = new FormGroup({
     name: new FormControl('wad'),
     description: new FormControl('awd'),
     rating: new FormControl('5'),
-    author: new FormControl(''),
-    category: new FormControl(''),
+    author: new FormControl('0'),
+    category: new FormControl('0'),
     image: new FormControl(null),
     nutritionFacts: new FormGroup({
       calories: new FormControl('5'),
@@ -96,12 +97,31 @@ export class CreateRecipesComponent implements OnInit {
   submitForm() {
     const formData = new FormData();
 
-    // Dodajte sve kontrole koje imaju vrednost
     for (const control in this.form.controls) {
-      const value = this.form.get(control)?.value;
+      let value = this.form.get(control)?.value;
       if (value) {
+        if (typeof value === 'object') {
+          value = JSON.stringify(value);
+        }
         formData.append(control, value);
       }
     }
+
+    this.insertNewRecipeSub = this.adminRecipesService
+      .insertNewRecipe(formData)
+      .subscribe({
+        next: (response) => {
+          console.log(response);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.authorSubscription.unsubscribe();
+    this.categorySubscription.unsubscribe();
+    this.insertNewRecipeSub.unsubscribe();
   }
 }
