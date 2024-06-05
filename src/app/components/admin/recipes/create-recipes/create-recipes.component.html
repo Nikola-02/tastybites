@@ -12,22 +12,34 @@
   </div>
 
   <div class="col-md-7">
-    <form class="mb-5">
+    <form [formGroup]="form" class="mb-5">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" />
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          id="name"
+        />
       </div>
+
       <div class="mb-3">
         <label for="floatingTextarea" class="form-label">Description</label>
         <textarea
           class="form-control"
           placeholder="Leave a description here"
           id="floatingTextarea"
+          formControlName="description"
         ></textarea>
       </div>
+
       <div class="mb-3">
         <label for="name" class="form-label">Rating</label>
-        <select class="form-select" aria-label="Default select example">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="rating"
+        >
           <option selected>Select rating</option>
           <option *ngFor="let rating of ratings" [value]="rating">
             {{ rating }}
@@ -37,7 +49,11 @@
 
       <div class="mb-3">
         <label for="name" class="form-label">Author</label>
-        <select class="form-select" aria-label="Default select example">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="author"
+        >
           <option selected>Select author</option>
           <option *ngFor="let author of authors" [value]="author">
             {{ author }}
@@ -47,7 +63,11 @@
 
       <div class="mb-3">
         <label for="name" class="form-label">Category</label>
-        <select class="form-select" aria-label="Default select example">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="category"
+        >
           <option selected>Select category</option>
           <option *ngFor="let cat of categories" [value]="cat">
             {{ cat }}
@@ -55,33 +75,82 @@
         </select>
       </div>
 
-      <div class="mb-3 mt-4">
-        <label for="exampleInputPassword1" class="form-label"
-          >Nutrition facts</label
-        >
-        <input type="text" class="form-control mt-2" placeholder="calories" />
-        <input type="text" class="form-control mt-2" placeholder="carbs" />
-        <input type="text" class="form-control mt-2" placeholder="fat" />
-        <input type="text" class="form-control mt-2" placeholder="protein" />
-        <input type="text" class="form-control mt-2" placeholder="fiber" />
+      <div class="mb-3 mt-4" formGroupName="nutritionFacts">
+        <label class="form-label">Nutrition facts</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="calories"
+          formControlName="calories"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="carbs"
+          formControlName="carbs"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="fat"
+          formControlName="fat"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="protein"
+          formControlName="protein"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="fiber"
+          formControlName="fiber"
+        />
         <input
           type="text"
           class="form-control mt-2"
           placeholder="cholesterol"
+          formControlName="cholesterol"
         />
-        <input type="text" class="form-control mt-2" placeholder="sodium" />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="sodium"
+          formControlName="sodium"
+        />
       </div>
 
-      <div class="mb-3 mt-4">
-        <label for="exampleInputPassword1" class="form-label">Times</label>
-        <input type="text" class="form-control mt-2" placeholder="prep_time" />
-        <input type="text" class="form-control mt-2" placeholder="cook_time" />
-        <input type="text" class="form-control mt-2" placeholder="servings" />
+      <div class="mb-3 mt-4" formGroupName="times">
+        <label class="form-label">Times</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="prep_time"
+          formControlName="prep_time"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="cook_time"
+          formControlName="cook_time"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="servings"
+          formControlName="servings"
+        />
       </div>
 
       <div class="mb-3">
         <label for="image" class="form-label">Image</label>
-        <input type="file" class="form-control" id="image" />
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          (change)="onImageChange($event)"
+        />
       </div>
 
       <div class="mb-3">
@@ -90,17 +159,28 @@
           <i class="fa-solid fa-square-plus"></i>
         </button>
 
-        <div class="mt-2">
+        <div class="mt-2" formArrayName="ingredients">
           <div
             class="mb-3 d-flex gap-4 align-items-center justify-content-between p-2 border rounded"
-            *ngFor="let c of ingredientsCounterArray"
+            *ngFor="let ingredient of ingredients.controls; let i = index"
+            [formGroupName]="i"
           >
-            <input type="text" class="form-control" placeholder="Name" />
-            <input type="number" class="form-control" placeholder="Amount" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Name"
+            />
+            <input
+              type="number"
+              class="form-control"
+              formControlName="amount"
+              placeholder="Amount"
+            />
             <button
               type="button"
               class="btn d-flex justify-content-center align-items-center"
-              (click)="removeIngredient(c)"
+              (click)="removeIngredient(i)"
             >
               <i class="fa-regular fa-circle-xmark"></i>
             </button>
@@ -108,7 +188,9 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary">Create</button>
+      <button type="button" (click)="submitForm()" class="btn btn-primary">
+        Create
+      </button>
     </form>
   </div>
 </div>

@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { EditRecipesComponent } from './recipes/edit-recipes/edit-recipes.component';
 import { CreateRecipesComponent } from './recipes/create-recipes/create-recipes.component';
 import { DashboardRecipesComponent } from './recipes/dashboard-recipes/dashboard-recipes.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,6 @@ import { DashboardRecipesComponent } from './recipes/dashboard-recipes/dashboard
     CreateRecipesComponent,
     DashboardRecipesComponent,
   ],
-  imports: [CommonModule, AdminRoutingModule],
+  imports: [CommonModule, AdminRoutingModule, ReactiveFormsModule],
 })
 export class AdminModule {}
