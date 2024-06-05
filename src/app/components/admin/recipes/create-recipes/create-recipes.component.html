@@ -1,15 +1,114 @@
-<h2 class="mt-4">Add new recipe</h2>
-<button class="btn btn-success mt-2 mb-3" routerLink="/admin/recipes/create">
-  Add recipe
-</button>
-<form class="mb-5">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" />
+<div class="row">
+  <div class="col-md-7">
+    <h2 class="mt-4">Add new recipe</h2>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+  <div class="col-md-7">
+    <button
+      class="btn btn-success mt-2 mb-3"
+      routerLink="/admin/recipes/create"
+    >
+      Add recipe
+    </button>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+  <div class="col-md-7">
+    <form class="mb-5">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label for="floatingTextarea" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          placeholder="Leave a description here"
+          id="floatingTextarea"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Rating</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select rating</option>
+          <option *ngFor="let rating of ratings" [value]="rating">
+            {{ rating }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Author</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select author</option>
+          <option *ngFor="let author of authors" [value]="author">
+            {{ author }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Category</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select category</option>
+          <option *ngFor="let cat of categories" [value]="cat">
+            {{ cat }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3 mt-4">
+        <label for="exampleInputPassword1" class="form-label"
+          >Nutrition facts</label
+        >
+        <input type="text" class="form-control mt-2" placeholder="calories" />
+        <input type="text" class="form-control mt-2" placeholder="carbs" />
+        <input type="text" class="form-control mt-2" placeholder="fat" />
+        <input type="text" class="form-control mt-2" placeholder="protein" />
+        <input type="text" class="form-control mt-2" placeholder="fiber" />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="cholesterol"
+        />
+        <input type="text" class="form-control mt-2" placeholder="sodium" />
+      </div>
+
+      <div class="mb-3 mt-4">
+        <label for="exampleInputPassword1" class="form-label">Times</label>
+        <input type="text" class="form-control mt-2" placeholder="prep_time" />
+        <input type="text" class="form-control mt-2" placeholder="cook_time" />
+        <input type="text" class="form-control mt-2" placeholder="servings" />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" class="form-control" id="image" />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Ingredients</label>
+        <button type="button" class="btn" (click)="pushNewIngredient()">
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+
+        <div class="mt-2">
+          <div
+            class="mb-3 d-flex gap-4 align-items-center justify-content-between p-2 border rounded"
+            *ngFor="let c of ingredientsCounterArray"
+          >
+            <input type="text" class="form-control" placeholder="Name" />
+            <input type="number" class="form-control" placeholder="Amount" />
+            <button
+              type="button"
+              class="btn d-flex justify-content-center align-items-center"
+              (click)="removeIngredient(c)"
+            >
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+  </div>
+</div>

@@ -7,12 +7,11 @@ import { IRecipe } from 'src/app/shared/interfaces/i-recipe';
   providedIn: 'root',
 })
 export class AdminRecipesService {
+  private baseJsonUrl: string = '../../../../assets/json/';
   constructor(private http: HttpClient) {}
 
   getAllRecipesForDashboard() {
-    const url = '../../../../assets/json/recipes.json';
-
-    return this.http.get<IRecipe[]>(url).pipe(
+    return this.http.get<IRecipe[]>(this.baseJsonUrl + 'recipes.json').pipe(
       map((recipes: IRecipe[]) => {
         recipes = recipes.map((recipe: IRecipe) => {
           let date = new Date(recipe.created_at);
@@ -31,5 +30,9 @@ export class AdminRecipesService {
     const url = 'http://localhost:5000/api/recipes/' + id;
 
     return this.http.delete(url);
+  }
+
+  getAllForDdl(json: string) {
+    return this.http.get(this.baseJsonUrl + json + '.json');
   }
 }

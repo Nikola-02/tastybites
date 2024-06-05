@@ -1,1 +1,8 @@
-/*# sourceMappingURL=create-recipes.component.css.map */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle-xmark {
+  font-size: 25px;
+}/*# sourceMappingURL=create-recipes.component.css.map */
