@@ -1,27 +1,39 @@
-<table class="table mt-4" *ngIf="recipes.length; else noRecipes">
+<h2 class="mt-4">Admin dashboard</h2>
+<button class="btn btn-success mt-2 mb-3" routerLink="/admin/recipes/create">
+  Add recipe
+</button>
+<table class="table mt-4 mb-3" *ngIf="recipes.length; else noRecipes">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Category</th>
+      <th scope="col">Author</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Created at</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor="let r of recipes; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ r.name }}</td>
+      <td class="image-td">
+        <img [src]="'../../../../../assets/images/' + r.image" [alt]="r.name" />
+      </td>
+      <td>{{ r.category }}</td>
+      <td>{{ r.author }}</td>
+      <td>{{ r.rating }}</td>
+      <td>{{ r.created_at }}</td>
       <td>
         <button class="btn btn-primary">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </td>
       <td>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger" (click)="deleteRecipe(r.id)">
           <i class="fa-solid fa-trash"></i>
         </button>
       </td>

@@ -23,4 +23,15 @@ export class DashboardRecipesComponent implements OnInit {
       },
     });
   }
+
+  deleteRecipe(id: string): void {
+    this.adminRecipesService.deleteRecipe(+id).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
 }

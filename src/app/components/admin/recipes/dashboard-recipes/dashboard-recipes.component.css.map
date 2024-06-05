@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"dashboard-recipes.component.css"}
+{"version":3,"sources":["dashboard-recipes.component.scss","dashboard-recipes.component.css"],"names":[],"mappings":"AAAA;EACE,YAAA;ACCF;ADAE;EACE,WAAA;ACEJ","file":"dashboard-recipes.component.css"}
