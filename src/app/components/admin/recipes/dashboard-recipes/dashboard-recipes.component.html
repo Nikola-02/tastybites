@@ -28,10 +28,7 @@
       <td>{{ r.rating }}</td>
       <td>{{ r.created_at }}</td>
       <td>
-        <button
-          class="btn btn-primary"
-          routerLink="/admin/recipes/{{ r.id }}/edit"
-        >
+        <button class="btn btn-primary" (click)="openEditDialog(+r.id)">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </td>
