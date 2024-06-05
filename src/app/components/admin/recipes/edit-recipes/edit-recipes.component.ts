@@ -12,6 +12,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditRecipesComponent implements OnInit {
   getSingleRecipeSub: Subscription;
   recipe: IRecipe;
+  authors: any = [];
+  categories: any = [];
 
   constructor(
     private route: ActivatedRoute,
