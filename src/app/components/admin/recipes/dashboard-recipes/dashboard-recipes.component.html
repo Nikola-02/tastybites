@@ -28,7 +28,10 @@
       <td>{{ r.rating }}</td>
       <td>{{ r.created_at }}</td>
       <td>
-        <button class="btn btn-primary">
+        <button
+          class="btn btn-primary"
+          routerLink="/admin/recipes/{{ r.id }}/edit"
+        >
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       </td>
