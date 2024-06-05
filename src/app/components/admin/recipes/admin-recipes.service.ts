@@ -26,6 +26,14 @@ export class AdminRecipesService {
     );
   }
 
+  getSingleRecipe(id) {
+    return this.getAllRecipesForDashboard().pipe(
+      map((recipes: IRecipe[]) => {
+        return recipes.find((r) => r.id == id);
+      })
+    );
+  }
+
   deleteRecipe(id: number) {
     const url = 'http://localhost:5000/api/recipes/' + id;
 

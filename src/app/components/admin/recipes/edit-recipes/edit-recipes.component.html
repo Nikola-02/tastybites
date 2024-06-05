@@ -1,1 +1,196 @@
-<p>edit-recipes works!</p>
+<div class="row">
+  <div class="col-md-7">
+    <h2 class="mt-4">Add new recipe</h2>
+  </div>
+  <div class="col-md-7">
+    <button
+      class="btn btn-success mt-2 mb-3"
+      routerLink="/admin/recipes/create"
+    >
+      Add recipe
+    </button>
+  </div>
+
+  <div class="col-md-7">
+    <form [formGroup]="form" class="mb-5">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          id="name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="floatingTextarea" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          placeholder="Leave a description here"
+          id="floatingTextarea"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Rating</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="rating"
+        >
+          <option selected>Select rating</option>
+          <option *ngFor="let rating of ratings" [value]="rating">
+            {{ rating }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Author</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="author"
+        >
+          <option selected>Select author</option>
+          <option *ngFor="let author of authors" [value]="author">
+            {{ author }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Category</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="category"
+        >
+          <option selected>Select category</option>
+          <option *ngFor="let cat of categories" [value]="cat">
+            {{ cat }}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-3 mt-4" formGroupName="nutritionFacts">
+        <label class="form-label">Nutrition facts</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="calories"
+          formControlName="calories"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="carbs"
+          formControlName="carbs"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="fat"
+          formControlName="fat"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="protein"
+          formControlName="protein"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="fiber"
+          formControlName="fiber"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="cholesterol"
+          formControlName="cholesterol"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="sodium"
+          formControlName="sodium"
+        />
+      </div>
+
+      <div class="mb-3 mt-4" formGroupName="times">
+        <label class="form-label">Times</label>
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="prep_time"
+          formControlName="prep_time"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="cook_time"
+          formControlName="cook_time"
+        />
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="servings"
+          formControlName="servings"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          (change)="onImageChange($event)"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Ingredients</label>
+        <button type="button" class="btn" (click)="pushNewIngredient()">
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+
+        <div class="mt-2" formArrayName="ingredients">
+          <div
+            class="mb-3 d-flex gap-4 align-items-center justify-content-between p-2 border rounded"
+            *ngFor="let ingredient of ingredients.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="Name"
+            />
+            <input
+              type="number"
+              class="form-control"
+              formControlName="amount"
+              placeholder="Amount"
+            />
+            <button
+              type="button"
+              class="btn d-flex justify-content-center align-items-center"
+              (click)="removeIngredient(i)"
+            >
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" (click)="submitForm()" class="btn btn-primary">
+        Create
+      </button>
+    </form>
+  </div>
+</div>
