@@ -17,25 +17,25 @@ export class CreateRecipesComponent implements OnInit, OnDestroy {
   insertNewRecipeSub: Subscription;
 
   form = new FormGroup({
-    name: new FormControl('wad'),
-    description: new FormControl('awd'),
-    rating: new FormControl('5'),
-    author: new FormControl('0'),
-    category: new FormControl('0'),
+    name: new FormControl(''),
+    description: new FormControl(''),
+    rating: new FormControl(''),
+    author: new FormControl(''),
+    category: new FormControl(''),
     image: new FormControl(null),
     nutritionFacts: new FormGroup({
-      calories: new FormControl('5'),
-      carbs: new FormControl('5'),
-      fat: new FormControl('5'),
-      protein: new FormControl('5'),
-      fiber: new FormControl('5'),
-      cholesterol: new FormControl('5'),
-      sodium: new FormControl('5'),
+      calories: new FormControl(''),
+      carbs: new FormControl(''),
+      fat: new FormControl(''),
+      protein: new FormControl(''),
+      fiber: new FormControl(''),
+      cholesterol: new FormControl(''),
+      sodium: new FormControl(''),
     }),
     times: new FormGroup({
-      prep_time: new FormControl('5'),
-      cook_time: new FormControl('5'),
-      servings: new FormControl('5'),
+      prep_time: new FormControl(''),
+      cook_time: new FormControl(''),
+      servings: new FormControl(''),
     }),
     ingredients: new FormArray([
       new FormGroup({
@@ -120,8 +120,8 @@ export class CreateRecipesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.authorSubscription.unsubscribe();
-    this.categorySubscription.unsubscribe();
-    this.insertNewRecipeSub.unsubscribe();
+    if (this.authorSubscription) this.authorSubscription.unsubscribe();
+    if (this.categorySubscription) this.categorySubscription.unsubscribe();
+    if (this.insertNewRecipeSub) this.insertNewRecipeSub.unsubscribe();
   }
 }

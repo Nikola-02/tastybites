@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"edit-recipes.component.css"}
+{"version":3,"sources":["edit-recipes.component.scss","edit-recipes.component.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,uBAAA;ACCF;;ADEA;EACE,eAAA;ACCF","file":"edit-recipes.component.css"}

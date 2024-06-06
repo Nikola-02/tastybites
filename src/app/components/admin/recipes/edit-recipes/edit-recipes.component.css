@@ -1,1 +1,8 @@
-/*# sourceMappingURL=edit-recipes.component.css.map */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle-xmark {
+  font-size: 25px;
+}/*# sourceMappingURL=edit-recipes.component.css.map */
