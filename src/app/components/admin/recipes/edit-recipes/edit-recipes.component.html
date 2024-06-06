@@ -22,6 +22,7 @@
           placeholder="Leave a description here"
           id="floatingTextarea"
           formControlName="description"
+          rows="5"
         ></textarea>
       </div>
 
@@ -143,6 +144,11 @@
           id="image"
           (change)="onImageChange($event)"
         />
+        <img
+          class="mt-3 w-25"
+          [src]="'../../../../../assets/images/' + recipe.image"
+          alt="{{ recipe.name }}"
+        />
       </div>
 
       <div class="mb-3">
@@ -181,7 +187,7 @@
       </div>
 
       <button type="button" (click)="submitForm()" class="btn btn-primary">
-        Create
+        Update
       </button>
     </form>
   </div>

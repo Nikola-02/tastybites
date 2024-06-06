@@ -47,4 +47,8 @@ export class AdminRecipesService {
   insertNewRecipe(formValues) {
     return this.http.post('http://localhost:5000/api/recipes/', formValues);
   }
+
+  updateRecipe(formValues, id) {
+    return this.http.put('http://localhost:5000/api/recipes/' + id, formValues);
+  }
 }

@@ -20,7 +20,34 @@ export class EditRecipesComponent implements OnInit, OnDestroy {
   updateNewRecipeSub: Subscription;
   ratings: number[] = [1, 2, 3, 4, 5];
 
-  form: FormGroup = new FormGroup({});
+  form = new FormGroup({
+    name: new FormControl(''),
+    description: new FormControl(''),
+    rating: new FormControl(0),
+    author: new FormControl(''),
+    category: new FormControl(''),
+    image: new FormControl(''),
+    nutritionFacts: new FormGroup({
+      calories: new FormControl(0),
+      carbs: new FormControl(0),
+      fat: new FormControl(0),
+      protein: new FormControl(0),
+      fiber: new FormControl(0),
+      cholesterol: new FormControl(0),
+      sodium: new FormControl(0),
+    }),
+    times: new FormGroup({
+      prep_time: new FormControl(0),
+      cook_time: new FormControl(0),
+      servings: new FormControl(0),
+    }),
+    ingredients: new FormArray([
+      new FormGroup({
+        name: new FormControl(''),
+        amount: new FormControl(''),
+      }),
+    ]),
+  });
 
   constructor(
     private route: ActivatedRoute,
@@ -78,39 +105,40 @@ export class EditRecipesComponent implements OnInit, OnDestroy {
   }
 
   setFormValues(recipe: IRecipe) {
-    console.log(recipe.name);
+    const ingredientsArray = new FormArray(
+      recipe.ingredients.map(
+        (ingredient) =>
+          new FormGroup({
+            name: new FormControl(ingredient.name),
+            amount: new FormControl(ingredient.amount?.toString()), // Pretvaramo amount u string
+          })
+      )
+    );
 
-    this.form = new FormGroup({
-      name: new FormControl(recipe.name),
-      description: new FormControl(recipe.description),
-      rating: new FormControl(recipe.rating),
-      author: new FormControl(recipe.author),
-      category: new FormControl(recipe.category),
-      image: new FormControl(recipe.image),
-      nutritionFacts: new FormGroup({
-        calories: new FormControl(recipe.nutrition_facts.calories),
-        carbs: new FormControl(recipe.nutrition_facts.carbs),
-        fat: new FormControl(recipe.nutrition_facts.fat),
-        protein: new FormControl(recipe.nutrition_facts.protein),
-        fiber: new FormControl(recipe.nutrition_facts.fiber),
-        cholesterol: new FormControl(recipe.nutrition_facts.cholesterol),
-        sodium: new FormControl(recipe.nutrition_facts.sodium),
-      }),
-      times: new FormGroup({
-        prep_time: new FormControl(recipe.times.prep_time),
-        cook_time: new FormControl(recipe.times.cook_time),
-        servings: new FormControl(recipe.times.servings),
-      }),
-      ingredients: new FormArray(
-        recipe.ingredients.map(
-          (ingredient) =>
-            new FormGroup({
-              name: new FormControl(ingredient.name),
-              amount: new FormControl(ingredient.amount),
-            })
-        )
-      ),
+    this.form.patchValue({
+      name: recipe.name,
+      description: recipe.description,
+      rating: recipe.rating,
+      author: recipe.author,
+      category: recipe.category,
+      image: recipe.image,
+      nutritionFacts: {
+        calories: recipe.nutrition_facts.calories,
+        carbs: recipe.nutrition_facts.carbs,
+        fat: recipe.nutrition_facts.fat,
+        protein: recipe.nutrition_facts.protein,
+        fiber: recipe.nutrition_facts.fiber,
+        cholesterol: recipe.nutrition_facts.cholesterol,
+        sodium: recipe.nutrition_facts.sodium,
+      },
+      times: {
+        prep_time: recipe.times.prep_time,
+        cook_time: recipe.times.cook_time,
+        servings: recipe.times.servings,
+      },
     });
+
+    this.form.setControl('ingredients', ingredientsArray);
   }
 
   get ingredients() {
@@ -150,7 +178,7 @@ export class EditRecipesComponent implements OnInit, OnDestroy {
     }
 
     this.updateNewRecipeSub = this.adminRecipesService
-      .insertNewRecipe(formData)
+      .updateRecipe(formData, this.recipe.id)
       .subscribe({
         next: (response) => {
           console.log(response);
