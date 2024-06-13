@@ -1,7 +1,7 @@
 <div
   class="shopping-list-item"
   [ngClass]="{ 'edit-mode': mode == 'edit' }"
-  (click)="onChangeMode()"
+  (click)="onNotifyParentForChangeMode()"
 >
   <span
     >{{ shoppingItem.name }} ({{ shoppingItem.amount }})

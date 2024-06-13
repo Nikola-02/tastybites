@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ShoppingListService } from './shopping-list.service';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
-import { Subscription } from 'rxjs';
+import { Subject, Subscription } from 'rxjs';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -16,6 +16,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   public itemToEditName: string;
   public itemToEditAmount: number;
   public itemToEditId: number;
+  public turnOffEditModeForAllChildrenSubject: Subject<number> =
+    new Subject<number>();
 
   @ViewChild('f', { static: false }) form: NgForm;
 
@@ -29,6 +31,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       this.shoppingListService.shoppingList$.subscribe((list) => {
         this.shoppingList = list;
       });
+  }
+
+  turnOffEditModeForAllChildrenEvent() {
+    this.turnOffEditModeForAllChildrenSubject.next(this.itemToEditId);
   }
 
   onSubmitItem(form: NgForm) {
@@ -61,6 +67,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       this.itemToEditId = obj.item.id;
       this.itemToEditName = obj.item.name;
       this.itemToEditAmount = obj.item.amount;
+
+      this.turnOffEditModeForAllChildrenEvent();
     } else {
       this.form.reset();
     }

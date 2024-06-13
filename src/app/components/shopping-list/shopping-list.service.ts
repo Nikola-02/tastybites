@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { IIngredient } from 'src/app/shared/interfaces/i-ingredient';
 import { IShoppingItem } from 'src/app/shared/interfaces/i-shopping-item';
 

@@ -46,6 +46,9 @@
           [item]="item"
           (deleteItemEmitter)="deleteItem($event)"
           (swapMode)="onSwapMode($event)"
+          [turnOffEditModeEvent]="
+            turnOffEditModeForAllChildrenSubject.asObservable()
+          "
         ></app-shopping-item>
       </div>
       <ng-template #emptyList>
