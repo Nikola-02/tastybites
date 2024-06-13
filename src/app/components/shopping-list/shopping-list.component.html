@@ -41,6 +41,7 @@
         class="shopping-list-items"
         *ngIf="shoppingList.length; else emptyList"
       >
+        <h5>Click on ingredient to edit it</h5>
         <app-shopping-item
           *ngFor="let item of shoppingList"
           [item]="item"
