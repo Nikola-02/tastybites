@@ -33,8 +33,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       });
   }
 
-  turnOffEditModeForAllChildrenEvent() {
-    this.turnOffEditModeForAllChildrenSubject.next(this.itemToEditId);
+  turnOffEditModeForAllChildrenEvent(id) {
+    this.turnOffEditModeForAllChildrenSubject.next(id);
   }
 
   onSubmitItem(form: NgForm) {
@@ -68,9 +68,10 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
       this.itemToEditName = obj.item.name;
       this.itemToEditAmount = obj.item.amount;
 
-      this.turnOffEditModeForAllChildrenEvent();
+      this.turnOffEditModeForAllChildrenEvent(this.itemToEditId);
     } else {
       this.form.reset();
+      this.turnOffEditModeForAllChildrenEvent(0);
     }
   }
 
