@@ -95,4 +95,8 @@ export class AuthService implements OnInit {
 
     localStorage.removeItem('loginUser');
   }
+
+  isAdmin() {
+    return this.user && this.user.role == 'admin';
+  }
 }

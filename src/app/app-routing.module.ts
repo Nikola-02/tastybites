@@ -10,6 +10,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AdminLayoutComponent } from './components/layout/admin-layout/admin-layout.component';
+import { adminGuard } from './shared/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
       {
         path: 'admin',
         component: AdminLayoutComponent,
+        canActivateChild: [adminGuard],
         loadChildren: () =>
           import('./components/admin/admin.module').then((m) => m.AdminModule),
       },
